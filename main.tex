@@ -67,16 +67,66 @@ where $\perp$ denotes the transverse component, $\nabla_{\perp}^2 = \nabla_x^2 +
 This is the normal \textit{Helmholtz equation}, indicating the relation between propagation constant $\beta$ and material refractive index, i.e. \textit{chromatic dispersion}.
 
 Next, the boundary conditions determining the solution to Eqn. \ref{eq:helm}, arise from the Maxwell's equations as well.
-\begin{eqnarray}%\label{eq:bcon}
+\begin{eqnarray*}%\label{eq:bcon}
   \vb{\hat{n}} \cdot (\vb{E_a - E_b}) & = & 0 \\
   \vb{\hat{n}} \times (\vb{\vb{H_a} - H_{\vb{b}}}) & = & 0
-\end{eqnarray}
-which is the continuity condition of both electric and magnetic field. Here, $\vb{\hat{n}}$ is the normal direction at the material boundary and the subscript $a, b$ denote different regimes.
+\end{eqnarray*}
+which is the continuity condition of both electric and magnetic field at all dielectric material interfaces. Here, $\vb{\hat{n}}$ is the normal direction at the material boundary and the subscript $a, b$ denote different regimes.
 
-In our case, the channel waveguide, which is also the majority of optical waveguides in real world,
-the index discontinuity can be decomposed into two sets of independent and complete conditions, i.e. continuity on either horizontal surface or vertical surface. Approximately, the solution can be naturally divided into two sets, which is the mathematical origin of namely,\textit{ transverse electric} (TE) modes and \textit{transverse magnetic} (TM) modes.
+In the case of channel waveguides, the index discontinuity from both vertical and horizontal sides can be decomposed into two sets of independent and complete conditions, i.e. the horizontal boundary condition and vertical boundary condition, with the discontinuity on the waveguide corners neglected. In other words, approximately the equation has two independent partiuclar solutions, which is the mathematical origin of \textit{ transverse electric} (TE) modes and \textit{transverse magnetic} (TM) modes.
 
-For simplicity, next we choose planar waveguide, to derive the TE and TM mode eigen equantions separately.
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.7,>=stealth]
+\draw (-9,0) -- (6,0) (-9,2) -- (6,2);
+% \draw [->] (-9,1) -- (6,1);
+\foreach \x in {0,1.5}{
+  \draw [thick, ->] (-8+\x,0) -- (-6+\x,1);
+  \draw [thick,->] (-6+\x,1) -- (-4+\x,2) -- (-2+\x,1);
+  \draw [thick,->] (-2+\x,1) -- (0+\x,0) -- (2+\x,1);
+  \draw [thick,-] (2+\x,1) -- (4+\x,2);
+}
+\foreach \x in {-1,0,1,2,3,4}
+	\draw [dashed] (-6.5+0.6*\x,0) -- (-7.5+0.6*\x,2);
+\foreach \x in {0,1,2,3,4}
+	\draw [dashed] (2.4+0.6*\x,0) -- (1.4+0.6*\x,2);
+
+% \draw [<->] (-9,1.5) --(-9,0.7) -- (-7.4,0.7);
+% \draw [->] (-9,0.7) -- (-7.4,1.5);
+
+% \node at (-8.6,1.4) {$\tiny{k_i}$};
+% \node at (-8.2,0.4) {$\tiny{\beta}$};
+\node at (0.5,1) {$n_c k_0$};
+
+\draw [<->] (5.7,0) -- (5.7,2);
+\node at (5.3,1) {$2d$};
+\node at (-8.5,1) {$n_a$};
+\node at (-8.5,2.4) {$n_b$};
+\node at (-8.5,-0.4) {$n_b$};
+\node at (-3.4,2.4) {$\phi_1$};
+\node at (0.9,-0.4) {$\phi_2$};
+
+\draw (-3.8,2) arc [start angle=0, end angle=180, radius=0.2];
+\draw (-3.8+1.5,2) arc [start angle=0, end angle=180, radius=0.2];
+
+\draw (-3.8+3.6,0) arc [start angle=180, end angle=360, radius=0.2];
+\draw (-3.8+5.1,0) arc [start angle=180, end angle=360, radius=0.2];
+
+\end{tikzpicture}
+\caption{\textbf{Planar waveguide}. The upper}
+\label{fig:ch1-planar}
+\end{figure}
+
+Hence, we can study the eigenequantion by selecting only one set of boundary condition, as part of \textit{the effective index method}. For example, in a planar waveguide shown in Fig. ,$\dv[2]{}{y}=0$\footnote{Since the planar waveguide is infinite at the $y$-direction , thus the solution is identical in arbitrary $xz$-plane, which means no gradient along $x$-axis.},
+the TE mode features $E_x=0$ and consider only $y$-component, 
+\begin{equation}
+    \dv[2]{E_y}{x} + (k^2 n^2 - \beta^2)E_y =0
+\end{equation}
+and $E_y$ is continous at $x=\pm d$, where $2 d$ is the thickness of core layer. By substituting this condition, 
+
+\begin{equation}
+    2k_x d = m\pi + 2\arctan(\kappa/k_x)
+\end{equation}
 
 \section{Ring resonators}
 

@@ -57,7 +57,7 @@
 }
 
 \RequirePackage[final]{hyperref}
-\RequirePackage[nomarkers]{endfloat}
+% \RequirePackage[nomarkers]{endfloat}
 
 % abstract page same as japanese version
 \renewcommand*{\abstractname}{
