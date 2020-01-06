@@ -2,7 +2,8 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[final]{kuee_en}
 
-% \usepackage{endfloat}
+\usepackage[nomarkers]{endfloat}
+\usepackage{cleveref}
 % \usepackage[final]{hyperref}
 
 \usepackage{xcolor,graphicx}
@@ -11,10 +12,11 @@
 \sectionfont{\noindent\textsc} % indent setting
 % \usepackage{paralist}
 % \usepackage{booktabs}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{tgbonum}
 \usepackage{fancyhdr}
-\usepackage{tocloft}
+% \usepackage{tocloft}
 
 \usepackage[inkscape=on]{svg}
 \svgpath{{imgs/svg/}}
@@ -69,7 +71,7 @@ In chip scale quantum optical platforms, to confine the light in a sub-micron di
 
 In this chapter, the waveguide theory is roughly introduced and sequentially, mode coupling theory is discussed in the case of ring resonator. Second section will focus on nonlinear optics in the view of waveguide.
 
-\section{Guided modes}
+\section{Guided modes}\label{sec:guide}
 
 In an ideal optical waveguide, the core layer and the cladding layer are usually composed of two different materials, where the refractive index is larger in the core. As an analogue of optical fibers, only in the higher index region can the light propagate, and meanwhile dissipate in a wavelength scale in the lower index region.
 
@@ -132,9 +134,8 @@ In the case of channel waveguides, the index discontinuity from both vertical an
 
 \draw (-3.8+3.6,0) arc [start angle=180, end angle=360, radius=0.2];
 \draw (-3.8+5.1,0) arc [start angle=180, end angle=360, radius=0.2];
-
 \end{tikzpicture}
-\caption{\textbf{Planar waveguide}. The upper and bottom layer are clading and the middle is core layer. $\Delta \phi$ represents the Goos–H\"{a}nchen shift at the boundary.}
+\caption{\textbf{Planar waveguide}. The upper and bottom layer are cladding and the middle is core layer. $\Delta \phi$ represents the Goos-H\"{a}nchen shift at the boundary.}
 \label{fig:planar}
 \end{figure}
 
@@ -153,12 +154,26 @@ For the region $|x|>d/2$, the light evanesces at $x$-direction at rate $\kappa$ 
 where $m$ is the index of stationary wave. The second term can be treated as the Goos-H\"{a}nchen phase shift. Overall, the waveguide modes characterize that the phase shall maintain itself with an $m\pi$ shift along with the shift at the boundaries.
 
 In the case of TM modes, the eigen equation is 
-\begin{equation}
+\begin{equation}\label{eq:tm-eq}
     2k_x d = m\pi + 2\arctan(\delta\kappa/k_x)
 \end{equation}
 where $\delta=n_a/n_b$ is the index ratio and only differs from \autoref{eq:te-eq} with this parameter. conclusively, the less is $\delta$ parameter, the propagation constant of TE and TM modes are closer.
 
+Based on \autoref{eq:te-eq} and \autoref{eq:tm-eq}, $k_x$ can be solved and then utilized to calculate propagation constant $\beta$, since $n_a^2k^2 = k_{\perp}^2 + \beta^2$. In the case of channel waveguides, the TE and TM solutions are both necessary. Therefore, propagation constants $\beta$ can be expressed as the product of free space wave vector $k$ and the \textit{ effective index} $n_{\mathrm{eff}}$
+\begin{equation}\label{eq:disp_bk}
+    \beta = n_{\mathrm{eff}}k = n_{\mathrm{eff}} \frac{2\pi}{\lambda} = n_{\mathrm{eff}} \frac{\omega}{c}
+\end{equation}
+along with the differential form
+\begin{equation}\label{eq:ng-def}
+    \dv{\beta}{k} = n_{\mathrm{eff}} + k \dv{n_{\mathrm{eff}}}{k} = n_{\mathrm{eff}} - \lambda\dv{n_{\mathrm{eff}}}{\lambda} \equiv n_g
+\end{equation}
+which defines the group index $n_g$.
+
+This formula linking $\beta - k$ or $\beta - \omega$ is named as dispersion relation, which gives the physics that light with different color propagates at different \textit{speed}. Furthermore, \autoref{eq:te-eq} and \autoref{eq:tm-eq} also indicate that the dispersion relation intrinsically depends on waveguide geometry.
+
 \section{Ring resonators}
+
+The ring resonators comprise of a bus waveguide and a ring waveguide, are usually demonstrated as optical filters or modulators at a wide range of platforms. The working principle of ring resonator can be derived completely \cite{Bogaerts2012} as an analogue to Fabry-P\'{e}rot etalon, based on the coupling mode theory. 
 
 \begin{figure}
     \centering
@@ -167,13 +182,8 @@ where $\delta=n_a/n_b$ is the index ratio and only differs from \autoref{eq:te-e
     \label{fig:mrr-illus}
 \end{figure}
 
-The working principle of ring resonator can be derived completely \cite{Bogaerts2012} as an analogue to Fabry-P\'{e}rot etalon, based on the coupling mode theory. In the model illustrated in \autoref{fig:mrr-illus}, the self-coupling coefficient $\tau$ and the cross-coupling coefficient $\kappa$ can be evaluated analytically or using numerical simulation. Assuming the coupling only occur at the very close area, $\tau,\kappa$ are the power splitting ratios of the coupler and satify $\tau^2 + \kappa^2 =1 $ if the coupling section is lossless. $a$ is the single-pass amplitude transmission, including both propagation loss in the ring and loss in the couplers.
+In the model illustrated in \autoref{fig:mrr-illus}, the self-coupling coefficient $\tau$ and the cross-coupling coefficient $\kappa$ can be evaluated analytically or using numerical simulation. Assuming the coupling only occur at the very close area, $\tau,\kappa$ are the power splitting ratios of the coupler and satify $\tau^2 + \kappa^2 =1 $ if the coupling section is lossless. $a$ is the single-pass amplitude transmission, including both propagation loss in the ring and loss in the couplers.
 
-The transmission rate of a all-pass type ring cavity takes the form of
-\begin{equation}\label{eq:trans_phi}
-    T = \frac{I_\mathrm{pass}}{I_\mathrm{input}} = \frac{a^2 - 2a\tau \cos \phi + \tau^2}{1 - 2ar \cos \phi + a^2 \tau^2}
-\end{equation}
-Here $\phi=\beta L$ is the phase shift in a single round trip. The transmission rate is plotted as a function of phase $phi$ 
 \begin{figure}
     \centering
     \includesvg[scale=0.6]{mrr_spec}
@@ -181,63 +191,90 @@ Here $\phi=\beta L$ is the phase shift in a single round trip. The transmission 
     \label{fig:mrr_spec}
 \end{figure}
 
-In \autoref{fig:mrr_spec}, first, the resonance can be achieved as $\phi=2 \mu \pi$ leads to the minima of $T_n$, shown in. Hence
+The transmission rate of a all-pass type ring cavity takes the form of
+\begin{equation}\label{eq:trans_phi}
+    T = \frac{I_\mathrm{pass}}{I_\mathrm{input}} = \frac{a^2 - 2a\tau \cos \phi + \tau^2}{1 - 2ar \cos \phi + a^2 \tau^2}
+\end{equation}
+where $\phi=\beta L$ is the phase shift in a single round trip. 
+
+By plotting the function in \autoref{fig:mrr_spec}, we can see, the extinction ratio of absorption peak is defined by the self-coupling coefficient $\tau$ and the single-pass amplitude transmission $a$ due to device geometric differences, like the gap between the bus waveguide and the ring cavity. Namely, $a$ and $\tau$ both determine the coupling condition, which can be categorized in three cases
+\begin{itemize}
+    \item $a>\tau$ \textbf{weak coupling.} The loss inside the ring is larger than the power coupled from bus waveguides.
+    \item $a=\tau$ \textbf{critical coupling.} The loss and self-coupling are in balance. The optical power restored in the resonator achieve the minimum.
+    \item $a<\tau$ \textbf{over coupling or strong coupling.} The coupling is too strong for the light to dissipate in a single round trip.
+\end{itemize}
+
+Previous work \cite{Yusuke2017} proposed a method to evaluate the coupling condition above using the experimentally measured device transmission. Considering the loss in the coupler, bent segment of ring and higher mode perturbance, usually the critical coupling varies from modes and the cross section of waveguides \cite{Pfeiffer2017}.
+
+Meanwhile, the minimum of transmission rate $T$ can be achieved periodically as $\phi=2 \mu \pi$, which defines the resonance of ring resonators. Therefore, the resonance condition is derived as
 \begin{equation}
     \beta L =2 \mu \pi
 \end{equation}
-is the resonance condition. 
+    
+Specifically, the propagation constant $\beta$, shall be an integral times of a quasi wave vector $2\pi/L$. With this condition, the free spectrum range (FSR) of wavelength and frequency are obtained
+\begin{align}
+    \Delta \lambda_\mathrm{FSR} &\approx \frac{\lambda_\mathrm{res}^2}{n_g L} \label{eq:fsr-wl} \\
+    \Delta \omega_\mathrm{FSR} &\approx \frac{n_g L}{2\pi c} \label{eq:fsr-w}
+\end{align}
 
-Meanwhile, $a=\tau$, where the input power can compensate the loss of one round trip propagation.
+In both wavelength and frequency domain, FSR determines the spacing of neighbouring resonant peak. This is a significant factor when the ring resonators are designed.
 
-In , we can see the spectral characteristics is periodical. Th extinction ratio of absorption peak is defined by $a,\tau$. From \autoref{eq:trans_phi}, we can derive the full width at half maximum (FWHM) of the resonance spectrum
+Furthermore, from \autoref{eq:trans_phi}, the full width at half maximum (FWHM) of the resonance spectrum is derived as $\delta\lambda$
 \begin{equation}\label{eq:fwhm_phi}
     \delta\phi = \frac{2(1- a \tau)}{\sqrt{\tau a}}
     % \lambda_{\mathrm{res}}^2
 \end{equation}
-thus the half width of wavelength and frequency are
+\begin{figure}
+    \centering
+    \includesvg{mrr_fsr_illus}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+Likely, since the phase $\phi$ is related with the wave vector $k$ by \autoref{eq:ng-def}. Substituting $\delta \phi = L n_g \delta k$, the half width of wavelength and frequency are
+\begin{align}
+    \delta \lambda &= \dv{\lambda}{k}\delta k = \frac{\lambda_\mathrm{res}^2}{2\pi L n_g} \frac{2(1- a \tau)}{\sqrt{\tau a}} \label{eq:fwhm_wl}\\
+    \delta \omega &= \dv{\omega}{k}\delta k = \frac{c}{ L n_g} \frac{2(1- a \tau)}{\sqrt{\tau a}} \label{eq:fwhm_w}
+\end{align}
 
+Note in \autoref{eq:fsr-wl} \autoref{eq:fsr-w} \autoref{eq:fwhm_wl} and \autoref{eq:fwhm_w}, the group index $n_g$ is explicit instead of the effective index $n_\mathrm{eff}$ because both free spectrum range and full width depend on the differential form, \autoref{eq:ng-def}.
+
+And the finesse $F$ of the resonator is defined 
 \begin{equation}
-    \delta \lambda =  \frac{2(1- a \tau)}{\sqrt{\tau a}}
+    F \equiv \frac{2\pi}{\delta\phi} = \frac{\pi\sqrt{\tau a}}{2(1- a \tau)}
 \end{equation}
 
-And the finess $F$ of the resonator is defined as
-\begin{equation}
-    F \equiv \frac{2\pi}{\delta\phi} = 
+Finally, we define the quality factor, a measure of the sharpness of the resonance relative to its central frequency.
+
+\begin{equation}\label{eq:q-def}
+    Q = \frac{\lambda_\mathrm{res}}{\delta \lambda} =  \frac{\pi L n_g \sqrt{\tau a}} {\lambda_\mathrm{res} (1- a \tau)}
 \end{equation}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Usually, the \textit{Q}-factor can be decomposed into two parts by formula $Q^{-1}=Q_{i}^{-1} + Q_{l}^{-1}$. And $Q_{i}, Q_{l}$ are intrinsic \textit{Q}-factor and loaded \textit{Q}-factor, referring to the loss inside the ring waveguide and at the coupler, respectively. The physical meaning of the finesse and \textit{Q}-factor relates to the number of round-trips before being lost to internal loss and the bus waveguides when the power is depleted to $1/e$ of its initial value.
 
 \section{Degenerate four wave mixing}
 
-In addition, in the case of nonlinear photonics, the nonlinear response of the
-electric field is inherent and essential, hence we also derive the propagation
-by treating the nonlinear term as an additive source.
+Although the nonlinear effect in the waveguides is neglected in \autoref{sec:guide}, for numerous materials, the nonlinear responses of external electric fields become significant at mW level, which is easy to occur using mode lasers. These phenomena are critical to permit the frequency conversion not only in the bulky optics, but also in the sub-micron scale.
 
+% In this section, we prefer to introduce both second-order and third-order optical nonlinearity. 
+In a isotropic nonlinear medium, assuming an instantaneous dielectric response, the relation between the polarization $\vb{P}$ and the electric field $E$ is expressed by a power series in the electric field
+\begin{equation}\label{eq:nlp}
+    \vb{P} = \varepsilon_0 \large (\chi^{(1)}\vb{E} + \chi^{(2)}\vb{E}^2 + \chi^{(3)}\vb{E}^3)
+\end{equation}
 
+Note in \autoref{eq:nlp}, the susceptibilities $\chi^{(2)}$ and $\chi^{(3)}$ are  second-order and third-order tensors, corresponding to the tensor product $\vb{E}^2$ and $\vb{E}^3$.
 
-In addition, in the case of nonlinear photonics, the nonlinear response of the
-electric field is inherent and essential, hence we also derive the propagation
-by treating the nonlinear term as an additive source.
+\textbf{$\chi^{(2)}$ processes} In centrosymmetric crystals such as silicon, the second-order susceptibility term is absent. However, in other materials like lithium niobate (\ce{LiNbO3}) and aluminium nitride (AlN), the second-order nonlinearity are essential to realize electro-optic modulation and second harmonic generation.
+
+\textbf{$\chi^{(3)}$ processes} Silicon and silicon nitride are both cubic crystal. Thus, the third-order nonlineariry is important to exhibit a wide variety of phenomena. Consider three frequency components of $\vb{E}^3$, using the complex expression of electric field
+\begin{equation}
+    \vb{E}(\vb{r}, t) = \sum_{k=1}^3 \vb{E}_{\omega_k}(\vb{r}, t) = \frac{1}{2} \sum_{k=1}^3 \large ( \vb{E}_{\omega_k}(\vb{r})e^{i\omega_k t} + c.c.)
+\end{equation}
+
+Substituting into third-order polarization
+
+\begin{equation}
+    \vb{P}^{(3)} = 
+\end{equation}
 
 
 \section{Integrated nonlinear device}
@@ -251,7 +288,7 @@ by treating the nonlinear term as an additive source.
 \section{Four wave mixing}
 
 
-Assume in a ring resonator, to satisfy both energy conservation and momenmtum
+Assume in a ring resonator, to satisfy both energy conservation and momentum
 conservation,
 \begin{eqnarray*}
   \beta_i + \beta_s & = & 2 \beta_p\\

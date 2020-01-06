@@ -71,19 +71,19 @@
 }
 
 % custom contents 
-% \renewcommand{\tableofcontents}{%
-% \bgroup
-% \def\thepage{\roman{page}}%
-% \lineskip = \normallineskip
-% \@restonecolfalse
-% \if@twocolumn\@restonecoltrue\onecolumn\fi
-% \chapter*{\contentsname\@mkboth{\contentsname}{\contentsname}}%
-% \@starttoc{toc}
-% \if@restonecol\twocolumn\fi
-% \newpage
-% \egroup
-% \setcounter{page}{1}
-% }
+\renewcommand{\tableofcontents}{%
+\bgroup
+\def\thepage{\roman{page}}%
+\lineskip = \normallineskip
+\@restonecolfalse
+\if@twocolumn\@restonecoltrue\onecolumn\fi
+\chapter*{\contentsname\@mkboth{\contentsname}{\contentsname}}%
+\@starttoc{toc}
+\if@restonecol\twocolumn\fi
+\newpage
+\egroup
+\setcounter{page}{1}
+}
 
 % ackpage
 \newenvironment{acknowledgements}{%
