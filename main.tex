@@ -1,6 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[final]{kuee_en}
+
 % \usepackage{endfloat}
 % \usepackage[final]{hyperref}
 
@@ -12,8 +13,20 @@
 % \usepackage{booktabs}
 \usepackage[T1]{fontenc}
 \usepackage{tgbonum}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
 
+\usepackage[inkscape=on]{svg}
+\svgpath{{imgs/svg/}}
+%\usepackage[on]{svg-extract}
+\svgsetup{clean=tru,inkscapedpi=200}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{.6\columnwidth}
+	\import{./svg-inkscape/}{#1_svg-tex.pdf_tex}
+}
 
+% \renewcommand{\cftsetpnumwidth}{3em}% Default is 1.55em
+% \renewcommand{\cftchapfont}{\bfseries\raggedright}% Default is \bfseries
 %%%%%%%%%% Start TeXmacs macros
 \newcommand{\mathd}{\mathrm{d}}
 \newcommand{\tmname}[1]{\textsc{#1}}
@@ -40,8 +53,16 @@
     \lipsum[1]
 \end{abstract}
 
+\tableofcontents
+% \clearpage
+
 \chapter{Introduction}
 \lipsum[2-3]
+\section{Background}
+\subsection{Chip-scale quantum information processing}
+\subsection{Entangled photon sources for quantum communication and sensing}
+\section{Current problems}
+
 \chapter{Principal Theory}
 
 In chip scale quantum optical platforms, to confine the light in a sub-micron dimension, the mean how light propagate is different from the TEM mode or Gaussian mode in free space. Based on the conventional guided wave theory, the fundamental mode, which is mainly used in integrated optical applications, can be solved in some simple cases with some approximations. Furthermore, due to the broadband motivation in this study, it is essential to the dispersion into consideration, not only in the part of propagation but also the nonlinear progress where the photon pairs are generated.
@@ -50,7 +71,7 @@ In this chapter, the waveguide theory is roughly introduced and sequentially, mo
 
 \section{Guided modes}
 
-In an ideal optical waveguide, the core layer and the cladding layer are usually composed of two different materials, where the refractive index is larger in the core. As an analogue of optical fibers, only in the higher index regime can the light propagate, and meanwhile dissipate in a wavelength scale in the lower index regime.
+In an ideal optical waveguide, the core layer and the cladding layer are usually composed of two different materials, where the refractive index is larger in the core. As an analogue of optical fibers, only in the higher index region can the light propagate, and meanwhile dissipate in a wavelength scale in the lower index region.
 
 Usually, we assume the core and the cladding layer are made of nonmagnetic (magnetic permeability $\mu = \mu_0$) and dielectric material (conductivity $\sigma = 0$). Furthermore, we neglect the nonlinear response of the polarization of electric field ($\vb{P} \simeq \varepsilon_0 \chi \vb{E}$).
 
@@ -60,7 +81,7 @@ Since the waveguide in numerous research objects, is deposited or sputtered usin
   \beta \hat{\vb{z}}) (\vb{E_{\perp}} \nosymbol \cdot \nabla_{\perp} \ln
   n^2)
 \end{equation}
-where $\perp$ denotes the transverse component, $\nabla_{\perp}^2 = \nabla_x^2 + \nabla_y^2$. And $k, n, \beta$ are the wave vector in vacuum, refractive index and propagation constant, respectively. While, with the negligible film anisotripy, Eqn. \ref{eq:aniso} can be approximated into
+where $\perp$ denotes the transverse component, $\nabla_{\perp}^2 = \nabla_x^2 + \nabla_y^2$. And $k, n, \beta$ are the wave vector in vacuum, refractive index and propagation constant, respectively. While, with the negligible film anisotripy, \autoref{eq:aniso} can be approximated into
 \begin{equation}\label{eq:helm}
   (\nabla_{\perp}^2 + k^2 n^2 - \beta^2) \vb{E} = 0
 \end{equation}
@@ -71,7 +92,7 @@ Next, the boundary conditions determining the solution to Eqn. \ref{eq:helm}, ar
   \vb{\hat{n}} \cdot (\vb{E_a - E_b}) & = & 0 \\
   \vb{\hat{n}} \times (\vb{\vb{H_a} - H_{\vb{b}}}) & = & 0
 \end{eqnarray*}
-which is the continuity condition of both electric and magnetic field at all dielectric material interfaces. Here, $\vb{\hat{n}}$ is the normal direction at the material boundary and the subscript $a, b$ denote different regimes.
+which is the continuity condition of both electric and magnetic field at all dielectric material interfaces. Here, $\vb{\hat{n}}$ is the normal direction at the material boundary and the subscript $a, b$ denote different regions.
 
 In the case of channel waveguides, the index discontinuity from both vertical and horizontal sides can be decomposed into two sets of independent and complete conditions, i.e. the horizontal boundary condition and vertical boundary condition, with the discontinuity on the waveguide corners neglected. In other words, approximately the equation has two independent partiuclar solutions, which is the mathematical origin of \textit{ transverse electric} (TE) modes and \textit{transverse magnetic} (TM) modes.
 
@@ -103,8 +124,8 @@ In the case of channel waveguides, the index discontinuity from both vertical an
 \node at (-8.5,1) {$n_a$};
 \node at (-8.5,2.4) {$n_b$};
 \node at (-8.5,-0.4) {$n_b$};
-\node at (-3.4,2.4) {$\phi_1$};
-\node at (0.9,-0.4) {$\phi_2$};
+\node at (-3.4,2.4) {$\Delta\phi$};
+\node at (0.9,-0.4) {$\Delta\phi$};
 
 \draw (-3.8,2) arc [start angle=0, end angle=180, radius=0.2];
 \draw (-3.8+1.5,2) arc [start angle=0, end angle=180, radius=0.2];
@@ -113,30 +134,100 @@ In the case of channel waveguides, the index discontinuity from both vertical an
 \draw (-3.8+5.1,0) arc [start angle=180, end angle=360, radius=0.2];
 
 \end{tikzpicture}
-\caption{\textbf{Planar waveguide}. The upper}
-\label{fig:ch1-planar}
+\caption{\textbf{Planar waveguide}. The upper and bottom layer are clading and the middle is core layer. $\Delta \phi$ represents the Goos–H\"{a}nchen shift at the boundary.}
+\label{fig:planar}
 \end{figure}
 
-Hence, we can study the eigenequantion by selecting only one set of boundary condition, as part of \textit{the effective index method}. For example, in a planar waveguide shown in Fig. ,$\dv[2]{}{y}=0$\footnote{Since the planar waveguide is infinite at the $y$-direction , thus the solution is identical in arbitrary $xz$-plane, which means no gradient along $x$-axis.},
+Hence, we can study the eigenequantion by selecting only one set of boundary condition, as used in the \textit{the effective index method}. For example, in a planar waveguide shown in \autoref{fig:planar} ,$\dv[2]{}{y}=0$\footnote{Since the planar waveguide is infinite at the $y$-direction , thus the solution is identical in arbitrary $xz$-plane, which means no gradient along $x$-axis.},
 the TE mode features $E_x=0$ and consider only $y$-component, 
 \begin{equation}
     \dv[2]{E_y}{x} + (k^2 n^2 - \beta^2)E_y =0
 \end{equation}
-and $E_y$ is continous at $x=\pm d$, where $2 d$ is the thickness of core layer. By substituting this condition, 
+and $E_y$ is continous at $x=\pm d/2$, where $d$ is the thickness of core layer.
 
-\begin{equation}
+For the region $|x|>d/2$, the light evanesces at $x$-direction at rate $\kappa$ and in contrast, in the region of core layer, the light performs like stationary wave, denoting with $k_x$. By substituting these conditions, phase continuity is achieved between two interface
+
+\begin{equation}\label{eq:te-eq}
     2k_x d = m\pi + 2\arctan(\kappa/k_x)
 \end{equation}
+where $m$ is the index of stationary wave. The second term can be treated as the Goos-H\"{a}nchen phase shift. Overall, the waveguide modes characterize that the phase shall maintain itself with an $m\pi$ shift along with the shift at the boundaries.
+
+In the case of TM modes, the eigen equation is 
+\begin{equation}
+    2k_x d = m\pi + 2\arctan(\delta\kappa/k_x)
+\end{equation}
+where $\delta=n_a/n_b$ is the index ratio and only differs from \autoref{eq:te-eq} with this parameter. conclusively, the less is $\delta$ parameter, the propagation constant of TE and TM modes are closer.
 
 \section{Ring resonators}
 
-The working principle of ring resonator is derived completely in Ref. \cite{Bogaerts2012}. Like Fabry-P\'{e}rot etalon,  based on the coupling mode theory, the transmission of a all-pass type ring cavity takes the form
-\begin{equation}
-    T_n = \frac{I_\mathrm{pass}}{I_\mathrm{input}} = \frac{a^2 - 2ar \cos \phi + r^2}{1 - 2ar \cos \phi + a^2 r^2}
+\begin{figure}
+    \centering
+	\includesvg{mrr_illus}
+	\caption{\textbf{An all-pass type ring resonator.} The transmitted spectrum is filtered periodically by the ring waveguide, in the case satisfying resonance condition.}
+    \label{fig:mrr-illus}
+\end{figure}
+
+The working principle of ring resonator can be derived completely \cite{Bogaerts2012} as an analogue to Fabry-P\'{e}rot etalon, based on the coupling mode theory. In the model illustrated in \autoref{fig:mrr-illus}, the self-coupling coefficient $\tau$ and the cross-coupling coefficient $\kappa$ can be evaluated analytically or using numerical simulation. Assuming the coupling only occur at the very close area, $\tau,\kappa$ are the power splitting ratios of the coupler and satify $\tau^2 + \kappa^2 =1 $ if the coupling section is lossless. $a$ is the single-pass amplitude transmission, including both propagation loss in the ring and loss in the couplers.
+
+The transmission rate of a all-pass type ring cavity takes the form of
+\begin{equation}\label{eq:trans_phi}
+    T = \frac{I_\mathrm{pass}}{I_\mathrm{input}} = \frac{a^2 - 2a\tau \cos \phi + \tau^2}{1 - 2ar \cos \phi + a^2 \tau^2}
 \end{equation}
-Here $a$ is single-pass amplitude transmission, including the propagation loss in the ring and coupling loss between the bus waveguide and the cavity, $r$ is the self-coupling coefficient, denoting the transmission before and after coupling, $\phi=\beta L$ is the phase shift in a single trip. Given the specific device, the 
+Here $\phi=\beta L$ is the phase shift in a single round trip. The transmission rate is plotted as a function of phase $phi$ 
+\begin{figure}
+    \centering
+    \includesvg[scale=0.6]{mrr_spec}
+    \caption{\textbf{The transmission spectrum of a ring resonator.} }
+    \label{fig:mrr_spec}
+\end{figure}
 
-\section{Nonlinear optics}
+In \autoref{fig:mrr_spec}, first, the resonance can be achieved as $\phi=2 \mu \pi$ leads to the minima of $T_n$, shown in. Hence
+\begin{equation}
+    \beta L =2 \mu \pi
+\end{equation}
+is the resonance condition. 
+
+Meanwhile, $a=\tau$, where the input power can compensate the loss of one round trip propagation.
+
+In , we can see the spectral characteristics is periodical. Th extinction ratio of absorption peak is defined by $a,\tau$. From \autoref{eq:trans_phi}, we can derive the full width at half maximum (FWHM) of the resonance spectrum
+\begin{equation}\label{eq:fwhm_phi}
+    \delta\phi = \frac{2(1- a \tau)}{\sqrt{\tau a}}
+    % \lambda_{\mathrm{res}}^2
+\end{equation}
+thus the half width of wavelength and frequency are
+
+\begin{equation}
+    \delta \lambda =  \frac{2(1- a \tau)}{\sqrt{\tau a}}
+\end{equation}
+
+And the finess $F$ of the resonator is defined as
+\begin{equation}
+    F \equiv \frac{2\pi}{\delta\phi} = 
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Degenerate four wave mixing}
 
 In addition, in the case of nonlinear photonics, the nonlinear response of the
 electric field is inherent and essential, hence we also derive the propagation
@@ -148,6 +239,15 @@ In addition, in the case of nonlinear photonics, the nonlinear response of the
 electric field is inherent and essential, hence we also derive the propagation
 by treating the nonlinear term as an additive source.
 
+
+\section{Integrated nonlinear device}
+
+\chapter{Phase match condition for spontaneous four wave mixing in a ring cavity }
+\section{Chromatic dispersion}
+
+\section{Broadband phase matching condition}
+\section{Dispersion compensation and engineering using slot structure}
+\section{Effects of mode crossing}
 \section{Four wave mixing}
 
 

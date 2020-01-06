@@ -3,7 +3,7 @@
 
 % Packages
 \RequirePackage{lipsum}
-\RequirePackage{xcolor,graphicx,tikz}
+\RequirePackage{xcolor,graphicx,tikz,pgfplots}
 
 \RequirePackage{physics}
 \RequirePackage[version=4]{mhchem} % chemical formula, \ce{H2O}
@@ -56,7 +56,7 @@
 \end{titlepage}   
 }
 
-\RequirePackage[final]{hyperref}
+\RequirePackage[final,breaklinks=true]{hyperref}
 % \RequirePackage[nomarkers]{endfloat}
 
 % abstract page same as japanese version
@@ -71,18 +71,19 @@
 }
 
 % custom contents 
-\renewcommand{\tableofcontents}{%
-\bgroup
-\def\thepage{\roman{page}}%
-\lineskip = \normallineskip
-\@restonecolfalse
-\if@twocolumn\@restonecoltrue\onecolumn\fi
-\chapter*{\contentsname\@mkboth{\contentsname}{\contentsname}}%
-\@starttoc{toc}\if@restonecol\twocolumn\fi
-\newpage
-\egroup
-\setcounter{page}{1}
-}
+% \renewcommand{\tableofcontents}{%
+% \bgroup
+% \def\thepage{\roman{page}}%
+% \lineskip = \normallineskip
+% \@restonecolfalse
+% \if@twocolumn\@restonecoltrue\onecolumn\fi
+% \chapter*{\contentsname\@mkboth{\contentsname}{\contentsname}}%
+% \@starttoc{toc}
+% \if@restonecol\twocolumn\fi
+% \newpage
+% \egroup
+% \setcounter{page}{1}
+% }
 
 % ackpage
 \newenvironment{acknowledgements}{%
