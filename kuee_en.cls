@@ -57,6 +57,8 @@
 }
 
 \RequirePackage[final,breaklinks=true]{hyperref}
+\renewcommand*{\sectionautorefname}{Section}
+
 % \RequirePackage[nomarkers]{endfloat}
 
 % abstract page same as japanese version

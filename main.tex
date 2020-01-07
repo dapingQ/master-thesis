@@ -4,6 +4,7 @@
 
 \usepackage[nomarkers]{endfloat}
 \usepackage{cleveref}
+
 % \usepackage[final]{hyperref}
 
 \usepackage{xcolor,graphicx}
@@ -20,12 +21,9 @@
 
 \usepackage[inkscape=on]{svg}
 \svgpath{{imgs/svg/}}
-%\usepackage[on]{svg-extract}
+% \usepackage[on]{svg-extract}
 \svgsetup{clean=tru,inkscapedpi=200}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{.6\columnwidth}
-	\import{./svg-inkscape/}{#1_svg-tex.pdf_tex}
-}
+
 
 % \renewcommand{\cftsetpnumwidth}{3em}% Default is 1.55em
 % \renewcommand{\cftchapfont}{\bfseries\raggedright}% Default is \bfseries
@@ -139,7 +137,7 @@ In the case of channel waveguides, the index discontinuity from both vertical an
 \label{fig:planar}
 \end{figure}
 
-Hence, we can study the eigenequantion by selecting only one set of boundary condition, as used in the \textit{the effective index method}. For example, in a planar waveguide shown in \autoref{fig:planar} ,$\dv[2]{}{y}=0$\footnote{Since the planar waveguide is infinite at the $y$-direction , thus the solution is identical in arbitrary $xz$-plane, which means no gradient along $x$-axis.},
+Hence, we can study the eigenequantion by selecting only one set of boundary condition, as used in the \textit{the effective index method}. For example, in a planar waveguide shown in \autoref{fig:planar} ,$\dv*[2]{}{y}=0$\footnote{Since the planar waveguide is infinite at the $y$-direction , thus the solution is identical in arbitrary $xz$-plane, which means no gradient along $x$-axis.},
 the TE mode features $E_x=0$ and consider only $y$-component, 
 \begin{equation}
     \dv[2]{E_y}{x} + (k^2 n^2 - \beta^2)E_y =0
@@ -197,6 +195,8 @@ The transmission rate of a all-pass type ring cavity takes the form of
 \end{equation}
 where $\phi=\beta L$ is the phase shift in a single round trip. 
 
+\subsection{Coupling condition}
+
 By plotting the function in \autoref{fig:mrr_spec}, we can see, the extinction ratio of absorption peak is defined by the self-coupling coefficient $\tau$ and the single-pass amplitude transmission $a$ due to device geometric differences, like the gap between the bus waveguide and the ring cavity. Namely, $a$ and $\tau$ both determine the coupling condition, which can be categorized in three cases
 \begin{itemize}
     \item $a>\tau$ \textbf{weak coupling.} The loss inside the ring is larger than the power coupled from bus waveguides.
@@ -206,6 +206,7 @@ By plotting the function in \autoref{fig:mrr_spec}, we can see, the extinction r
 
 Previous work \cite{Yusuke2017} proposed a method to evaluate the coupling condition above using the experimentally measured device transmission. Considering the loss in the coupler, bent segment of ring and higher mode perturbance, usually the critical coupling varies from modes and the cross section of waveguides \cite{Pfeiffer2017}.
 
+\subsection{Spectrum characteristics}
 Meanwhile, the minimum of transmission rate $T$ can be achieved periodically as $\phi=2 \mu \pi$, which defines the resonance of ring resonators. Therefore, the resonance condition is derived as
 \begin{equation}
     \beta L =2 \mu \pi
@@ -253,31 +254,56 @@ Usually, the \textit{Q}-factor can be decomposed into two parts by formula $Q^{-
 
 \section{Degenerate four wave mixing}
 
-Although the nonlinear effect in the waveguides is neglected in \autoref{sec:guide}, for numerous materials, the nonlinear responses of external electric fields become significant at mW level, which is easy to occur using mode lasers. These phenomena are critical to permit the frequency conversion not only in the bulky optics, but also in the sub-micron scale.
+Although the nonlinear effect is neglected in the derivation of waveguide modes in \autoref{sec:guide}, 
+for numerous materials, the nonlinear response of electric field is significant even at mW level, which is easy to occur with assistance of modern lasers. The origin of nonlinear optic phenomena is similar to the movement of the object in a potential field, such as the ball-spring model. In the nonlinear material, the atoms or molecules are driven by the external electric field, due to the around chemical bonds or molecular orientation, the displacement of atoms or molecules perform nonlinear dependence on the strength of field. In real-world materials, interaction coming arising from various frequency leads to the addition or subtraction of these frequency components. This explains the frequency conversion nature in nonlinear optics.
+
+% these phenomena are widely used in quantum optics, such as spontaneous parametric down conversion. And
+It is worth mentioning that not only in the bulk crystals, but also in the sub-micron scale \cite{Leuthold2010}, the nonlinear response is still efficient, even over a single-layer two-dimensional material.
 
 % In this section, we prefer to introduce both second-order and third-order optical nonlinearity. 
-In a isotropic nonlinear medium, assuming an instantaneous dielectric response, the relation between the polarization $\vb{P}$ and the electric field $E$ is expressed by a power series in the electric field
+Here, a brief theoretical derivation is elucidated and in the following part, degenerate four wave mixing is emphasized. In an isotropic nonlinear medium, assuming only instantaneous dielectric response, the relation between the polarization $\vb{P}$ and the electric field $E$ is expressed by a power series in the electric field
 \begin{equation}\label{eq:nlp}
     \vb{P} = \varepsilon_0 \large (\chi^{(1)}\vb{E} + \chi^{(2)}\vb{E}^2 + \chi^{(3)}\vb{E}^3)
 \end{equation}
 
-Note in \autoref{eq:nlp}, the susceptibilities $\chi^{(2)}$ and $\chi^{(3)}$ are  second-order and third-order tensors, corresponding to the tensor product $\vb{E}^2$ and $\vb{E}^3$.
+Note in \autoref{eq:nlp}, the nonlinear susceptibilities $\chi^{(2)}$ and $\chi^{(3)}$ are second-rank and third-rank tensors, corresponding to the tensor product with $\vb{E}^2$ and $\vb{E}^3$. The higher order response is neglected and sequentially, only $\chi^{(2)}$ processes and $\chi^{(3)}$ processes are to be introduced.
 
 \textbf{$\chi^{(2)}$ processes} In centrosymmetric crystals such as silicon, the second-order susceptibility term is absent. However, in other materials like lithium niobate (\ce{LiNbO3}) and aluminium nitride (AlN), the second-order nonlinearity are essential to realize electro-optic modulation and second harmonic generation.
 
-\textbf{$\chi^{(3)}$ processes} Silicon and silicon nitride are both cubic crystal. Thus, the third-order nonlineariry is important to exhibit a wide variety of phenomena. Consider three frequency components of $\vb{E}^3$, using the complex expression of electric field
+\textbf{$\chi^{(3)}$ processes} Silicon and silicon nitride are both cubic crystal. Due to the third order dependence, another factor equivalent to the optical intensity is involved, the $\chi^{(3)}$ process is also named as intensity-dependent effect or Kerr effect.
+
+Consider three frequency components of $\vb{E}^3$, using the complex expression of electric field
 \begin{equation}
-    \vb{E}(\vb{r}, t) = \sum_{k=1}^3 \vb{E}_{\omega_k}(\vb{r}, t) = \frac{1}{2} \sum_{k=1}^3 \large ( \vb{E}_{\omega_k}(\vb{r})e^{i\omega_k t} + c.c.)
+    \vb{E}(\vb{r}, t) = \sum_{k=1}^3 \vb{E}_{\omega_k}(\vb{r}, t) = \frac{1}{2} \sum_{k=1}^3 \large ( \vb{E}_{\omega_k}\large(\vb{r})e^{i\omega_k t} + c.c.)
 \end{equation}
 
 Substituting into third-order polarization
 
-\begin{equation}
-    \vb{P}^{(3)} = 
-\end{equation}
+\begin{align}
+  P^{(3)} & = \frac{3}{4} \varepsilon_0 \chi^{(3)} \left[| E_{\omega_1} |^2 E_{\omega_1} + \cdots\right] & \mathrm{SPM} \\
+  & +  \frac{6}{4} \varepsilon_0 \chi^{(3)} \left[(| E_{\omega_2} |^2 + |E_{\omega_3} |^2) E_{\omega_1} + \cdots \right] & \mathrm{XPM} \\
+  & +  \frac{1}{4} \varepsilon_0 \chi^{(3)} \left[(E_{\omega_1}^3 e^{i \omega_1 t} + c.c.) + \cdots\right] & \mathrm{THG} \\
+  & +  \frac{3}{4} \varepsilon_0 \chi^{(3)} \left[ \frac{1}{2} (E_{\omega_1}^2 E_{\omega_2} e^{i (2 \omega_1 + \omega_2) t} + c.c.) + \cdots \right] & \mathrm{FWM} \\
+  & +  \frac{3}{4} \varepsilon_0 \chi^{(3)} \left[ \frac{1}{2} (E_{\omega_1}^2 E^{\ast}_{\omega_2} e^{i (2 \omega_1 - \omega_2) t} + c.c.) + \cdots \right] & \mathrm{FWM} \\ \label{eq:def-dfwm}
+  & +  \frac{6}{4} \varepsilon_0 \chi^{(3)} \left[ \frac{1}{2} (E_{\omega_1} E_{\omega_2} E_{\omega_3} e^{i (\omega_1 + \omega_2 + \omega_3) t} + c.c.) + \cdots \right] & \mathrm{FWM} \\
+  & +  \frac{6}{4} \varepsilon_0 \chi^{(3)} \left[ \frac{1}{2} (E_{\omega_1} E_{\omega_2} E^{\ast}_{\omega_3} e^{i (\omega_1 + \omega_2 - \omega_3) t} + c.c.) + \cdots \right] & \mathrm{FWM} \label{eq:def-ndfwm}
+\end{align}
+
+In above equations, $\cdots$ stands for all possible permutation terms contributed by frequencies $\omega_1, \omega_2, \omega_3$. The abbreviation on the right side are 
+
+\begin{itemize}
+    \item SPM, self-phase modulation
+    \item XPM, cross-phase modulation
+    \item THG, third-harmonic generation
+    \item FWM, four wave mixing 
+    % \item DFWM, degenerate four wave mixing
+\end{itemize}
+
+Another factor to mention is that the coefficient in each $\chi^{(3)}$ process arises from the combination of three frequency components. For instance, on the numerator \autoref{eq:def-dfwm} has the factor 3 but \autoref{eq:def-ndfwm} has the factor 6. This suggest that the interaction of two external field is mathematically two stronger than the single external field case, which is also called as \textit{degenerate four wave mixing} (DFWM).
 
 
 \section{Integrated nonlinear device}
+
 
 \chapter{Phase match condition for spontaneous four wave mixing in a ring cavity }
 \section{Chromatic dispersion}
