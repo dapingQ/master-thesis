@@ -2,8 +2,8 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[final]{kuee_en}
 
-\usepackage[nomarkers]{endfloat}
-\renewcommand{\efloatseparator}{\mbox{}}
+% \usepackage[nomarkers]{endfloat}
+% \renewcommand{\efloatseparator}{\mbox{}}
 
 % \usepackage{cleveref}
 
@@ -186,7 +186,7 @@ In the model illustrated in \autoref{fig:mrr-illus}, the self-coupling coefficie
 
 \begin{figure}
     \centering
-    \includesvg[scale=0.6]{mrr_spec}
+    \includesvg{mrr-cp}
     \caption{\textbf{The transmission spectrum of a ring resonator.} }
     \label{fig:mrr_spec}
 \end{figure}
@@ -385,7 +385,7 @@ where $D_1 / 2 \pi = 1 / v_g L$ is the \tmtextit{free spectrum range}, and
 \bibliographystyle{abbrv}
 
 \clearpage % ensure all floats are processed
-\processdelayedfloats
+% \processdelayedfloats
 \clearpage
 
 \appendix
