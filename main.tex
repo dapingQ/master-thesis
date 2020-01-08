@@ -1,4 +1,4 @@
-%!TEX TS-program = latex
+%!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[final]{kuee_en}
 
@@ -23,12 +23,18 @@
 
 \usepackage[inkscape=on]{svg}
 \svgpath{{imgs/svg/}}
-% \usepackage[on]{svg-extract}
-\svgsetup{clean=true,inkscapedpi=400}
-
+\usepackage[off]{svg-extract}
+\svgsetup{%
+	extractpath=./imgs/svg-extract/,
+	inkscapepath=./imgs/svg-inkscape, 
+	clean=true,
+	convertformat={png},
+	convertdpi={png=600},%
+	convertdpi=300}
 
 % \renewcommand{\cftsetpnumwidth}{3em}% Default is 1.55em
 % \renewcommand{\cftchapfont}{\bfseries\raggedright}% Default is \bfseries
+
 %%%%%%%%%% Start TeXmacs macros
 \newcommand{\mathd}{\mathrm{d}}
 \newcommand{\tmname}[1]{\textsc{#1}}
