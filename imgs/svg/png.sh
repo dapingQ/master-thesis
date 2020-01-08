@@ -1,0 +1,1 @@
+for x in *.svg;do inkscape "$x" --export-png="../png/`echo $x | sed -e 's/svg/png/g'`"; done
