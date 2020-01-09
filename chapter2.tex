@@ -215,11 +215,13 @@ Here, a brief theoretical derivation is elucidated and in the following part, de
 
 Note in \autoref{eq:nlp}, the nonlinear susceptibilities $\chi^{(2)}$ and $\chi^{(3)}$ are second-rank and third-rank tensors, corresponding to the tensor product with $\vb{E}^2$ and $\vb{E}^3$. The higher order response is neglected and sequentially, only $\chi^{(2)}$ processes and $\chi^{(3)}$ processes are to be introduced.
 
-\textbf{$\chi^{(2)}$ processes} 
+\bigskip
+\noindent\textbf{$\chi^{(2)}$ processes} 
 
 In centrosymmetric crystals such as silicon, the second-order susceptibility term is absent. However, in other materials like lithium niobate (\ce{LiNbO3}) and aluminium nitride (AlN), the second-order nonlinearity are essential to realize electro-optic modulation and second harmonic generation.
 
-\textbf{$\chi^{(3)}$ processes} 
+\bigskip
+\noindent\textbf{$\chi^{(3)}$ processes} 
 
 Silicon and silicon nitride are both cubic crystal. Due to the third-order dependence, another factor equivalent to the optical intensity is involved, the $\chi^{(3)}$ process is also named as intensity-dependent effect or Kerr effect.
 
@@ -244,45 +246,47 @@ Substituting into third-order term in \autoref{eq:nlp} and arranging with the sa
 
 In above equations, $\cdots$ stands for all possible permutation terms contributed by frequencies $\omega_1, \omega_2, \omega_3$. The abbreviation on the right side represent for 
 
-\begin{itemize}
-    \item \textbf{SPM, self-phase modulation}
-    
-    SPM adds an intensity-dependent term except the linear polarization, leading to a broadening of the pulse spectrum.
-    
-    Note the $\chi^{(3)}$ is complex, thus the imaginary part may contribute to another intensity-dependent absorption mechanics, which is usually depicted in the \textit{two-photon absorption} (TPA). The free carriers excited by TPA in further change the temporally both the absorption coefficient and the refractive index of material.
-    \begin{equation}\label{eq:spm-index}
-        n = n_0 + n_2 I + i \frac{\lambda}{4\pi}(\alpha_0 + \alpha_2 I)
-    \end{equation}
-    where the $I$ is the intensity, $n_2$ is the Kerr coefficient and $\alpha_0, \alpha_2$ are related with TPA-induced free carrier absorption (FCA) and free carrier index (FCI) change, both interrelated with third-order susceptibility
-    \begin{align}
-        n_2     &= \frac{1}{cn_0^2\varepsilon_0} \frac{3}{4} \Re{\chi^{(3)}} \\
-        \alpha_2&= \frac{-\omega}{c^2n_0^2\varepsilon_0} \frac{3}{2} \Im{\chi^{(3)}}
-    \end{align}
-    A figure of merit (FOM) is often used to compare the magnitude of Kerr coefficient $n_2$ with the strength of the TPA coefficient $\alpha_2$
-    \begin{equation}
-        \mathrm{FOM} = \frac{1}{\lambda} \frac{n_2}{\alpha_2}
-    \end{equation}
-    
-    \item \textbf{XPM, cross-phase modulation} 
-    
-    XPM can be seen the first signal index influenced by a second signal. And the coeffiecient of XPM is twice as strong as the SPM coefficient.
-    \item \textbf{THG, third-harmonic generation} 
-    
-    Like SHG, THG generated a new frequency with is one-third of input frequency. 
-    \item \textbf{FWM, four wave mixing} 
-    
-    % \item DFWM, degenerate four wave mixing
+\bigskip
+\noindent\textbf{SPM, self-phase modulation}
+
+SPM adds an intensity-dependent term except the linear polarization, leading to a broadening of the pulse spectrum.
+
+Note the $\chi^{(3)}$ is complex, thus the imaginary part may contribute to another intensity-dependent absorption mechanics, which is usually depicted in the \textit{two-photon absorption} (TPA). The free carriers excited by TPA in further change the temporally both the absorption coefficient and the refractive index of material.
+\begin{equation}\label{eq:spm-index}
+    n = n_0 + n_2 I + i \frac{\lambda}{4\pi}(\alpha_0 + \alpha_2 I)
+\end{equation}
+where the $I$ is the intensity, $n_2$ is the Kerr coefficient and $\alpha_0, \alpha_2$ are related with TPA-induced free carrier absorption (FCA) and free carrier index (FCI) change, both interrelated with third-order susceptibility
+\begin{align}
+    n_2     &= \frac{1}{cn_0^2\varepsilon_0} \frac{3}{4} \Re{\chi^{(3)}} \\
+    \alpha_2&= \frac{-\omega}{c^2n_0^2\varepsilon_0} \frac{3}{2} \Im{\chi^{(3)}}
+\end{align}
+A figure of merit (FOM) is often used to compare the magnitude of Kerr coefficient $n_2$ with the strength of the TPA coefficient $\alpha_2$
+\begin{equation}
+    \mathrm{FOM} = \frac{1}{\lambda} \frac{n_2}{\alpha_2}
+\end{equation}
+
+\bigskip
+\noindent\textbf{XPM, cross-phase modulation} 
+
+XPM can be seen the first signal index influenced by a second signal. And the coeffiecient of XPM is twice as strong as the SPM coefficient.
+
+\bigskip
+\noindent\textbf{THG, third-harmonic generation} 
+
+Like SHG, THG generated a new frequency with is one-third of input frequency. 
+
+\bigskip
+\noindent\textbf{FWM, four wave mixing} 
+
+% \item DFWM, degenerate four wave mixing
 % Another factor to mention is that the coefficient in each $\chi^{(3)}$ process arises from the combination of three frequency components. For instance, on the numerator \autoref{eq:def-dfwm} has the factor 3 but \autoref{eq:def-ndfwm} has the factor 6. 
 In FWM process, more than three frequencies are involved. Nevertheless, \autoref{eq:fwm1} and \autoref{eq:fwm2} contain two identical wave, sometime calles as degenerate four wave mixing (DFWM). And \autoref{eq:fwm3} and \autoref{eq:fwm4} is a truly four wave process. Similar to the relation between SPM and XPM, the non-degenerate FWM is naturally twice stronger.
 
 Traditionally, following the terminology in laser field, in DFWM, the $\omega_1$ square term \autoref{eq:fwm2} is labeled as pump frequency, and another two frequencies are referred to signal and idler frequency.
-\end{itemize}
 
 Besides, the imaginary part of third-order susceptibility incorporate other four-wave absorption mechanics, such as \textit{stimulated Brillouin scatter} (SBS) and \textit{stimulated Raman scattering} (SRS), which originate from acoustic waves in crystals and vibrating molecules.
 
 Finally, it worth mentioning that in all THG and FWM processes, different from SPM and XPM processes, phase matching condition is required due to the complex exponential factors. In this case, the phase mismatch can change the polarization rapidly and leads to periodical variation in these parametric processes.
-
-
 
 \section{Integrated nonlinear device}
 
