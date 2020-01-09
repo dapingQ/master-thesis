@@ -3,17 +3,16 @@
 %!TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 \documentclass[final]{kuee_en}
 
+% citation
 \usepackage[final,breaklinks=true]{hyperref}
 \renewcommand*{\sectionautorefname}{Section}
+% \usepackage{cleveref}
 
+% put all the figures end
 \usepackage[nomarkers,
     % disable,
     ]{endfloat}
 \renewcommand{\efloatseparator}{\mbox{}}
-
-% \usepackage{cleveref}
-
-% \usepackage[final]{hyperref}
 
 \usepackage{xcolor,graphicx}
 \usepackage{subcaption}
@@ -25,8 +24,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{tgbonum}
 \usepackage{fancyhdr}
-% \usepackage{tocloft}
 
+% svg insert
 \usepackage[inkscape=on]{svg}
 \svgpath{{imgs/svg/}}
 \usepackage[off]{svg-extract}
@@ -38,8 +37,12 @@
 	convertdpi={png=600},%
 	convertdpi=300}
 
-% \renewcommand{\cftsetpnumwidth}{3em}% Default is 1.55em
-% \renewcommand{\cftchapfont}{\bfseries\raggedright}% Default is \bfseries
+% using modern biblatex
+\usepackage[sorting=none,
+    bibencoding=utf8,
+    bibstyle=nature,
+    doi=false,isbn=false,url=false]{biblatex}
+\bibliography{library}
 
 %%%%%%%%%% Start TeXmacs macros
 \newcommand{\mathd}{\mathrm{d}}
@@ -116,11 +119,14 @@ where $D_1 / 2 \pi = 1 / v_g L$ is the \tmtextit{free spectrum range}, and
   \tmop{as} & = & a
 \end{eqnarray*}
 
-\bibliography{library}
-\bibliographystyle{abbrv}
+% \bibliography{library}
+% \bibliographystyle{kueethesis}
+% \bibliographystyle{unsrt}
+
+\printbibliography[title=References]
 
 \clearpage % ensure all floats are processed
-% \processdelayedfloats
+\processdelayedfloats
 \clearpage
 
 \appendix

@@ -180,37 +180,37 @@ FUNCTION {format.names}
   s num.names$ 'numnames :=
   numnames 'namesleft :=
     { namesleft #0 > }
-    { s nameptr "{ff}{ll}" format.name$ is.kanji.str$
-        { s nameptr "{ff}{ll}" format.name$ 't := }
-        { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't := }
-      if$
-      nameptr #1 >
-        { namesleft #1 >
-            { ", " * t * }
-            { t "others" =
-                { s is.kanji.str$
-                        { "ほか" * }
-                        { ", et~al." * }
-                  if$
-                }
-                { s is.kanji.str$
-                    { ", " * t * }
-                    { numnames #2 =
-                        { " and " * t * }
-                        { ", and " * t * }
-                      if$
-                    }
-                  if$
-                }
-              if$
-            }
-          if$
-        }
-        't
-      if$
-      nameptr #1 + 'nameptr :=
-      namesleft #1 - 'namesleft :=
-    }
+%    { s nameptr "{ff}{ll}" format.name$ is.kanji.str$
+%        { s nameptr "{ff}{ll}" format.name$ 't := }
+%        { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't := }
+%      if$
+%      nameptr #1 >
+%        { namesleft #1 >
+%            { ", " * t * }
+%            { t "others" =
+%                { s is.kanji.str$
+%                        { "ほか" * }
+%                        { ", et~al." * }
+%                  if$
+%                }
+%                { s is.kanji.str$
+%                    { ", " * t * }
+%                    { numnames #2 =
+%                        { " and " * t * }
+%                        { ", and " * t * }
+%                      if$
+%                    }
+%                  if$
+%                }
+%              if$
+%            }
+%          if$
+%        }
+%        't
+%      if$
+%      nameptr #1 + 'nameptr :=
+%      namesleft #1 - 'namesleft :=
+%    }
   while$
 }
 FUNCTION {format.authors}
