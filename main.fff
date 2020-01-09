@@ -1,0 +1,64 @@
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.7,>=stealth]
+\draw (-9,0) -- (6,0) (-9,2) -- (6,2);
+% \draw [->] (-9,1) -- (6,1);
+\foreach \x in {0,1.5}{
+  \draw [thick, ->] (-8+\x,0) -- (-6+\x,1);
+  \draw [thick,->] (-6+\x,1) -- (-4+\x,2) -- (-2+\x,1);
+  \draw [thick,->] (-2+\x,1) -- (0+\x,0) -- (2+\x,1);
+  \draw [thick,-] (2+\x,1) -- (4+\x,2);
+}
+\foreach \x in {-1,0,1,2,3,4}
+\draw [dashed] (-6.5+0.6*\x,0) -- (-7.5+0.6*\x,2);
+\foreach \x in {0,1,2,3,4}
+\draw [dashed] (2.4+0.6*\x,0) -- (1.4+0.6*\x,2);
+
+% \draw [<->] (-9,1.5) --(-9,0.7) -- (-7.4,0.7);
+% \draw [->] (-9,0.7) -- (-7.4,1.5);
+
+% \node at (-8.6,1.4) {$\tiny{k_i}$};
+% \node at (-8.2,0.4) {$\tiny{\beta}$};
+\node at (0.5,1) {$n_c k_0$};
+
+\draw [<->] (5.7,0) -- (5.7,2);
+\node at (5.3,1) {$2d$};
+\node at (-8.5,1) {$n_a$};
+\node at (-8.5,2.4) {$n_b$};
+\node at (-8.5,-0.4) {$n_b$};
+\node at (-3.4,2.4) {$\Delta\phi$};
+\node at (0.9,-0.4) {$\Delta\phi$};
+
+\draw (-3.8,2) arc [start angle=0, end angle=180, radius=0.2];
+\draw (-3.8+1.5,2) arc [start angle=0, end angle=180, radius=0.2];
+
+\draw (-3.8+3.6,0) arc [start angle=180, end angle=360, radius=0.2];
+\draw (-3.8+5.1,0) arc [start angle=180, end angle=360, radius=0.2];
+\end{tikzpicture}
+\caption{\textbf{Planar waveguide}. The upper and bottom layer are cladding and the middle is core layer. $\Delta \phi$ represents the Goos-H\"{a}nchen shift at the boundary.}
+\label{fig:planar}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+    \centering
+\includesvg{mrr_illus}
+\caption{\textbf{An all-pass type ring resonator.} The transmitted spectrum is filtered periodically by the ring waveguide, in the case satisfying resonance condition.}
+    \label{fig:mrr-illus}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+    \centering
+    \includesvg{mrr_cp}
+    \caption{\textbf{The transmission spectrum of a ring resonator.} }
+    \label{fig:mrr_spec}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+    \centering
+    \includesvg{mrr_fsr_illus}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}

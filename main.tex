@@ -1,5 +1,6 @@
 %!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
+%!TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 \documentclass[final]{kuee_en}
 
 \usepackage[nomarkers]{endfloat}
@@ -23,7 +24,7 @@
 
 \usepackage[inkscape=on]{svg}
 \svgpath{{imgs/svg/}}
-\usepackage[off]{svg-extract}
+\usepackage[on]{svg-extract}
 \svgsetup{%
 	extractpath=./imgs/svg-extract/,
 	inkscapepath=./imgs/svg-inkscape, 
@@ -197,7 +198,7 @@ In the model illustrated in \autoref{fig:mrr-illus}, the self-coupling coefficie
 
 \begin{figure}
     \centering
-    \includesvg{mrr-cp}
+    \includesvg{mrr_cp}
     \caption{\textbf{The transmission spectrum of a ring resonator.} }
     \label{fig:mrr_spec}
 \end{figure}
