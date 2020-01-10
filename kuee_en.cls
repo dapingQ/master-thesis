@@ -89,7 +89,6 @@
 }{%
 }
 
-\renewcommand{\bibname}{References}
-
+% \renewcommand{\bibname}{References}
 
 \endinput

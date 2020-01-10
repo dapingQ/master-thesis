@@ -2,10 +2,11 @@
 %!TEX encoding = UTF-8 Unicode
 %!TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 \documentclass[final]{kuee_en}
-
+\usepackage[titletoc]{appendix}
 % citation
 \usepackage[final,breaklinks=true]{hyperref}
 \renewcommand*{\sectionautorefname}{Section}
+\renewcommand*{\chapterautorefname}{Chapter}
 % \usepackage{cleveref}
 
 % put all the figures end
@@ -77,59 +78,24 @@
 
 \input{chapter1.tex}
 \input{chapter2.tex}
+\input{chapter3.tex}
 
-
-\chapter{Phase match condition for spontaneous four wave mixing in a ring cavity }
-\section{Chromatic dispersion}
-
-\section{Broadband phase matching condition}
-\section{Dispersion compensation and engineering using slot structure}
-\section{Effects of mode crossing}
-\section{Four wave mixing}
-
-
-Assume in a ring resonator, to satisfy both energy conservation and momentum
-conservation,
-\begin{eqnarray*}
-  \beta_i + \beta_s & = & 2 \beta_p\\
-  \omega_i + \omega_s & = & 2 \omega_p
-\end{eqnarray*}
-meanwhile, $\beta = m \frac{2 \pi}{L}$, and $L$ is the length of the
-resonator. Thus,
-
-{\tmname{\begin{equation}
-  m_i + m_s = 2 m_p
-\end{equation}}}
-
-Hence, \tmtextit{the momenmtum conservation agrees with mode numder
-equidistant.} Thus, we choose the frequency domain to estimate the phase
-mismatch. Expand the frequency into Taylor seires at $\omega_0$ to the
-propagation constant $\beta$,
-\begin{eqnarray}
-  \omega_{\mu} & = & \omega_0 + \frac{\mathd \omega}{\mathd \beta}
-  (\beta_{\mu} - \beta_0) + \frac{1}{2}  \frac{\mathd^2 \omega}{\mathd
-  \beta^2} (\beta_{\mu} - \beta_0)^2 + \cdots \\
-  & = & \omega_0 + \frac{\mathd \omega}{\mathd \beta} \frac{2 \pi}{L} \mu +
-  \frac{\mathd^2 \omega}{\mathd \beta^2} \left( \frac{2 \pi}{L} \mu \right)^2
-  + \cdots \nonumber\\
-  & = & \omega_0 + D_1 \mu + D_2 \mu^2 + D_3 \mu^3 + \cdots \nonumber
-\end{eqnarray}
-where $D_1 / 2 \pi = 1 / v_g L$ is the \tmtextit{free spectrum range}, and
-\begin{eqnarray*}
-  \tmop{as} & = & a
-\end{eqnarray*}
+\begin{acknowledgements}
+\lipsum[2-4]
+\end{acknowledgements}
 
 % \bibliography{library}
 % \bibliographystyle{kueethesis}
 % \bibliographystyle{unsrt}
-
-\printbibliography[title=References]
+\printbibliography[title=References,heading=bibintoc]
 
 \clearpage % ensure all floats are processed
 \processdelayedfloats
 \clearpage
 
-\appendix
+\begin{appendices}
+\chapter{Supplementary}
+\end{appendices}
 
-\chapter{Supple}
+
 \end{document}
