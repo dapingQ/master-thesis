@@ -62,3 +62,9 @@
     \caption{Caption}
     \label{fig:my_label}
 \end{figure}
+\efloatseparator
+ 
+\begin{figure}
+    \includesvg{tpa}
+    \caption{caption}\label{fig:energy-level}
+\end{figure}
