@@ -1,39 +1,58 @@
 \chapter{Phase match condition for spontaneous four wave mixing in a ring cavity }\label{chap:pmc-sfwm}
+According to the previous chapter, in a typical nonlinear optical waveguide or just silica fibers, the frequency conversion processes involve not only the SPM of pump light and XPM of signal and idler light, but also the phase mismatch in FWM propagation factor \cite{Agrawal2013a}. 
+
+Whereas in ring resonators, 
+whose mode linewidth (pm) is much narrower than SPM frequency broadening, the frequency broadening in the cavity can be neglected. Thus the phase match condition of FWM is the main factor determining signal and idler light generation. 
+
+This chapter first describes the major problem of phase mismatching, dispersion, and goes on the broadband phase matching technology. Several topics are also included concerning the band of phase matching.
 
 \section{Chromatic dispersion}
 
-\section{Broadband phase matching condition}
+In a typical FWM process, both energy conservation and momentum conservation are required 
+\begin{align}
+  \beta_i + \beta_s & = 2 \beta_p \label{eq:beta-cons} \\
+  \omega_i + \omega_s & = 2 \omega_p \label{eq:omega-cons}
+\end{align}
+where the subscripts $s~i~p$ stand for signal, idler and pump light.
 
-Assume in a ring resonator, to satisfy both energy conservation and momentum
-conservation,
-\begin{eqnarray*}
-  \beta_i + \beta_s & = & 2 \beta_p\\
-  \omega_i + \omega_s & = & 2 \omega_p
-\end{eqnarray*}
-meanwhile, $\beta = m \frac{2 \pi}{L}$, and $L$ is the length of the
-resonator. Thus,
+Meanwhile, the resonance condition \autoref{eq:res-con} gives $\beta = m \frac{2 \pi}{L}$. Thus, \autoref{eq:beta-cons} is equivalent to 
+\begin{equation}\label{eq:mu-cons}
+  m_i + m_s = 2 m_p 
+\end{equation} 
+  
+We can see that \tmtextit{the momentum conservation agrees with mode number
+conservation.} That is to say, by choosing the equidistant mode relative the pump mode, the momentum conservation can be naturally satisfied, which is the most important difference from non-resonant devices.
 
-{\tmname{\begin{equation}
-  m_i + m_s = 2 m_p
-\end{equation}}}
-
-Hence, \tmtextit{the momentum conservation agrees with mode numder
-equidistant.} Thus, we choose the frequency domain to estimate the phase
-mismatch. Expand the frequency into Taylor seires at $\omega_0$ to the
-propagation constant $\beta$,
+Therefore, we can estimate the phase mismatch only in the frequency domain. Expand the frequency into Taylor seires at $\omega_0$ to the propagation constant $\beta$
 \begin{eqnarray}
-  \omega_{\mu} & = & \omega_0 + \frac{\mathd \omega}{\mathd \beta}
-  (\beta_{\mu} - \beta_0) + \frac{1}{2}  \frac{\mathd^2 \omega}{\mathd
-  \beta^2} (\beta_{\mu} - \beta_0)^2 + \cdots \\
-  & = & \omega_0 + \frac{\mathd \omega}{\mathd \beta} \frac{2 \pi}{L} \mu +
-  \frac{\mathd^2 \omega}{\mathd \beta^2} \left( \frac{2 \pi}{L} \mu \right)^2
-  + \cdots \nonumber\\
+  \omega_{\mu} & = & \omega_0 
+  + \sum_{j=1}\dv[j]{\omega}{\beta} (\beta_{\mu}-\beta_0) \\
+  & = & \omega_0 
+  + \sum_{j=1}\dv[j]{\omega}{\beta} \qty(\frac{2 \pi}{L})^j \mu^j \nonumber \\
   & = & \omega_0 + D_1 \mu + D_2 \mu^2 + D_3 \mu^3 + \cdots \nonumber
 \end{eqnarray}
-where $D_1 / 2 \pi = 1 / v_g L$ is the \tmtextit{free spectrum range}, and
-\begin{eqnarray*}
-  \tmop{as} & = & a
-\end{eqnarray*}
+where $D_j =  (\frac{2 \pi}{L})^j\dv*[j]{\omega}{\beta}$ are \textit{j}-order mode number dispersion parameter, whose dimension are all $\mathrm{T}^{-1}$ and $\mu \in \mathbb{Z}$ is the relative mode number. 
 
-\section{Dispersion compensation and engineering using slot structure}
+It is easy to know that $D_1 / 2 \pi = 1 / v_g L$ is the free spectrum range in the frequency and indicates that the dispersion property is related with the difference of resonant frequencies.   
+
+Next, we introduce the integrated dispersion $\dint$ \cite{Brasch2014a} to analyse the phase mismatch
+\begin{align}\label{eq:def-dint}
+    D_\mathrm{int}(\mu) &= \omega_{\mu} - (\omega_0 + D_1 \mu)  \\
+    &= D_2 \mu^2 + D_3 \mu^3 + \cdots \nonumber
+\end{align}
+
+In particular, $\dint$ includes the dispersion higher than second order. Approximately, if $D_3 \mu \ll D_2$, the second-order dispersion will dominate the phase mismatch both at signal and idler mode.
+
+Indeed, 
+
+\begin{equation}
+    D_2 = -(\frac{c}{n})\frac{D_1^2}{\beta_2}
+\end{equation}
+In \autoref{eq:disp_bk}, the relation between the wavevector 
+
+\section{Dispersion compensation}
+structure dispersion
+in language of $D_\lambda$ or $\beta_2$
+\section{Dispersion engineering using slot structure}
+
 \section{Effects of mode crossing}

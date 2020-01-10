@@ -15,6 +15,8 @@
     ]{endfloat}
 \renewcommand{\efloatseparator}{\mbox{}}
 
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{xcolor,graphicx}
 \usepackage{subcaption}
 \usepackage{sectsty} % change section style
@@ -54,6 +56,8 @@
 \newcommand{\tmmathmd}[1]{\ensuremath{#1}}
 %%%%%%%%%% End TeXmacs macros
 
+\newcommand\mycaption[2]{\caption[#1]{\textbf{#1}. #2}}
+\newcommand{\dint}{D_\mathrm{int}}
 
 \etitle{Broadband frequency entangled photon generation using silicon nitride ring cavities}
 % \title{\cjk{窒化シリコンリング共振器を用いた\\広帯域周波数もつれ光子生成}}
@@ -94,7 +98,8 @@
 \clearpage
 
 \begin{appendices}
-\chapter{Supplementary}
+\chapter{Dispersion simulation}
+\chapter{Layout design}
 \end{appendices}
 
 

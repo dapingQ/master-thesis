@@ -1,4 +1,4 @@
-\chapter{Principal Theory}
+\chapter{Principal theory}
 
 The way how light travels in a chip-scale is remarkably different the way in free-space. In the sub-micron scale, the electromagnetic wave can only propagate in a fewer cycles due to the constraint of material boundaries. However, since atoms and molecules are much smaller, the refractive index is not changed, as well as the reflection, interference and diffraction. 
 
@@ -72,7 +72,7 @@ In the case of channel waveguides, the index discontinuity from both vertical an
 \draw (-3.8+3.6,0) arc [start angle=180, end angle=360, radius=0.2];
 \draw (-3.8+5.1,0) arc [start angle=180, end angle=360, radius=0.2];
 \end{tikzpicture}
-\caption{\textbf{Planar waveguide}. The upper and bottom layer are cladding and the middle is core layer. $\Delta \phi$ represents the Goos-H\"{a}nchen shift at the boundary.}
+\mycaption{Planar waveguide}{The upper and bottom layer are cladding and the middle is core layer. $\Delta \phi$ represents the Goos-H\"{a}nchen shift at the boundary.}
 \label{fig:planar}
 \end{figure}
 
@@ -116,7 +116,7 @@ The ring resonators comprise of a bus waveguide and a ring waveguide, are usuall
 \begin{figure}
     \centering
 	\includesvg{mrr_illus}
-	\caption{\textbf{An all-pass type ring resonator.} The transmitted spectrum is filtered periodically by the ring waveguide, in the case satisfying resonance condition.}
+	\mycaption{An all-pass type ring resonator}{The transmitted spectrum is filtered periodically by the ring waveguide, in the case satisfying resonance condition.}
     \label{fig:mrr-illus}
 \end{figure}
 
@@ -125,7 +125,7 @@ In the model illustrated in \autoref{fig:mrr-illus}, the self-coupling coefficie
 \begin{figure}
     \centering
     \includesvg{mrr_cp}
-    \caption{\textbf{The transmission spectrum of a ring resonator.} }
+    \mycaption{The transmission spectrum of a ring resonator}{}
     \label{fig:mrr_spec}
 \end{figure}
 
@@ -147,12 +147,11 @@ By plotting the function in \autoref{fig:mrr_spec}, we can see, the extinction r
 Previous work \cite{Yusuke2017} proposed a method to evaluate the coupling condition above using the experimentally measured device transmission. Considering the loss in the coupler, bent segment of ring and higher mode perturbance, usually the critical coupling varies from modes and the cross section of waveguides \cite{Pfeiffer2017}.
 
 \subsection{Spectrum characteristics}
-Meanwhile, the minimum of transmission rate $T$ can be achieved periodically as $\phi=2 \mu \pi$, which defines the resonance of ring resonators. Therefore, the resonance condition is derived as
-\begin{equation}
-    \beta L =2 \mu \pi
+Meanwhile, the minimum of transmission rate $T$ can be achieved periodically as $\phi=2 m \pi$, which defines the resonance of ring resonators. Therefore, the resonance condition is derived as
+\begin{equation}\label{eq:res-con}
+    \beta L =2 m \pi
 \end{equation}
-    
-Specifically, the propagation constant $\beta$, shall be an integral times of a quasi wave vector $2\pi/L$. With this condition, the free spectrum range (FSR) of wavelength and frequency are obtained
+where $m$ is the mode index. Specifically, the propagation constant $\beta$, shall be an integral times of a quasi wave vector $2\pi/L$. With this condition, the free spectrum range (FSR) of wavelength and frequency are obtained
 \begin{align}
     \Delta \lambda_\mathrm{FSR} &\approx \frac{\lambda_\mathrm{res}^2}{n_g L} \label{eq:fsr-wl} \\
     \Delta \omega_\mathrm{FSR} &\approx \frac{n_g L}{2\pi c} \label{eq:fsr-w}
@@ -168,7 +167,7 @@ Furthermore, from \autoref{eq:trans_phi}, the full width at half maximum (FWHM) 
 \begin{figure}
     \centering
     \includesvg{mrr_fsr_illus}
-    \caption{Caption}
+    \mycaption{Caption}{}
     \label{fig:my_label}
 \end{figure}
 
@@ -231,7 +230,8 @@ Consider three frequency components of $\vb{E}^3$, using the complex expression 
 \end{equation}
 \begin{figure}
     \includesvg{tpa}
-    \caption{caption}\label{fig:energy-level}
+    \mycaption{caption}{}
+    \label{fig:energy-level}
 \end{figure}
 Substituting into third-order term in \autoref{eq:nlp} and arranging with the same propagation direction, the third-order polarization is 
 
@@ -287,13 +287,10 @@ In FWM process, more than three frequencies are involved. Nevertheless, \autoref
 
 Traditionally, following the terminology in laser field, in DFWM, the $\omega_1$ square term \autoref{eq:fwm2} is labeled as pump frequency, and another two frequencies are referred to signal and idler frequency.
 
+\bigskip
 Besides, the imaginary part of third-order susceptibility incorporate other four-wave absorption mechanics, such as \textit{stimulated Brillouin scatter} (SBS) and \textit{stimulated Raman scattering} (SRS), which originate from acoustic waves in crystals and vibrating molecules.
 
 Finally, it worth mentioning that in all THG and FWM processes, different from SPM and XPM processes, phase matching condition is required due to the complex exponential factors. In this case, the phase mismatch can change the polarization rapidly and leads to periodical variation in these parametric processes.
 
-\section{Nonlinear integrated devices}
+% \section{Nonlinear integrated devices}
 
-From the above section, in the nonlinear optical waveguide or just silica fiber,
-phase matching condition of degenerate four wave mixing involves not only the SPM of pump light and XPM of signal and idler light, but also the phase mismatch in FWM propagation factor\cite{Agrawal2013a}. 
-
-However, in our research objective, the resonator limits the mode linewidth (pm), which is much narrower than SPM frequency broadening. Based on this fact, we neglect the pump light broadening in the cavity. And the phase matching condition is dealt with in \autoref{chap:pmc-sfwm}.
