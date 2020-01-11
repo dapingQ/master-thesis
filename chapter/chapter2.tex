@@ -1,3 +1,5 @@
+% !TeX root = ../main.tex
+
 \chapter{Principal theory}
 
 The way how light travels in a chip-scale is remarkably different the way in free-space. In the sub-micron scale, the electromagnetic wave can only propagate in a fewer cycles due to the constraint of material boundaries. However, since atoms and molecules are much smaller, the refractive index is not changed, as well as the reflection, interference and diffraction. 
@@ -102,10 +104,11 @@ Based on \autoref{eq:te-eq} and \autoref{eq:tm-eq}, $k_x$ can be solved and then
     \beta = n_{\mathrm{eff}}k = n_{\mathrm{eff}}(\lambda) \frac{2\pi}{\lambda} = n_{\mathrm{eff}}(\omega) \frac{\omega}{c}
 \end{equation}
 along with the differential form
-\begin{equation}\label{eq:ng-def}
-    \dv{\beta}{k} = n_{\mathrm{eff}} + k \dv{n_{\mathrm{eff}}}{k} = n_{\mathrm{eff}} - \lambda\dv{n_{\mathrm{eff}}}{\lambda} \equiv n_g
-\end{equation}
-which defines the group index $n_g$.
+\begin{align}\label{eq:ng-def}
+    \dv{\beta}{k} &= n_{\mathrm{eff}} + k \dv{n_{\mathrm{eff}}}{k} = n_{\mathrm{eff}} - \lambda\dv{n_{\mathrm{eff}}}{\lambda} \equiv n_g \\
+    \dv{\omega}{\beta} &= c \dv{k}{\beta} = \frac{c}{n_g} \equiv v_g  
+\end{align}
+which defines the group index $n_g$ and group velocity $v_g$.
 
 This formula linking $\beta - k$ or $\beta - \omega$ is named as dispersion relation, which gives the physics that light with different color propagates at different \textit{speed}. Furthermore, \autoref{eq:te-eq} and \autoref{eq:tm-eq} also indicate that the dispersion relation intrinsically depends on waveguide geometry.
 
@@ -151,10 +154,10 @@ Meanwhile, the minimum of transmission rate $T$ can be achieved periodically as 
 \begin{equation}\label{eq:res-con}
     \beta L =2 m \pi
 \end{equation}
-where $m$ is the mode index. Specifically, the propagation constant $\beta$, shall be an integral times of a quasi wave vector $2\pi/L$. With this condition, the free spectrum range (FSR) of wavelength and frequency are obtained
+where $m$ is the mode index. Specifically, the propagation constant $\beta$, shall be an integral times of a quasi wave vector $2\pi/L$. With this condition, the free spectral range (FSR) of wavelength and frequency are obtained
 \begin{align}
     \Delta \lambda_\mathrm{FSR} &\approx \frac{\lambda_\mathrm{res}^2}{n_g L} \label{eq:fsr-wl} \\
-    \Delta \omega_\mathrm{FSR} &\approx \frac{n_g L}{2\pi c} \label{eq:fsr-w}
+    \Delta \omega_\mathrm{FSR} &\approx \frac{2\pi c}{n_g L} \label{eq:fsr-w}
 \end{align}
 
 In both wavelength and frequency domain, FSR determines the spacing of neighbouring resonant peak. This is a significant factor when the ring resonators are designed.
@@ -180,7 +183,7 @@ the same, at the frequency domain
     \delta \omega = \dv{\omega}{k}\delta k = \frac{c}{ L n_g} \frac{2(1- a \tau)}{\sqrt{\tau a}} \label{eq:fwhm_w}
 \end{equation}
 
-Note in \autoref{eq:fsr-wl} \autoref{eq:fsr-w} \autoref{eq:fwhm_wl} and \autoref{eq:fwhm_w}, the group index $n_g$ is explicit instead of the effective index $n_\mathrm{eff}$ because both free spectrum range and full width depend on the differential form, \autoref{eq:ng-def}.
+Note in \autoref{eq:fsr-wl} \autoref{eq:fsr-w} \autoref{eq:fwhm_wl} and \autoref{eq:fwhm_w}, the group index $n_g$ is explicit instead of the effective index $n_\mathrm{eff}$ because both free spectral range and full width depend on the differential form, \autoref{eq:ng-def}.
 
 And the finesse $F$ of the resonator is defined 
 \begin{equation}
@@ -208,8 +211,8 @@ It is worth mentioning that not only in the bulk crystals, but also in the sub-m
 % In this section, we prefer to introduce both second-order and third-order optical nonlinearity. 
 Here, a brief theoretical derivation is elucidated and in the following part, degenerate four wave mixing is emphasized. In an isotropic nonlinear medium, assuming only instantaneous dielectric response, the relation between the polarization and the electric field is expressed by a power series in the electric field
 \begin{equation}\label{eq:nlp}
-    \vb{P} = \varepsilon_0 \large (\chi^{(1)}\vb{E} + \chi^{(2)}\vb{E}^2 + \chi^{(3)}\vb{E}^3)
-    = \varepsilon_0 \chi^{(1)}\vb{E} + \vb{P}_\mathrm{NL}
+    \vb{P}(t) = \varepsilon_0 \large (\chi^{(1)}\vb{E}(t) + \chi^{(2)}\vb{E}^2(t) + \chi^{(3)}\vb{E}^3(t))
+    = \varepsilon_0 \chi^{(1)}\vb{E}(t) + \vb{P}_\mathrm{NL}(t)
 \end{equation}
 
 Note in \autoref{eq:nlp}, the nonlinear susceptibilities $\chi^{(2)}$ and $\chi^{(3)}$ are second-rank and third-rank tensors, corresponding to the tensor product with $\vb{E}^2$ and $\vb{E}^3$. The higher order response is neglected and sequentially, only $\chi^{(2)}$ processes and $\chi^{(3)}$ processes are to be introduced.
@@ -236,7 +239,7 @@ Consider three frequency components of $\vb{E}^3$, using the complex expression 
 Substituting into third-order term in \autoref{eq:nlp} and arranging with the same propagation direction, the third-order polarization is 
 
 \begin{align}
-  \vb{P}^{(3)} 
+  \vb{P}^{(3)}(t) 
   & = \frac{3}{4} \varepsilon_0 \chi^{(3)} \left[| \vb{E}_{\omega_1} |^2 \vb{E}_{\omega_1} + \cdots\right] & \mathrm{SPM} \\
   & + \frac{6}{4} \varepsilon_0 \chi^{(3)} \left[(| \vb{E}_{\omega_2} |^2 + |\vb{E}_{\omega_3} |^2) \vb{E}_{\omega_1} + \cdots \right] & \mathrm{XPM} \\
   & + \frac{1}{4} \varepsilon_0 \chi^{(3)} \left[(\vb{E}_{\omega_1}^3 e^{i \omega_1 t} + c.c.) + \cdots\right] & \mathrm{THG} \\
