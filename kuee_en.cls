@@ -27,6 +27,7 @@
 
 \LoadClass[12pt,a4paper]{report}
 
+% define title
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand*{\@supervisor}{\texttt{\string\supervisor} currently not set. Please fix this.}
 \newcommand*{\school}[1]{\gdef\@school{#1}}
