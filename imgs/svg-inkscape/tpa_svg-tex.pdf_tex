@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{564.5867208bp}%
+    \setlength{\unitlength}{107.95898046bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,19 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.43699456)%
+  \begin{picture}(1,1.58497924)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
+    \put(-0.34329778,1.69525041){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{2.29253713\unitlength}\raggedright \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{tpa_svg-tex.pdf}}%
-    \put(-0.00160862,0.32108195){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
-    \put(-0.00131803,0.42126126){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SPM\end{tabular}}}}%
-    \put(-0.33184323,1.54347066){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.65684551\unitlength}\raggedright \end{minipage}}}%
+    \put(-0.00841248,0.38269558){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{tpa_svg-tex.pdf}}%
-    \put(0.47782137,0.29062408){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_2$\end{tabular}}}}%
-    \put(0.18339495,0.20601875){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
-    \put(0.36106607,0.29118808){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{tpa_svg-tex.pdf}}%
-    \put(0.53376081,0.18868801){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
-    \put(0.65341075,0.219797){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_\mathrm{THG}$\end{tabular}}}}%
+    \put(0.08933957,1.50416513){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TPA\end{tabular}}}}%
   \end{picture}%
 \endgroup%

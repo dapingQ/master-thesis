@@ -35,7 +35,7 @@
 \draw (-3.8+3.6,0) arc [start angle=180, end angle=360, radius=0.2];
 \draw (-3.8+5.1,0) arc [start angle=180, end angle=360, radius=0.2];
 \end{tikzpicture}
-\caption{\textbf{Planar waveguide}. The upper and bottom layer are cladding and the middle is core layer. $\Delta \phi$ represents the Goos-H\"{a}nchen shift at the boundary.}
+\mycaption{Planar waveguide}{The upper and bottom layer are cladding and the middle is core layer. $\Delta \phi$ represents the Goos-H\"{a}nchen shift at the boundary.}
 \label{fig:planar}
 \end{figure}
 \efloatseparator
@@ -43,7 +43,7 @@
 \begin{figure}
     \centering
 \includesvg{mrr_illus}
-\caption{\textbf{An all-pass type ring resonator.} The transmitted spectrum is filtered periodically by the ring waveguide, in the case satisfying resonance condition.}
+\mycaption{An all-pass type ring resonator}{The transmitted spectrum is filtered periodically by the ring waveguide, in the case satisfying resonance condition.}
     \label{fig:mrr-illus}
 \end{figure}
 \efloatseparator
@@ -51,7 +51,7 @@
 \begin{figure}
     \centering
     \includesvg{mrr_cp}
-    \caption{\textbf{The transmission spectrum of a ring resonator.} }
+    \mycaption{The transmission spectrum of a ring resonator}{}
     \label{fig:mrr_spec}
 \end{figure}
 \efloatseparator
@@ -59,12 +59,13 @@
 \begin{figure}
     \centering
     \includesvg{mrr_fsr_illus}
-    \caption{Caption}
+    \mycaption{Caption}{}
     \label{fig:my_label}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-    \includesvg{tpa}
-    \caption{caption}\label{fig:energy-level}
+    \includesvg{energy_diagram}
+    \mycaption{Illustration of possible energy diagram in typical third-order nonlinear processes}{}
+    \label{fig:energy-level}
 \end{figure}

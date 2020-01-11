@@ -1,6 +1,7 @@
-%!TEX TS-program = pdflatex
-%!TEX encoding = UTF-8 Unicode
-%!TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+% !TeX root = ./main.tex
+% !TEX program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 \documentclass[final]{kuee_en}
 \usepackage[titletoc]{appendix}
 % citation
@@ -42,10 +43,12 @@
 
 % using modern biblatex
 \usepackage[sorting=none,
+    % backend=biber,
     bibencoding=utf8,
     bibstyle=nature,
-    doi=false,isbn=false,url=false]{biblatex}
+    doi=false,isbn=false,url=false,eprint=false]{biblatex}
 \bibliography{library}
+\bibliography{bibsupple}
 
 %%%%%%%%%% Start TeXmacs macros
 \newcommand{\mathd}{\mathrm{d}}
