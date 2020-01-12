@@ -1,12 +1,14 @@
 % !TeX root = ../main.tex
 
 \chapter{Phase match condition for spontaneous four wave mixing in a ring cavity }\label{chap:pmc-sfwm}
-According to the previous chapter, in a typical nonlinear optical waveguide or just silica fibers, the frequency conversion processes involve not only the SPM of pump light and XPM of signal and idler light, but also the phase mismatch in FWM propagation factor \cite{AGRAWAL2013397}. 
 
-Whereas in ring resonators, 
-whose mode linewidth (pm) is much narrower than SPM frequency broadening, the frequency broadening in the cavity can be neglected. Thus the phase match condition of FWM is the main factor determining signal and idler light generation. 
+According to the previous chapter, in a typical nonlinear optical waveguide or silica fibers, despite the stimulated Raman and Brillouin scattering, the frequency conversion processes involve not only the self-phase modulation of pump light and cross-phase modulation of signal and idler light, but also the phase mismatch in four wave mixing propagation factor. In this case, it is necessary to study the coupled nonlinear equations involving signal, idler and pump intensity \cite{AGRAWAL2013397}. 
 
-This chapter first describes the major problem of phase mismatching, dispersion, and goes on the broadband phase matching technology. Several topics are also included concerning the band of phase matching.
+Whereas in ring resonators, whose mode linewidth (pm) is much narrower than SPM frequency broadening, 
+the frequency broadening in single mode is approximately negligible. 
+Thus the phase mismatch among cavity modes becomes the critical factor of the band of four wave mixing.
+
+This chapter first describes the major origin of phase mismatch, chromatic dispersion, and goes on to the design philosophy used in device fabrication. Besides, several topics concerning the band of phase matching are also included.
 
 \section{Chromatic dispersion}
 
@@ -39,29 +41,37 @@ It is easy to know that $D_1 / 2 \pi = v_g / L$ is the free spectral range in th
 
 Next, we introduce the integrated dispersion $\dint$ \cite{Brasch2014a} to analyse the phase mismatch
 \begin{align}\label{eq:def-dint}
-    D_\mathrm{int}(\mu) &= \omega_{\mu} - (\omega_0 + D_1 \mu)  \\
+    D_\mathrm{int}(\mu) &\equiv \omega_{\mu} - (\omega_0 + D_1 \mu)  \\
     &= D_2 \mu^2 + D_3 \mu^3 + \cdots \nonumber
 \end{align}
 
 In particular, $\dint$ includes the residual dispersion higher than second order. Approximately, if $D_3 \mu \ll D_2$, the second-order dispersion will dominate the phase mismatch both at signal and idler mode.
 
-Indeed, 
-
+Indeed, the mode number dispersion parameter is linked with the dispersion coefficients in frequency and wavelength domain, giving such a chain rule
 \begin{equation}\label{eq:disp-chain}
     D_2 = - \frac{L}{2\pi} {D_1^3}{\beta_2} = \frac{L}{2\pi}  \frac{\lambda^2}{2\pi c} {D_1^3} D_{\lambda}
 \end{equation}
-where $\beta_2=\dv*[2]{\beta}{\omega}$ is group velocity dispersion (GVD) and $D_{\lambda}$ is dispersion parameter.
+where $\beta_2=\dv*[2]{\beta}{\omega}$ is group velocity dispersion (GVD) and $D_{\lambda}=(\lambda/c)\dv*[2]{n}{\lambda}$ is the dispersion parameter.
 
-From the above derivation, a rough presupposition to increase the efficient phase matched band is achieving zero dispersion.
-% In \autoref{eq:disp_bk}, the relation between the wavevector 
+From the above derivation, a rough presupposition to increase the efficient phase matched band is achieving zero and flat dispersion around pump wavelengths.
 
 \section{Dispersion compensation}
-Mentioned in \autoref{sec:guide}, the dispersion behaviour in ring resonator is not only the intrinsic material property, but also influenced by the waveguide dimension. Here, the numerical simulation is adopted to evaluate the dispersion parameter, then according to the second-order dispersion chain rule \autoref{eq:disp-chain}, 
+Mentioned previously in \autoref{sec:guide}, the dispersion behaviour in integrated devices is not only the intrinsic material property, but also depends on the waveguide dimension. In other words, the phase mismatch occurs as a result of material dispersion and waveguide dispersion, $D= D_M + D_W$
+In the case of silicon nitride, 
+
+This indicates that the dispersion 
+
+Usually, the Sellmeier equation is used to fit the refractive index for a particular transparent medium. \citeauthor{Luke2015a} reported the measured refractive index of stoichiometric \ce{Si3N4}
+\begin{equation}\label{eq:si3n4-selleimeier}
+    n_{\ce{Si3N4}}^2 = 1 + \frac{3.0249 \lambda^2}{\lambda^2-135.3406^2} + \frac{40314 \lambda^2}{\lambda^2 - 1239842^2}
+\end{equation}
+It is plotted in , along with the dispersion parameter, defined as $D_{\lambda}=(\lambda/c)\dv*[2]{n}{\lambda}$
+
+On the other hand, the numerical simulation is adopted to evaluate the dispersion parameter, then according to the second-order dispersion chain rule \autoref{eq:disp-chain}, 
 
 
-Luke \cite{Luke2015a}
+
 structure dispersion
-in language of $D_\lambda$ or $\beta_2$
 
 \begin{figure}
     \centering
