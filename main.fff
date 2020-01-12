@@ -77,3 +77,11 @@
     \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 nm, $n$=1.9963 and $D_M$ = -6.57 ps/km\IeC {\textperiodcentered }nm .}
     \label{fig:Luke-si3n4}
 \end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includesvg{1550_True}
+\mycaption{Waveguide dispersion simulation}{.}
+\label{fig:wg-disp}
+\end{figure}

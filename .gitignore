@@ -8,3 +8,5 @@
 *.synctex.gz
 .vscode/
 *svg-tex*
+*.fff
+*.xml

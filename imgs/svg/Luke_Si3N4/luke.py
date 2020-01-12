@@ -59,7 +59,7 @@ axD.plot(wlRange, D_Luke*1e6, 'b--',label=r'$D_{\lambda}$')
 
 
 axD.set_xlabel(r'wavelength (nm)')
-axD.set_ylabel(r'$D_M (ps/km·nm)')
+axD.set_ylabel(r'$D_M$ (ps/km·nm)')
 axn.set_ylabel('refractive index')
 
 
