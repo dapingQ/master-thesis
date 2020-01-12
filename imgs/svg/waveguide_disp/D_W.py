@@ -29,7 +29,7 @@ fig, ax = plt.subplots(dpi=200,figsize=(6,3))
 im = ax.imshow(d_array, interpolation='bilinear', origin='lower',
                 cmap=cm.rainbow,extent=(w[0],w[-1],t[0],t[-1]),aspect='auto')
 
-cs = ax.contour(d_array, np.arange(-400,400,100),
+cs = ax.contour(d_array, np.arange(0,80,10),
                 origin='lower',#cmap='flag',
                 colors='k',extent=(w[0],w[-1],t[0],t[-1]))
 
@@ -38,7 +38,7 @@ mark = True
 if mark:
 #     ax.hlines(xmin=w[0],xmax=sizex,y=sizey, ls='--', alpha=0.5)
 #     ax.vlines(ymax=sizey,ymin=t[0],x=sizex, ls='--', alpha=0.5)
-    ax.plot(sizex,sizey,'o',color='black')
+    ax.plot(sizex,sizey,'.',color='black',)
 
 # cs.levels = [nf(val) for val in cs.levels]
 
@@ -55,7 +55,7 @@ cbar.ax.set_ylabel(r'$D_{W}$ (ps/nm·km)')
 ax.set_xlabel('width ($\mathrm{\mu}$m)')
 ax.set_ylabel(r'thickness ($\mathrm{\mu}$m)')
 
-# plt.show()
-fig.savefig(f'..\{wl*1e3:.0F}_{mark}.svg',dpi=200,transparent=True,bbox_inches='tight')
+plt.show()
+# fig.savefig(f'..\{wl*1e3:.0F}_{mark}.svg',dpi=200,transparent=True,bbox_inches='tight')
 # ax.set_title(r'$D_{W}$ at ' + f'{wl*1e3:.0F} nm (ps/nm·km)')
 # fig.savefig(f'{wl*1e3:.0F}_{mark}_title.svg',dpi=200,transparent=True,bbox_inches='tight')

@@ -86,7 +86,9 @@ It is plotted in \autoref{fig:Luke-si3n4} , along with the material dispersion p
     \label{fig:Luke-si3n4}
 \end{figure}
 
-On the other hand, the numerical simulation is adopted to evaluate the dispersion parameter, then according to the second-order dispersion chain rule in \autoref{eq:disp-chain}, 
+On the other hand, the numerical simulation is adopted to evaluate the waveguide parameter. Shown in \autoref{fig:wg-disp}, the waveguide dispersion dependence of waveguide dimension features negative dispersion parameter in smaller waveguide size, i.e. normal dispersion behavior. In contrast, increasing either the thickness or width of channel waveguide can efficiently change to the anomalous dispersion.
+
+For example, in a 1.5 \si{\um} by 0.8 \si{\um} silicon nitride waveguide cladded by silica, the waveguide dispersion at 1550 nm is 45 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 12 kHz. This a close to zero dispersion for the pump wavelength.
 
 \begin{figure}
 	\centering
@@ -98,9 +100,5 @@ On the other hand, the numerical simulation is adopted to evaluate the dispersio
 
 \section{Dispersion engineering using slot structure}
 
-
-
-
-Using the commercial Comsol Multiphysics package for FEM simulations, we implemented a 2D simulation which takes into account the cylindrical symmetry of the system in the third dimension. Material dispersion is taken into account via an iterative approach which takes the values of the refractive index from measured values for our SiN films. The values for dispersion parameters are obtained from fitting appropriate polynomials to the absolute frequencies of the modes around our pump wavelength of 192.2 THz. The relative magnitude of the values for the free spectral range in the simulation is used to identify the mode
 
 \section{Effects of mode crossing}
