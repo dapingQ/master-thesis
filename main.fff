@@ -59,7 +59,7 @@
 \begin{figure}
     \centering
     \includesvg{mrr_fsr_illus}
-    \mycaption{Caption}{}
+    \mycaption{Illustration of wavelength transmission spectrum of ring resonators}{FSR, free spectral range, the distance between neighbouring resonant wavelength. FWHM, full width at half maximum.}
     \label{fig:my_label}
 \end{figure}
 \efloatseparator
@@ -68,4 +68,12 @@
     \includesvg{energy_diagram}
     \mycaption{Illustration of possible energy diagram in typical third-order nonlinear processes}{}
     \label{fig:energy-level}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+    \centering
+    \includesvg{Luke}
+    \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 nm, $n$=1.9963 and $D_M$ = -6.57 ps/km\IeC {\textperiodcentered }nm .}
+    \label{fig:Luke-si3n4}
 \end{figure}
