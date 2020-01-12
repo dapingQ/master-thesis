@@ -69,26 +69,27 @@ From the above derivation, the frequency mismatch $ \Delta\omega $ only adds to 
 To conclude, a rough presupposition to increase the efficient phase matched band is achieving zero and flat dispersion around pump wavelengths.
 
 \section{Dispersion compensation}
-Mentioned previously in \autoref{sec:guide}, the dispersion behaviour in integrated devices is not only the intrinsic material property, but also depends on the waveguide dimension. 
+Previously mentioned  in \autoref{sec:guide}, the dispersion behaviour in integrated devices is not only the intrinsic material property, but also depends on the waveguide dimension. 
 
 In other words, the phase mismatch occurs as a result of material dispersion $D_M$ and waveguide dispersion $ D_W $, $D_{\lambda}= D_M + D_W$. Here, we adopt the wavelength dispersion parameter since the wavelength domain is measurable.
 
-Usually, the Sellmeier equation is used to fit the refractive index for a particular transparent medium. \citeauthor{Luke2015a} reported the measured refractive index of stoichiometric \ce{Si3N4} \cite{Luke2015a}
+Usually, the Sellmeier equation is used to fit the refractive index for a particular transparent medium based on the Lorentz-Drude mode. \citeauthor{Luke2015a} reported the below measured refractive index of stoichiometric \ce{Si3N4} film \cite{Luke2015a}
 \begin{equation}\label{eq:si3n4-selleimeier}
     n_{\ce{Si3N4}}^2 = 1 + \frac{3.0249 \lambda^2}{\lambda^2-135.3406^2} + \frac{40314 \lambda^2}{\lambda^2 - 1239842^2}
 \end{equation}
-It is plotted in \autoref{fig:Luke-si3n4} , along with the material dispersion parameter $D_M$. This equation is valid over the wavelength range 310–5504 nm. In the telecom C-band, $n$=1.9963 and $D_M$ = -6.57 \dispu, which suggests the material dispersion at this range is considerably small.
+
+The result of \autoref{eq:si3n4-selleimeier} is plotted in \autoref{fig:Luke-si3n4}, along with the material dispersion parameter $D_M$, which is calculated at the precision of \si{\nm} using the second-order finite difference of refractive index. This equation is valid over the wavelength range 310–5504 \si{\nm}. In the telecom C-band, $n$=1.9963 and $D_M$ = -6.57 \dispu, which suggests the material dispersion at this range is considerably small.
 
 \begin{figure}
     \centering
     \includesvg{Luke}
-    \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 nm, $n$=1.9963 and $D_M$ = -6.57 \dispu .}
+    \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 \si{\nm}, $n$=1.9963 and $D_M$ = -6.57 \dispu .}
     \label{fig:Luke-si3n4}
 \end{figure}
 
 On the other hand, the numerical simulation is adopted to evaluate the waveguide parameter. Shown in \autoref{fig:wg-disp}, the waveguide dispersion dependence of waveguide dimension features negative dispersion parameter in smaller waveguide size, i.e. normal dispersion behavior. In contrast, increasing either the thickness or width of channel waveguide can efficiently change to the anomalous dispersion.
 
-For example, in a 1.5 \si{\um} by 0.8 \si{\um} silicon nitride waveguide cladded by silica, the waveguide dispersion at 1550 nm is 45 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 12 kHz. This a close to zero dispersion for the pump wavelength.
+For example, in a 1.5 \si{\um} times by 0.8 \si{\um} silicon nitride waveguide cladded by silica, the waveguide dispersion at 1550 \si{\nm} is 45 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 12 kHz. This is close to zero dispersion for the pump wavelength.
 
 \begin{figure}
 	\centering
@@ -100,5 +101,14 @@ For example, in a 1.5 \si{\um} by 0.8 \si{\um} silicon nitride waveguide cladded
 
 \section{Dispersion engineering using slot structure}
 
+The slot waveguide was firstly realized by \citeauthor{Xu2004} experimentally \cite{Xu2004}. In the same group \citeauthor{Almeida2004} then discussed the light enhancement and confinement caused by large discontinuity of the electric field at high-index-contrast interfaces \cite{Almeida2004}. In the recent decade, it is fully studied that such a novel waveguide can be also used to design dispersion-flattened waveguide \cites{Mas2010, Zhang2010, Zhu2012, Nolte2013}.
 
+However, 
 \section{Effects of mode crossing}
+
+The previous section proves that only in the wider or thicker waveguides can the normal second-order dispersion be compensated to achieve zero frequency mismatch. However, in this case, the waveguide of the ring resonator support not only fundamental TE or TM modes, but also the high order modes. Since the coupling of propagation modes between the bus and the waveguide 
+
+Early research on ultra high-Q microres- onators in other platforms led to the development of sev- eral adjustable evanescent coupling techniques based on prisms and tapered optical fibers [16–20]. To
+
+
+Fig shows the 

@@ -2010,6 +2010,14 @@
     <bcf:citekey order="10">Brasch2014a</bcf:citekey>
     <bcf:citekey order="11">Luke2015a</bcf:citekey>
     <bcf:citekey order="12">Luke2015a</bcf:citekey>
+    <bcf:citekey order="13">Xu2004</bcf:citekey>
+    <bcf:citekey order="14">Xu2004</bcf:citekey>
+    <bcf:citekey order="15">Almeida2004</bcf:citekey>
+    <bcf:citekey order="16">Almeida2004</bcf:citekey>
+    <bcf:citekey order="17">Mas2010</bcf:citekey>
+    <bcf:citekey order="17">Zhang2010</bcf:citekey>
+    <bcf:citekey order="17">Zhu2012</bcf:citekey>
+    <bcf:citekey order="17">Nolte2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

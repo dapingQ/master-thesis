@@ -15,7 +15,9 @@
 % \usepackage{cleveref}
 
 % put all the figures end
-\usepackage[nomarkers]{endfloat}
+\usepackage[nomarkers,
+%	disable
+]{endfloat}
 \renewcommand{\efloatseparator}{\mbox{}}
 
 \usepackage{amsfonts}
@@ -48,6 +50,7 @@
     backend=biber,
     bibencoding=utf8,
     bibstyle=nature,
+    citestyle=numeric-comp,
     doi=false,isbn=false,url=false,eprint=false]{biblatex}
 \bibliography{library}
 \bibliography{bibsupple}
