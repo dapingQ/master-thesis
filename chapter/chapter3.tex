@@ -78,32 +78,48 @@ Usually, the Sellmeier equation is used to fit the refractive index for a partic
     n_{\ce{Si3N4}}^2 = 1 + \frac{3.0249 \lambda^2}{\lambda^2-135.3406^2} + \frac{40314 \lambda^2}{\lambda^2 - 1239842^2}
 \end{equation}
 
-The result of \autoref{eq:si3n4-selleimeier} is plotted in \autoref{fig:Luke-si3n4}, along with the material dispersion parameter $D_M$, which is calculated at the precision of \si{\nm} using the second-order finite difference of refractive index. This equation is valid over the wavelength range 310–5504 \si{\nm}. In the telecom C-band, $n$=1.9963 and $D_M$ = -6.57 \dispu, which suggests the material dispersion at this range is considerably small.
+This Sellmeier equation is valid over the wavelength range 310–5504 \si{\nm}.
+The result of \autoref{eq:si3n4-selleimeier} is plotted in \autoref{fig:Luke-si3n4}, along with the material dispersion parameter $D_M$, which is calculated at the precision of \si{\nm} using the second-order finite difference of refractive index. In the telecom C-band, $n$=1.9963 and $D_M$ = -6.57 \dispu, which suggests the material dispersion at this range is considerably small.
 
 \begin{figure}
     \centering
     \includesvg{Luke}
-    \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 \si{\nm}, $n$=1.9963 and $D_M$ = -6.57 \dispu .}
+    \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 \si{\nm}, $n$=1.9963 and $D_M$ = -6.5656 \dispu .}
     \label{fig:Luke-si3n4}
 \end{figure}
 
-On the other hand, the numerical simulation is adopted to evaluate the waveguide parameter. Shown in \autoref{fig:wg-disp}, the waveguide dispersion dependence of waveguide dimension features negative dispersion parameter in smaller waveguide size, i.e. normal dispersion behavior. In contrast, increasing either the thickness or width of channel waveguide can efficiently change to the anomalous dispersion.
+On the other hand, the numerical simulation is adopted to evaluate the waveguide parameter.
+We use commercial software \textit{Lumerical MODE} to solve for the refractive index of fundamental TE modes.
+Shown in \autoref{fig:wg-disp}, the dimension dependence of waveguide dispersion features negative values in the small waveguide size, i.e. behaving as normal dispersion at the second order. Nevertheless, as either the thickness or width of channel waveguide increases,
+$D_W$ turns positive. This indicates that to achieve zero dispersion in phase match condition of four wave mixing, the normal material dispersion can be compensated with anomalous waveguide dispersion. 
 
-For example, in a 1.5 \si{\um} times by 0.8 \si{\um} silicon nitride waveguide cladded by silica, the waveguide dispersion at 1550 \si{\nm} is 45 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 12 kHz. This is close to zero dispersion for the pump wavelength.
+For example, at 1550 \si{\nm}, in a 1.5-\si{\um}-wide and 0.8-\si{\um} -thick silicon nitride waveguide cladded by silica, where the refractive index is 1.48,
+the waveguide dispersion is 45 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 12 kHz. It is close to zero dispersion for the pump wavelength.
 
 \begin{figure}
 	\centering
 	\includesvg{1550_True}
-	\mycaption{Waveguide dispersion simulation}{.}
+	\mycaption{Waveguide dispersion map simulated by Lumerical MODE}{The central wavelength to perform the simulation is 1550 \si{\nm} and the precision is nm. We select the fundamental TE mode as the objective to study the waveguide dispersion. The scattered point in the figure is 1.5-\si{\um}-wide and 0.8-\si{\um}-thick.}
 	\label{fig:wg-disp}
 \end{figure}
 
-
 \section{Dispersion engineering using slot structure}
 
-The slot waveguide was firstly realized by \citeauthor{Xu2004} experimentally \cite{Xu2004}. In the same group \citeauthor{Almeida2004} then discussed the light enhancement and confinement caused by large discontinuity of the electric field at high-index-contrast interfaces \cite{Almeida2004}. In the recent decade, it is fully studied that such a novel waveguide can be also used to design dispersion-flattened waveguide \cites{Mas2010, Zhang2010, Zhu2012, Nolte2013}.
+The slot waveguide was firstly realized by \citeauthor{Xu2004} experimentally \cite{Xu2004}. In the same group \citeauthor{Almeida2004} then discussed the light enhancement and confinement caused by large discontinuity of the electric field at high-index-contrast interfaces \cite{Almeida2004}. In the recent decade, it is fully studied that such a novel waveguide can be also used to design dispersion-flattened waveguide \cites{Mas2010, Zhang2010, Zhu2012, Nolte2013}, including the both vertical or horizontal and single or multiple slots. It is also reported a micro-ring resonators formed by a slot hybrid waveguide 
+exhibits a flat and low anomalous dispersion \cite{Zhang2013}.
 
-However, 
+Here, the vertical slot waveguide is preferred because it is easy to realized based on the monolithic fabrication process. We propose a double-slot silicon nitride to achieve near-zero and flat dispersion.
+
+In a double vertical slot waveguide illustrated in 
+
+
+% \begin{figure}
+%     \centering
+    % \includegraphics{slot}
+%     \caption{Caption}
+%     \label{fig:my_label}
+% \end{figure}
+
 \section{Effects of mode crossing}
 
 The previous section proves that only in the wider or thicker waveguides can the normal second-order dispersion be compensated to achieve zero frequency mismatch. However, in this case, the waveguide of the ring resonator support not only fundamental TE or TM modes, but also the high order modes. Since the coupling of propagation modes between the bus and the waveguide 
