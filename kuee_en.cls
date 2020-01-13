@@ -7,7 +7,6 @@
 
 \RequirePackage{physics}
 \RequirePackage[version=4]{mhchem} % chemical formula, \ce{H2O}
-\RequirePackage{siunitx} % SI units
 
 \RequirePackage{CJKutf8}
 \newcommand*{\cjk}[1]{%
@@ -90,6 +89,24 @@
 }{%
 }
 
-% \renewcommand{\bibname}{References}
+\RequirePackage{etoolbox}
+\RequirePackage[nomarkers]{endfloat}
+\makeatletter
+\@ifpackageloaded{endfloat}
+{
+	\efloat@condopen{fff}
+	\pretocmd\@chapter{\immediate\write\efloat@postfff{\noexpand\stepcounter{chapter}}}{}{\fail}
+	\AtBeginFigures{\setcounter{chapter}{0}}
+}{}
+\makeatother
+
+\makeatletter
+\@ifpackageloaded{endfloat}
+{
+	\efloat@condopen{ttt}
+	\pretocmd\@chapter{\immediate\write\efloat@postttt{\noexpand\stepcounter{chapter}}}{}{\fail}
+	\AtBeginTables{\setcounter{chapter}{0}}
+}{}
+\makeatother\renewcommand{\efloatseparator}{\vfill}
 
 \endinput
