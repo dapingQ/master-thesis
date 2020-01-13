@@ -68,7 +68,7 @@ In this method, we can analyze the phase mismatch in FWM quantitatively
 From the above derivation, the frequency mismatch $ \Delta\omega $ only adds to the even terms of Taylor series in \autoref{eq:omega-taylor}.
 To conclude, a rough presupposition to increase the efficient phase matched band is achieving zero and flat dispersion around pump wavelengths.
 
-\section{Dispersion compensation}
+\section{Dispersion compensation}\label{sec:disp-comp}
 Previously mentioned  in \autoref{sec:guide}, the dispersion behaviour in integrated devices is not only the intrinsic material property, but also depends on the waveguide dimension. 
 
 In other words, the phase mismatch occurs as a result of material dispersion $D_M$ and waveguide dispersion $ D_W $, $D_{\lambda}= D_M + D_W$. Here, we adopt the wavelength dispersion parameter since the wavelength domain is measurable.
@@ -93,7 +93,7 @@ We use commercial software \textit{Lumerical MODE} to solve for the refractive i
 Shown in \autoref{fig:wg-disp}, the dimension dependence of waveguide dispersion features negative values in the small waveguide size, i.e. behaving as normal dispersion at the second order. Nevertheless, as either the thickness or width of channel waveguide increases,
 $D_W$ turns positive. This indicates that to achieve zero dispersion in phase match condition of four wave mixing, the normal material dispersion can be compensated with anomalous waveguide dispersion. 
 
-For example, at 1550 \si{\nm}, in a 1.5-\si{\um}-wide and 0.8-\si{\um} -thick silicon nitride waveguide cladded by silica, where the refractive index is 1.48,
+For example, at 1550 \si{\nm}, in a 1.5-\si{\um}-wide and 0.8-\si{\um}-thick silicon nitride waveguide cladded by silica, where the refractive index is 1.48,
 the waveguide dispersion is 45 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 12 kHz. It is close to zero dispersion for the pump wavelength.
 
 \begin{figure}
@@ -108,23 +108,53 @@ the waveguide dispersion is 45 \dispu. Substituting into the second-order disper
 The slot waveguide was firstly realized by \citeauthor{Xu2004} experimentally \cite{Xu2004}. In the same group \citeauthor{Almeida2004} then discussed the light enhancement and confinement caused by large discontinuity of the electric field at high-index-contrast interfaces \cite{Almeida2004}. In the recent decade, it is fully studied that such a novel waveguide can be also used to design dispersion-flattened waveguide \cites{Mas2010, Zhang2010, Zhu2012, Nolte2013}, including the both vertical or horizontal and single or multiple slots. It is also reported a micro-ring resonators formed by a slot hybrid waveguide 
 exhibits a flat and low anomalous dispersion \cite{Zhang2013}.
 
-Here, the vertical slot waveguide is preferred because it is easy to realized based on the monolithic fabrication process. We propose a double-slot silicon nitride to achieve near-zero and flat dispersion.
+In our research, the vertical slot waveguide is preferred because it is easy to realized based on the monolithic fabrication process. We propose a double-slot silicon nitride to achieve near-zero and flat dispersion.
 
-In a double vertical slot waveguide illustrated in 
+In a double vertical slot waveguide illustrated in \autoref{fig:slot-illus} , two vertical slots are fully etched and cladded with silica instead. Except the waveguide width $w$ and thickness $t$, two extra parameters are defined. The position factor ($ \mathit{pf} $) is the ratio of slot position to the waveguide width. And the filling factor ($ \mathit{ff} $) is the ratio of slot width to the waveguide width.
 
+\begin{figure}
+		\centering	
+		\includesvg{slot-illus}
+		\mycaption{Illustration of a double vertical slot waveguide}{The cyan region is \ce{Si3N4} waveguide and surrounded by silica.}
+		\label{fig:slot-illus}
+\end{figure}
 
-% \begin{figure}
-%     \centering
-    % \includegraphics{slot}
-%     \caption{Caption}
-%     \label{fig:my_label}
-% \end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{imgs/png/slot-mode}
+    \mycaption{Modes of the double vertical slot waveguide}{}
+ 	\label{fig:slot-mode}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{imgs/png/Ez}
+	\mycaption{Modes of the double vertical slot waveguide}{}
+	\label{fig:slot-mode-Ez}
+\end{figure}
+
+To classify the modes in this slot structure, the same mode solver mention in previous section is adopted to plot the electric field intensity in \autoref{fig:slot-mode}. 
+An interesting finding is that differing from the simple rectangular waveguide, 
+the mode of both quasi-TE and quasi-TM modes can be assumed as the symmetric and anti-symmetric combination of the mode field on both sides. 
+
+\begin{align}\label{key}
+	\vb{E}_\mathrm{sym} &= \vb{E}_{l} + \vb{E}_{r} \\
+	\vb{E}_\mathrm{asym} &= \vb{E}_{l} - \vb{E}_{r} \nonumber
+\end{align}
+
+\autoref{fig:slot-mode-Ez} is the \textit{z}-component of the electric field of the four modes. For example, quasi-TE0 mode is even parity while quasi-TE1 mode is odd parity.
+
+Furthermore, by optimizing the position and filling factors, the near-zero and flattened dispersion is obtained. 
 
 \section{Effects of mode crossing}
 
-The previous section proves that only in the wider or thicker waveguides can the normal second-order dispersion be compensated to achieve zero frequency mismatch. However, in this case, the waveguide of the ring resonator support not only fundamental TE or TM modes, but also the high order modes. Since the coupling of propagation modes between the bus and the waveguide 
+In the conclusion of \autoref{sec:disp-comp},
+only in the wider or thicker waveguides can the zero dispersion be compensated. However, 
+despite the fabrication difficulty arising from thicker films,
+the waveguide of larger size also supports high order modes. 
 
-Early research on ultra high-Q microres- onators in other platforms led to the development of sev- eral adjustable evanescent coupling techniques based on prisms and tapered optical fibers [16–20]. To
+In this case, due to the perturbation of high order modes, the linear mode coupling occurs and influences the resonance spectrum. 
+In the study of soliton generation,
+it is found that avoided mode crossings induced by linear mode coupling can prevent optical soliton formation when affecting resonator modes close to the pump laser frequency \cites{Herr2014a,Bao2018}. On the other hand, by introducing artificial mode crossing, the anomalous group velocity can also be achieved \cite{Kim2017}.
 
 
-Fig shows the 

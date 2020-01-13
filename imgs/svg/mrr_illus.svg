@@ -429,7 +429,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.1402416"
-     inkscape:cx="145.09919"
+     inkscape:cx="67.716609"
      inkscape:cy="94.068607"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -468,12 +468,12 @@
      id="layer1"
      transform="translate(0,-246.2)">
     <path
-       style="opacity:0.85100002;fill:#0010ff;fill-opacity:0.27638191;fill-rule:nonzero;stroke:none;stroke-width:2.04860854;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44313725;paint-order:stroke fill markers"
+       style="opacity:0.6;fill:#00ccff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.04860854;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44313725;paint-order:stroke fill markers"
        d="m 39.687501,255.32714 a 13.550691,13.550691 0 0 0 -13.550691,13.55069 13.550691,13.550691 0 0 0 13.550691,13.5507 13.550691,13.550691 0 0 0 13.550691,-13.5507 13.550691,13.550691 0 0 0 -13.550691,-13.55069 z m 0,3.30828 A 10.243042,10.243042 0 0 1 49.930977,268.87783 10.243042,10.243042 0 0 1 39.687501,279.1213 10.243042,10.243042 0 0 1 29.444024,268.87783 10.243042,10.243042 0 0 1 39.687501,258.63542 Z"
        id="path2385"
        inkscape:connector-curvature="0" />
     <rect
-       style="opacity:0.85100002;fill:#0010ff;fill-opacity:0.27638191;fill-rule:nonzero;stroke:none;stroke-width:1.89102352;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44313725;paint-order:stroke fill markers"
+       style="opacity:0.6;fill:#00ccff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.89102352;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44313725;paint-order:stroke fill markers"
        id="rect2415"
        width="65.043327"
        height="2.8365352"
@@ -544,18 +544,18 @@
          id="tspan2107"
          x="7.9374995"
          y="291.30408"
-         style="stroke-width:0.26458332">input</tspan></text>
+         style="stroke-width:0.26458332;font-size:4.23333333px">input</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="53.989304"
-       y="291.74506"
+       x="55.927185"
+       y="290.64972"
        id="text2113"><tspan
          sodipodi:role="line"
          id="tspan2111"
-         x="53.989304"
-         y="291.74506"
-         style="stroke-width:0.26458332">trans</tspan></text>
+         x="55.927185"
+         y="290.64972"
+         style="font-size:4.23333311px;stroke-width:0.26458332">pass</tspan></text>
     <path
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Mstart);paint-order:normal"
        id="path2207"
@@ -665,5 +665,16 @@
    inkscape:connector-curvature="0"
    id="path2974"
    d="m 151.63,660.94 h 1.67 c 0.13,0 0.49,0 0.49,0.34 0,0.24 -0.2,0.24 -0.41,0.24 h -2.78 c -0.19,0 -0.58,0 -1.01,-0.47 -0.33,-0.36 -0.61,-0.83 -0.61,-0.89 0,-0.02 0,-0.1 0.12,-0.1 0.08,0 0.1,0.03 0.16,0.11 0.48,0.77 1.04,0.77 1.26,0.77 h 0.82 l -0.97,-3.19 c -0.03,-0.12 -0.1,-0.33 -0.1,-0.36 0,-0.11 0.07,-0.28 0.28,-0.28 0.33,0 0.38,0.28 0.41,0.44 z" />
-</g>  </g>
+</g>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="6.6823959"
+       y="280.74432"
+       id="text1727"><tspan
+         sodipodi:role="line"
+         id="tspan1725"
+         x="6.6823959"
+         y="280.74432"
+         style="stroke-width:0.26458332;font-size:4.23333333px">scattering</tspan></text>
+  </g>
 </svg>

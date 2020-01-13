@@ -50,14 +50,15 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.57058029)%
+  \begin{picture}(1,0.56621588)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{mrr_illus_svg-tex.pdf}}%
-    \put(-1.23022028,11.84399756){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{14.82334252\unitlength}\raggedright \end{minipage}}}%
+    \put(-1.23022028,11.83963314){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{14.82334252\unitlength}\raggedright \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{mrr_illus_svg-tex.pdf}}%
-    \put(0.02372767,0.01745765){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}input\end{tabular}}}}%
-    \put(0.73174501,0.01067787){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}trans\end{tabular}}}}%
+    \put(0.02372767,0.01309323){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}input\end{tabular}}}}%
+    \put(0.76153871,0.02315357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}pass\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{mrr_illus_svg-tex.pdf}}%
+    \put(0.00443124,0.17544276){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}scattering\end{tabular}}}}%
   \end{picture}%
 \endgroup%
