@@ -14,6 +14,8 @@
 %\renewcommand*{\equationautorefname}{Eqn.}
 % \usepackage{cleveref}
 
+\usepackage{pdflscape}
+
 \usepackage{siunitx} % SI units
 \sisetup{detect-all}
 \usepackage{amsfonts}
@@ -50,6 +52,11 @@
     doi=false,isbn=false,url=false,eprint=false]{biblatex}
 \bibliography{library}
 \bibliography{bibsupple}
+
+
+% Please add the following required packages to your document preamble:
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
 
 %%%%%%%%%% Start TeXmacs macros
 \newcommand{\mathd}{\mathrm{d}}
@@ -111,6 +118,8 @@
 \begin{appendices}
 \chapter{Dispersion simulation}
 \chapter{Layout design}
+\chapter{Process}
+
 \end{appendices}
 
 \end{document}

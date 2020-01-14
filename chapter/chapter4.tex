@@ -17,17 +17,54 @@ The subtractive fabrication of waveguide is widely perform in a variety of mater
 	\label{fig:fab-flow}
 \end{figure}
 
-The schematic process flow of the subtractive process is shown in \autoref{fig:fab-flow}. 
+The schematic process flow of the subtractive process is shown in \autoref{fig:fab-flow}. To begin this process, we deposit the silicon dioxide over a 4 inch silicon wafer using the TEOS  (tetraethyl orthosilicate) source or begin with a thermal oxidized wafer. Next step is to deposit silicon nitride film with chemical vapor deposition method. After patternning the layout with electron beam lithography, the silicon nitride layer is etched. Following the resist removal, another layer of silica is cladded. Finally, the chip is diced to couple the light from the edge. The details of each step will be explained in the following contents.
 
-To begin this process, we deposit the silicon dioxide over a 4 inch silicon wafer using the TEOS source or begin with a thermal oxidized wafer. The film
-
-Recently, Si3N4 has been widely utilized in integrated optic devices because of its conspicuous flexibility in the refractive index around 2.0. In our fabrication (Fig. 1), the Si3N4 films with controlled thickness and refractive index were deposited onto the SiO2/Si substrate through LSCVD using the liquid SiN-X source (SAMCO Inc.) with N2 or N2O. The measured refractive index of the deposited Si3N4 film was 1.99, which can be turned to between 1.66 and 1.78 as silicon oxynitride (SiOxNy) by mixing N2O gas. The propagation loss of the films also demonstrated a temperature dependence of the deposition. If the temperature is set too low, the chemical reaction may be uncompleted to form Si3N4. We found that the optimal deposition temperature was 150C to obtain the required low loss properties. The photonic patterns of waveguides, ring resonators, and grating couplers were transferred onto the resist
-layer on Si3N4 by using the electron beam lithography (EBL) technique. The direct write capability of EBL guarantees the small feature size and high accuracy of the device. After development, the patterned resist was hard-baked at 150C for 5 minutes. This process is effective to improve the dry etching selectivity of the resist and Si3N4, and to help to achieve rectangle waveguide cross-sections. We used a mixed gas of CHF3/O2 for the inductively coupled plasma reactive ion etching (ICP-RIE). After etching to reach the desired depths, we striped the leftover resist using the RIE in which the O2 plasma removes only the resist, but leaves the exposed Si3N4 waveguide untouched. By utilizing CVD, we deposited a top cladding of SiO2 onto the Si3N4 core to form a buried ridge waveguide resonator
+%Recently, Si3N4 has been widely utilized in integrated optic devices because of its conspicuous flexibility in the refractive index around 2.0. In our fabrication (Fig. 1), the Si3N4 films with controlled thickness and refractive index were deposited onto the SiO2/Si substrate through LSCVD using the liquid SiN-X source (SAMCO Inc.) with N2 or N2O. The measured refractive index of the deposited Si3N4 film was 1.99, which can be turned to between 1.66 and 1.78 as silicon oxynitride (SiOxNy) by mixing N2O gas. The propagation loss of the films also demonstrated a temperature dependence of the deposition. If the temperature is set too low, the chemical reaction may be uncompleted to form Si3N4. We found that the optimal deposition temperature was 150C to obtain the required low loss properties. The photonic patterns of waveguides, ring resonators, and grating couplers were transferred onto the resist layer on Si3N4 by using the electron beam lithography (EBL) technique. The direct write capability of EBL guarantees the small feature size and high accuracy of the device. After development, the patterned resist was hard-baked at 150C for 5 minutes. This process is effective to improve the dry etching selectivity of the resist and Si3N4, and to help to achieve rectangle waveguide cross-sections. We used a mixed gas of CHF3/O2 for the inductively coupled plasma reactive ion etching (ICP-RIE). After etching to reach the desired depths, we striped the leftover resist using the RIE in which the O2 plasma removes only the resist, but leaves the exposed Si3N4 waveguide untouched. By utilizing CVD, we deposited a top cladding of SiO2 onto the Si3N4 core to form a buried ridge waveguide resonator
 
 \subsection{Film deposition}
+
+The traditional method to grow silicon nitride is using low pressure CVD (LPCVD) method. The silicon source is usually silane (\ce{SiH4}) or chloride silane, such as dichlorosilane (DCS, \ce{SiH2Cl2}), which is usually in vapor phase and toxic \cite{Kaloyeros2017}, as well as ammonia gas (\ce{NH3}) as nitrogen source. A latest trend is to alter the chemistries with liquid source with modern plasma-enhanced CVD (PE-CVD) which has faster growing rate and lower reaction temperature.
+
+% Except the difference of precursors, the silicon nitride formation and deposition techniques can influence the film properties. The plasma-enhanced CVD (PE-CVD) is one alternative which has faster growing rate and lower reaction temperature. Based on PE-CVD, liquid source CVD is developed in several industry sectors.
+
+In our research, we choose three different CVD methods---LP-CVD, PE-CVD and LS-CVD 
+to compare the differences on film properties and optical characteristics.  
+
+Compared with commercial LP-CVD silicon nitride wafers,
+the details of PE-CVD and LS-CVD recipes are listed in \autoref{tab:cvd}. It is apparent from the data that LS-CVD has the fastest rate and lowest reaction temperature. In addition, although the flow rate of SN-2 source changes the film growing rate, it does not effect on the film stoichiometry and optical properties. This is different from PE-CVD facility used in this research, which can be also used to produce silicon-rich or nitrogen-rich films as controlling the gas ratio.
+
+It is worth to mention that all the three recipes shows lower film tensile and no cracks during the fabrication.
+
+\begin{table}[]
+\centering
+\caption{Recipes of CVD methods uses in this research}
+\label{tab:cvd}
+\begin{tabular}{cccc}
+\hline
+              & LP-CVD                            & PE-CVD                                                                                  & LS-CVD                                                                                  \\ \hline
+Facility      & -                                 & SAMCO PD-220NL                                                                          & SMACO PD-100ST                                                                          \\ \hline
+Source        & DCS:NH3:N2                        & \begin{tabular}[c]{@{}c@{}}\ce{SiH4}:\ce{NH3}:N2\\ =6:5:189 sccm\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}SN-2:N2\\ =0.5:30 sccm\end{tabular}                          \\ \hline
+Chamber Temp. & 750\si{\celsius}-800\si{\celsius} & \begin{tabular}[c]{@{}c@{}}upper 150\si{\celsius}\\ lower 350\si{\celsius}\end{tabular} & \begin{tabular}[c]{@{}c@{}}upper 150\si{\celsius}\\ lower 180\si{\celsius}\end{tabular} \\ \hline
+RF power      & -                                 & 40W                                                                                     & 30W                                                                                     \\ \hline
+Rate          & -                                 & 15 nm/min                                                                               & 23 nm/min                                                                               \\ \hline
+\end{tabular}
+\end{table}
+
+
 \subsection{Material properties}
+
+
+The vast majority of studies of silicon nitride waveguide that have found that the Si-H bond remaining in the hydrogenated silicon intride (\ce{SiNx}:H) causes 
+\cite{Shaw2005}
+has been one of the problem causing optical absorption around 1520 nm. Detailed analysis is finished in 
+
+To solve this problem 
+
+
 \subsection{Patterning and etching}
+
 \subsection{Top-cladding and annealing}
+
 \subsection{Optical I/O and packaging}
 
 \section{Fabless samples via foundries}
