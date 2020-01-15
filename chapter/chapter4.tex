@@ -2,13 +2,15 @@
 
 \chapter{Device fabrication of silicon nitride ring resonators}
 
-Different from fabrication of silicon-on-insulator, which is CMOS-compatible and fully understood both in the laboratory and semiconductor industry, fabricating integrated silicon nitride device, in particular high Q-factor ring resonators, is only realized in several group all around the word. 
+Different from fabrication of silicon photonic devices based silicon-on-insulator (SOI) wafers, which is CMOS-compatible and widely used in the laboratory and semiconductor industry, to fabricate integrated silicon nitride device, in particular high Q-factor ring resonators realizing four wave mixing, is still challenging.
 
-Collaborating with Yokoyama Lab in Kyushu University, we perform the subtractive fabrication of silicon nitride ring resonators, along with other optical devices. To discover the diversity of fabrication recipes and compare the material properties, we also design the device layout and order the devices using ligentec process and NTT-AT process.
+Collaborating with Yokoyama Lab in Kyushu University, we perform the subtractive fabrication of silicon nitride ring resonators as well as other optical devices. To discover the diversity of fabrication recipes and compare the material properties, we also design the device layout and order the devices using ligentec process and NTT-AT process.
 
 \section{Subtractive fabrication process}
 
-The subtractive fabrication of waveguide is widely perform in a variety of material platforms, including silicon nitride. The previous work concerning our fabrication processes reported ring resonators with high \textit{Q}-factor up to \num{5.2d4} and waveguides with measured loss of 2.9 dB/cm \cite{Cheng2017b}. 
+The subtractive process refers to the subtraction of unnecessary parts after the patterning, differing from the lift-off or damascence processes. For optical waevguides, it challenges the etching process to achieve less roughness on the sidewalls. 
+% abrication of waveguide is widely perform in a variety of material platforms, including silicon nitride.
+The previous work using similar fabrication processes reported silicon nitride ring resonators with \textit{Q}-factor up to \num{5.2d4}. The measured loss of waveguides is 2.9 dB/cm \cite{Cheng2017b}. 
 
 \begin{figure}
 	\centering
@@ -17,13 +19,25 @@ The subtractive fabrication of waveguide is widely perform in a variety of mater
 	\label{fig:fab-flow}
 \end{figure}
 
-The schematic process flow of the subtractive process is shown in \autoref{fig:fab-flow}. To begin this process, we deposit the silicon dioxide over a 4 inch silicon wafer using the TEOS  (tetraethyl orthosilicate) source or begin with a thermal oxidized wafer. Next step is to deposit silicon nitride film with chemical vapor deposition method. After patternning the layout with electron beam lithography, the silicon nitride layer is etched. Following the resist removal, another layer of silica is cladded. Finally, the chip is diced to couple the light from the edge. The details of each step will be explained in the following contents.
+The schematic process flow of the subtractive process is shown in \autoref{fig:fab-flow}. First, the silicon dioxide film is deposited on a 4-inch silicon substrate using the TEOS  (tetraethyl orthosilicate) source.
+An alternative method is using a thermal oxidized silicon wafer directly. The target thickness of silicon dioxide layter is greater than 2 \si{\um} to create enough buffer between the silicon nitride film and the silicon substrate. 
+Next is silicon nitride film deposition using chemical vapor deposition methods. Following electron beam (EB) lithography patternning, the silicon nitride layer is etched with inductively coupled plasma reactive-ion etching (ICP RIE) technique. After the resist removal, another layer of silica is cladded. Finally, the chip is cut to couple the light from the edge. 
+
+The details of each step will be expanded in the following contents.
 
 %Recently, Si3N4 has been widely utilized in integrated optic devices because of its conspicuous flexibility in the refractive index around 2.0. In our fabrication (Fig. 1), the Si3N4 films with controlled thickness and refractive index were deposited onto the SiO2/Si substrate through LSCVD using the liquid SiN-X source (SAMCO Inc.) with N2 or N2O. The measured refractive index of the deposited Si3N4 film was 1.99, which can be turned to between 1.66 and 1.78 as silicon oxynitride (SiOxNy) by mixing N2O gas. The propagation loss of the films also demonstrated a temperature dependence of the deposition. If the temperature is set too low, the chemical reaction may be uncompleted to form Si3N4. We found that the optimal deposition temperature was 150C to obtain the required low loss properties. The photonic patterns of waveguides, ring resonators, and grating couplers were transferred onto the resist layer on Si3N4 by using the electron beam lithography (EBL) technique. The direct write capability of EBL guarantees the small feature size and high accuracy of the device. After development, the patterned resist was hard-baked at 150C for 5 minutes. This process is effective to improve the dry etching selectivity of the resist and Si3N4, and to help to achieve rectangle waveguide cross-sections. We used a mixed gas of CHF3/O2 for the inductively coupled plasma reactive ion etching (ICP-RIE). After etching to reach the desired depths, we striped the leftover resist using the RIE in which the O2 plasma removes only the resist, but leaves the exposed Si3N4 waveguide untouched. By utilizing CVD, we deposited a top cladding of SiO2 onto the Si3N4 core to form a buried ridge waveguide resonator
 
 \subsection{Film deposition}
 
-The traditional method to grow silicon nitride is using low pressure CVD (LP-CVD) method. The silicon source is usually silane (\ce{SiH4}) or chloride silane, such as dichlorosilane (DCS, \ce{SiH2Cl2}), which is vapor phase and toxic \cite{Kaloyeros2017}, while the ammonia gas (\ce{NH3}) plays the role of nitrogen source. An alternative approach is using modern plasma-enhanced CVD (PE-CVD) with liquid source, which has faster growing rate and lower reaction temperature.
+Low pressure CVD (LP-CVD) is a traditional method to deposit silicon nitride from the vapor source by the decomposition of chemicals on the surface.  
+Stoichiometric silicon nitride can be obtained by controlling and optimizing the ratio of silicon and nitrogen sources. 
+The precursor of silicon is usually silane (\ce{SiH4}) or chloride silane gases, such as dichlorosilane (DCS, \ce{SiH2Cl2}). And the ammonia gas (\ce{NH3}) plays the role of nitrogen source. 
+\begin{align*}
+    \ce{3SiH4(g) + 4NH3(g) &-> Si3N4(s) + 12H2(g)} \\
+    \ce{3SiH2Cl2(g) + 4NH3(g) &-> Si3N4(s) + 6HCl(g) + 6H2(g)}
+\end{align*}
+
+Considering the toxic gases used in LP-CVD, an alternative approach is using modern plasma-enhanced CVD (PE-CVD) with liquid source, which has faster growing rate and lower reaction temperature.
 
 Although the silicon nitride waveguides deposited by LP-CVD method are mainly reported, it is necessary to figure out the CVD method dependence of film properties, especially the refractive index. 
 
@@ -52,13 +66,13 @@ Deposition Rate          & -                                 & 15 nm/min        
 \subsection{Material properties}
 The vast majority of studies concerning silicon nitride processes have found that the hydrogen remaining in the film leads to N-H and Si-H bond, which influence the absorption at S and C band \cites{Ay2004, Agnihotri2000}. 
 
-To quantitatively clarify these bonds in the films deposited with CVD facilities mention above, we perform the Fourier-transform infrared spectroscopy on the surface silicon nitride film. The absorbance is taken from the difference with background, From \autoref{fig:ftir}, it can be seen that except the peak around 870 \si{\per\cm}, two other peaks are located around 2200 and 3300 \si{\per\cm}, corresponding to Si-H and N-H bonds respectively.
+To quantitatively clarify these bonds in the films deposited with CVD facilities mention above, we perform the Fourier-transform infrared spectroscopy (FTIR) on the surface silicon nitride film.
 
-Interestingly, there are also two peaks found at ? and ?, indicating Si-O symmetric and asymmetric stretching bonds respectively. This result may be explained by the fact that the infrared 
+The measurement is carried out using attenuated total reflection (ATR) method with SHIMADZU ?. The absorbance is taken from the difference with background, From \autoref{fig:ftir}, it can be seen that except the peak around 800 \si{\per\cm}, two other peaks are located around 2150 and 3350 \si{\per\cm}, corresponding to Si-H and N-H bonds respectively.
 
-
-
-\cite{Shaw2005}
+Interestingly, there are also two peaks found at 1020 and 1120, indicating Si-O symmetric and asymmetric stretching bonds respectively. This result may be explained by the fact that the depth of penetration of ATR method is less than 1 micron at this wavelength, where the thickness of silicon nitride layer
+is targeted at 800 nm.
+% \cite{Shaw2005}
 
 \begin{figure}
     \centering
@@ -67,7 +81,19 @@ Interestingly, there are also two peaks found at ? and ?, indicating Si-O symmet
     \label{fig:ftir}
 \end{figure}
 
+In conclusion, even though the ammonia free recipe is used in LS-CVD method, the film is still hydrogenated while LP-CVD commercial wafers show least N-H absorbance.
+
 \subsection{Patterning and etching}
+The sample used in our experiments are usually in a 20 mm$\times$20 mm size, diced off from the 4-inch wafer. The electron beam lithography is used to pattern the waveguide layout. To create the mask against etching plasma, electron beam resist is spin-coated on the surface of silicon nitride films after several times of cleaning. 
+
+Ahead of EB resist coating, a layer of an adhesion promoter, hexamethyldisilazane (HDMS) is coated at 2000 rpm and baked at 120 \si{\celsius} for 1 min. Next, the positive resist (AR-P 6500, ALLRESIST GmbH) is coated at 1000 rpm and soft-baked at 120 \si{\celsius} for 2 min. The final thickness of resist is around 800 nm to achieve enough thickness during the etching process. 
+
+ELIONIX ELS-F100 is the mainly used EB machien and the optimized dose is 3 nA, 0.6 sec/dot. This recipe has small feature sizes and high accuracy up to 10 nm. After the lithography, the sample is developed using \textit{o}-Xylene. 
+
+After developing using \textit{o}-Xylene, 
+
+Several EB resists are compared, both negative and positive type. 
+
 
 \subsection{Top-cladding and annealing}
 
