@@ -15,7 +15,7 @@ plt.rcParams.update({
 w = np.arange(0.5,2.4,0.1)
 t = np.arange(0.5,1.0,0.1)
 
-data = np.loadtxt('20013-test_disp.txt')
+data = np.loadtxt('20013-test_disp.txt')#[:int(len(w)*len(t)*3)]
 d_array = data.reshape((len(w),len(t),4))[:,:,1]*1e6
 
 X, Y = np.meshgrid(w,t)
@@ -50,4 +50,4 @@ ax.set_xlabel('width ($\mathrm{\mu}$m)')
 ax.set_ylabel(r'thickness ($\mathrm{\mu}$m)')
 
 # plt.show()
-fig.savefig(f'fdtd.svg',dpi=200,transparent=True,bbox_inches='tight')
+fig.savefig(f'fdtd_fine.svg',dpi=200,transparent=True,bbox_inches='tight')
