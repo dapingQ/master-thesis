@@ -2,6 +2,20 @@
 \stepcounter {chapter}
 \stepcounter {chapter}
 \stepcounter {chapter}
+\begin{table}[]
+\centering
+\begin{tabular}{cccc}
+\hline
+              & LP-CVD                            & PE-CVD                                                                                  & LS-CVD                                                                                  \\ \hline
+Facility      & -                                 & SAMCO PD-220NL                                                                          & SMACO PD-100ST                                                                          \\ \hline
+Source        & DCS:NH3:N2                        & \begin{tabular}[c]{@{}c@{}}\ce{SiH4}:\ce{NH3}:N2\\ =6:5:189 sccm\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}SN-2:\ce{N2}\\ =0.5:30 sccm\end{tabular}                          \\ \hline
+Chamber Temp. & 750\si{\celsius}-800\si{\celsius} & \begin{tabular}[c]{@{}c@{}}upper 150\si{\celsius}\\ lower 350\si{\celsius}\end{tabular} & \begin{tabular}[c]{@{}c@{}}upper 150\si{\celsius}\\ lower 180\si{\celsius}\end{tabular} \\ \hline
+RF Power      & -                                 & 40 W                                                                                     & 30 W                                                                                     \\ \hline
+Deposition Rate          & -                                 & 15 nm/min                                                                               & 23 nm/min                                                                               \\ \hline
+\end{tabular}
+\mycaption{Recipes of CVD methods used in this research}{In the case of PE-CVD and LS-CVD, upper electrode and lower electrode are set at different temperature. RF power refers to radio frequency power used to excite the precursor gasses.}
+\label{tab:cvd}
+\end{table}
 \stepcounter {chapter}
 \stepcounter {chapter}
 \stepcounter {chapter}
