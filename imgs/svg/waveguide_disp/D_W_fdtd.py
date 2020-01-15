@@ -16,14 +16,14 @@ w = np.arange(0.5,2.4,0.1)
 t = np.arange(0.5,1.0,0.1)
 
 data = np.loadtxt('20013-test_disp.txt')
-d_array = data.reshape((len(w),len(t),4))[:,:,3]*1e6
+d_array = data.reshape((len(w),len(t),4))[:,:,1]*1e6
 
 X, Y = np.meshgrid(w,t)
 fig, ax = plt.subplots(dpi=200,figsize=(6,3))
 im = ax.imshow(d_array, interpolation='bilinear', origin='lower',
                 cmap=cm.rainbow,extent=(w[0],w[-1],t[0],t[-1]),aspect='auto')
 
-cs = ax.contour(d_array, np.arange(-50,200,50),
+cs = ax.contour(d_array, (-300,-100,0,50,100,150),
                 origin='lower',#cmap='flag',
                 colors='k',extent=(w[0],w[-1],t[0],t[-1]))
 
@@ -49,5 +49,5 @@ cbar.ax.set_ylabel(r'$D_{W}$ (ps/nm·km)')
 ax.set_xlabel('width ($\mathrm{\mu}$m)')
 ax.set_ylabel(r'thickness ($\mathrm{\mu}$m)')
 
-plt.show()
+# plt.show()
 fig.savefig(f'fdtd.svg',dpi=200,transparent=True,bbox_inches='tight')
