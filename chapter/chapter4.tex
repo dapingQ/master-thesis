@@ -90,10 +90,33 @@ But first, a layer of an adhesion promoter, hexamethyldisilazane (HDMS) is coate
 
 \subsection{ICP etching}
 
+In order to etch the waveguide layer selectively, ICP-RIE (RIE-400iPB, SAMCO Inc.) is used to remove the unmasked section in silicon nitride layer.
+
+Different from previous work \cite{Yusuke2017}, the ICP-RIE facility used in this study is optimized for deep silicon etching. In the key etching step of our recipe, only \ce{CHF3} gas, 6 sccm, is used along with argon gas to cleans any residual organic matter over the surface. ICP power is set 50 W, and RF bias power is 20 W.
+
+The etching rate of three kinds of film is listed in \autoref{tab:cvd}. From the data, we can see LS-CVD deposited film has the best selectivity, much higher than LP- and PE-CVD samples. It seems possible that the film density varies from the CVD methods, due to LS-CVD has the fastest growth rate and lowest reaction temperature.
+
+\begin{table}[]
+\begin{tabular}{cccc}
+\hline
+       & \begin{tabular}[c]{@{}c@{}}Film Etching Rate \\ (nm/min)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Resist Etching Rate\\ (nm/min)\end{tabular} & Selectivity \\ \hline
+LP-CVD & 19.20                                                            & 12.76                                                                     & 1.50        \\ \hline
+PE-CVD & 23.48                                                            & 14.29                                                                     & 1.64        \\ \hline
+LS-CVD & 27.40                                                            & 2.08                                                                      & 13.17       \\ \hline
+\end{tabular}
+\mycaption{Etching rate and selectivity of ICP process}{}
+\label{tab:icp}
+\end{table}
 
 \subsection{Top-cladding and annealing}
+The final step is cladding another layer of silicon dioxide. The recipe is as same as the buried oxide layer, using TEOS source. To remove the residual hydrogen in silicon nitride film, an optional step of annealing is studied. 
+
+Traditionally, annealing process can be performed in different cases, after or during CVD deposition, after dry etching or after top cladding. Since the first case requires tensile control during cycled deposition-annealing operation, in our experiments, annealing before or after top cladding are considered.
+
+
 
 \subsection{Optical I/O and packaging}
+
 
 \section{Fabless samples via foundries}
 
