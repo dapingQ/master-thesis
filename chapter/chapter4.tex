@@ -23,43 +23,49 @@ The schematic process flow of the subtractive process is shown in \autoref{fig:f
 
 \subsection{Film deposition}
 
-The traditional method to grow silicon nitride is using low pressure CVD (LPCVD) method. The silicon source is usually silane (\ce{SiH4}) or chloride silane, such as dichlorosilane (DCS, \ce{SiH2Cl2}), which is usually in vapor phase and toxic \cite{Kaloyeros2017}, as well as ammonia gas (\ce{NH3}) as nitrogen source. A latest trend is to alter the chemistries with liquid source with modern plasma-enhanced CVD (PE-CVD) which has faster growing rate and lower reaction temperature.
+The traditional method to grow silicon nitride is using low pressure CVD (LP-CVD) method. The silicon source is usually silane (\ce{SiH4}) or chloride silane, such as dichlorosilane (DCS, \ce{SiH2Cl2}), which is vapor phase and toxic \cite{Kaloyeros2017}, while the ammonia gas (\ce{NH3}) plays the role of nitrogen source. An alternative approach is using modern plasma-enhanced CVD (PE-CVD) with liquid source, which has faster growing rate and lower reaction temperature.
+
+Although the silicon nitride waveguides deposited by LP-CVD method are mainly reported, it is necessary to figure out the CVD method dependence of film properties, especially the refractive index. 
 
 % Except the difference of precursors, the silicon nitride formation and deposition techniques can influence the film properties. The plasma-enhanced CVD (PE-CVD) is one alternative which has faster growing rate and lower reaction temperature. Based on PE-CVD, liquid source CVD is developed in several industry sectors.
 
-In our research, we choose three different CVD methods---LP-CVD, PE-CVD and LS-CVD 
-to compare the differences on film properties and optical characteristics.  
-
-Compared with commercial LP-CVD silicon nitride wafers,
-the details of PE-CVD and LS-CVD recipes are listed in \autoref{tab:cvd}. It is apparent from the data that LS-CVD has the fastest rate and lowest reaction temperature. In addition, although the flow rate of SN-2 source changes the film growing rate, it does not effect on the film stoichiometry and optical properties. This is different from PE-CVD facility used in this research, which can be also used to produce silicon-rich or nitrogen-rich films as controlling the gas ratio.
-
-It is worth to mention that all the three recipes shows lower film tensile and no cracks during the fabrication.
+In our research, we choose three different CVD facilities---LP-CVD, PE-CVD and liquid source CVD as the film deposition facilities, and adopt different recipes to deposit the silicon nitride layer. Compared with commercial LP-CVD silicon nitride wafers,
+the details of PE-CVD and LS-CVD recipes are listed in \autoref{tab:cvd}. It is apparent from the data that LS-CVD has the fastest rate and lowest reaction temperature. In addition, although the flow rate of SN-2 source changes the film growing rate 23 nm/min, it does not effect on the film stoichiometry and optical properties. This is different from PE-CVD facility used in this research, which can be also used to produce silicon-rich or nitrogen-rich films as controlling the gas ratio.
+It is worth to mention that all the wafer deposited with above three recipes shows no cracks during the fabrication, suggesting low tensile in silicon nitride films.
 
 \begin{table}[]
 \centering
-\caption{Recipes of CVD methods uses in this research}
-\label{tab:cvd}
 \begin{tabular}{cccc}
 \hline
               & LP-CVD                            & PE-CVD                                                                                  & LS-CVD                                                                                  \\ \hline
 Facility      & -                                 & SAMCO PD-220NL                                                                          & SMACO PD-100ST                                                                          \\ \hline
-Source        & DCS:NH3:N2                        & \begin{tabular}[c]{@{}c@{}}\ce{SiH4}:\ce{NH3}:N2\\ =6:5:189 sccm\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}SN-2:N2\\ =0.5:30 sccm\end{tabular}                          \\ \hline
+Source        & DCS:NH3:N2                        & \begin{tabular}[c]{@{}c@{}}\ce{SiH4}:\ce{NH3}:N2\\ =6:5:189 sccm\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}SN-2:\ce{N2}\\ =0.5:30 sccm\end{tabular}                          \\ \hline
 Chamber Temp. & 750\si{\celsius}-800\si{\celsius} & \begin{tabular}[c]{@{}c@{}}upper 150\si{\celsius}\\ lower 350\si{\celsius}\end{tabular} & \begin{tabular}[c]{@{}c@{}}upper 150\si{\celsius}\\ lower 180\si{\celsius}\end{tabular} \\ \hline
-RF power      & -                                 & 40W                                                                                     & 30W                                                                                     \\ \hline
-Rate          & -                                 & 15 nm/min                                                                               & 23 nm/min                                                                               \\ \hline
+RF Power      & -                                 & 40 W                                                                                     & 30 W                                                                                     \\ \hline
+Deposition Rate          & -                                 & 15 nm/min                                                                               & 23 nm/min                                                                               \\ \hline
 \end{tabular}
+\mycaption{Recipes of CVD methods used in this research}{In the case of PE-CVD and LS-CVD, upper electrode and lower electrode are set at different temperature. RF power refers to radio frequency power used to excite the precursor gasses.}
+\label{tab:cvd}
 \end{table}
 
 
 \subsection{Material properties}
+The vast majority of studies concerning silicon nitride processes have found that the hydrogen remaining in the film leads to N-H and Si-H bond, which influence the absorption at S and C band \cites{Ay2004, Agnihotri2000}. 
+
+To quantitatively clarify these bonds in the films deposited with CVD facilities mention above, we perform the Fourier-transform infrared spectroscopy on the surface silicon nitride film. The absorbance is taken from the difference with background, From \autoref{fig:ftir}, it can be seen that except the peak around 870 \si{\per\cm}, two other peaks are located around 2200 and 3300 \si{\per\cm}, corresponding to Si-H and N-H bonds respectively.
+
+Interestingly, there are also two peaks found at ? and ?, indicating Si-O symmetric and asymmetric stretching bonds respectively. This result may be explained by the fact that the infrared 
 
 
-The vast majority of studies of silicon nitride waveguide that have found that the Si-H bond remaining in the hydrogenated silicon intride (\ce{SiNx}:H) causes 
+
 \cite{Shaw2005}
-has been one of the problem causing optical absorption around 1520 nm. Detailed analysis is finished in 
 
-To solve this problem 
-
+\begin{figure}
+    \centering
+    \includesvg{ftir}
+    \caption{Caption}
+    \label{fig:ftir}
+\end{figure}
 
 \subsection{Patterning and etching}
 
