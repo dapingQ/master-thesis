@@ -4,31 +4,21 @@ from scipy.optimize import curve_fit
 from scipy.constants import c, pi
 from scipy.misc import derivative
 from math import sqrt
-# from matplotlib import rcParams
-
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.optimize import curve_fit
-from scipy.constants import c, pi
-from scipy.misc import derivative
-from math import sqrt
-# from matplotlib import rcParams
 
 from cycler import cycler
 plt.rcParams.update({    
-    'font.size': 16,
-#     'ytick.labelsize':14,
-    'lines.linewidth': 0.8,
     'figure.max_open_warning': 0,
-    'legend.frameon': False,
     'figure.subplot.hspace': 0,
-    'savefig.dpi':300,
+    'axes.prop_cycle': cycler('color', 'bgrcmyk'),
     'axes.labelsize': 16,
-    'savefig.transparent': True,
     'axes.grid': True,
+    'lines.linewidth': 0.8,
+    'font.size': 16,
+    'legend.frameon': False,
     'grid.linestyle': ':',
-    'axes.prop_cycle': cycler('color', 'bgrcmyk')
-#     'xtick.alignment': 'right'
+    'savefig.transparent': True,
+    'savefig.bbox': 'tight',
+    'savefig.dpi': 300,
 })
 
 # wl,nRaw = np.loadtxt('ellipso.txt').T
