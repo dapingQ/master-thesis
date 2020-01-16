@@ -65,12 +65,15 @@ Deposition Rate          & -                                 & 15 nm/min        
 
 
 \subsection{Material properties}
+
+\subsubsection{Fourier-transform infrared spectroscopy}
 The vast majority of studies on silicon nitride fabrication processes have found that the hydrogen remaining in the films leads to N-H and Si-H bonds, which causes the optical absorption at S and C band \cites{Ay2004, Agnihotri2000}. To quantitatively clarify these bonds in our film, we perform the Fourier-transform infrared spectroscopy (FTIR) on the top of silicon nitride film.
 
 The measurement is carried out using attenuated total reflection (ATR) method with SHIMADZU ?. In \autoref{fig:ftir}, the absorbance is taken from the difference with background transmittance. It can be seen that except the peak around 800? \si{\per\cm} referring to Si-N stretching mode, two other peaks are located around 2150 and 3350 \si{\per\cm}, corresponding to Si-H and N-H bonds respectively.
 
 Interestingly, there are also two peaks found at 1020 and 1120, indicating Si-O symmetric and asymmetric stretching modes. This result may be explained by the fact that in ATR method, the depth of penetration at this wavelength is less than 1 micron, while the thickness of silicon nitride layers in our experiment is targeted at 800 nm.
 % \cite{Shaw2005}
+
 
 \begin{figure}
     \centering
@@ -80,6 +83,9 @@ Interestingly, there are also two peaks found at 1020 and 1120, indicating Si-O 
 \end{figure}
 
 In conclusion, even though the ammonia free recipe is used in LS-CVD method, the film is still hydrogenated while LP-CVD commercial wafers show least N-H absorbance.
+
+\subsubsection{Ellipsometry}
+
 
 \subsection{Patterning}
 The sample used in our experiments are usually in the size of 20 mm $\times$ 20 mm, diced off from a 4-inch wafer. Before the electron beam lithography, electron beam resist is spin-coated on the surface of silicon nitride films after several times of cleaning. 
@@ -142,40 +148,69 @@ In general, the finding of cracks on the top clad layer shows despite the tensil
     \label{fig:anneal}
 \end{figure}
 
-\subsection{Optical I/O and packaging}
+\subsection{Edge coupling and chip dicing}
 
+In previous works \cite{Sunada2018}, both grating coupling and edge coupling were designed and studied. In this research, considering the broadband frequency conversion motivation, the edge coupling is preferred due to the broader 3 dB bandwidth. 
+
+To achieve high coupling efficiency, we adopt monolithic inversed tapered waveguide as the mode convertor. The input and output ports of waveguide are both tapered from normal width 1.5 \si{\um} to a narrower end. By FDTD methods, the mode field is swept with different taper end widths.
 
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.33\textwidth}
-		\includesvg[width=\textwidth]{taper/0.3}
+		\includesvg[width=\textwidth]{taper/03.svg}
 		\caption{End width 0.3 \si{\um}}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{0.33\textwidth}
-		\includesvg[width=\textwidth]{taper/0.6}
+		\includesvg[width=\textwidth]{taper/06}
 		\caption{End width 0.6 \si{\um}}
 	\end{subfigure}\hfill
-		\begin{subfigure}[b]{0.33\textwidth}
-		\includesvg[width=\textwidth]{taper/0.9}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includesvg[width=\textwidth]{taper/09}
 		\caption{End width 0.9 \si{\um}}
 	\end{subfigure}
 	\vfill
-		\begin{subfigure}[b]{0.33\textwidth}
-		\includesvg[width=\textwidth]{taper/1.2}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includesvg[width=\textwidth]{taper/12}
 		\caption{End width 1.2 \si{\um}}
 	\end{subfigure}
-		\begin{subfigure}[b]{0.33\textwidth}
-		\includesvg[width=\textwidth]{taper/1.5}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includesvg[width=\textwidth]{taper/15}
 		\caption{End width 1.5 \si{\um}}
 	\end{subfigure}
-
-    \mycaption{Taper mode}{}
+    \mycaption{Mode field at the taper end}{The outline of taper edge is profiled.}
 \label{fig:taper}
+\end{figure}
+
+From the result shown in \autoref{fig:taper}a, the mode fields expand horizontally as the taper end width increases proportionally. The largest mode size of 3.4 \si{\um} $\times$ 3.4 \si{\um} is successfully demonstrated, but the enhancement is not significant compared with no tapered port in \autoref{fig:taper}e. In result, a lensed fiber with spot diameter from 3.0 \si{\um} to 3.4 \si{\um} is recommended. 
+
+In order to precisely define the input and output ports, the chip dicing is required.
+Compared with conventional mechanical dicing,  the laser dicing technique is advantageous at high precision and less damages on the chip edges. The image of laser diced edge is compared with the manually diced one in \autoref{fig:dicing}. Apparently, the chip using laser dicing has smoother edge, which is helpful to reduce the backward scattering.
+
+\begin{figure}
+    \centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{imgs/jpg/laser}
+% 		\caption{Laser diced}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{imgs/jpg/manual_cleav}
+% 		\caption{Manually cleaved}
+	\end{subfigure}
+    \mycaption{Caption}{}
+    \label{fig:dicing}
 \end{figure}
 
 \section{Fabless samples via foundries}
 
-\subsection{Ligentec}
+\cite{Hochberg2010}
+Beyond the above fabrication processes, fabless photonic 
 
-\subsection{NTT-AT}
 
+
+
+
+\subsection{Ligentec technique}
+damascene
+
+\subsection{NTT-AT technique}
+sputter source
