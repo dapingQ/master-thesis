@@ -12,11 +12,12 @@ plt.rcParams.update({
     'savefig.transparent': True,
 })
 
-w = np.arange(0.5,2.4,0.1)
-t = np.arange(0.5,1.0,0.1)
+w = np.arange(0.6,2.45,0.05)
+t = np.arange(0.6,1.05,0.05)
 
-data = np.loadtxt('20013-test_disp.txt')#[:int(len(w)*len(t)*3)]
-d_array = data.reshape((len(w),len(t),4))[:,:,1]*1e6
+
+data = np.loadtxt('20015-run05_disp.txt')#[:int(len(w)*len(t)*3)]
+d_array = data.reshape((len(w),len(t),3))[:,:,1]*1e6
 
 X, Y = np.meshgrid(w,t)
 fig, ax = plt.subplots(dpi=200,figsize=(6,3))

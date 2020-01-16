@@ -16,6 +16,19 @@ Deposition Rate          & -                                 & 15 nm/min        
 \mycaption{Recipes of CVD methods used in this research}{In the case of PE-CVD and LS-CVD, upper electrode and lower electrode are set at different temperature. RF power refers to radio frequency power used to excite the precursor gasses.}
 \label{tab:cvd}
 \end{table}
+\efloatseparator
+ 
+\begin{table}[]
+\begin{tabular}{cccc}
+\hline
+       & \begin{tabular}[c]{@{}c@{}}Film Etching Rate \\ (nm/min)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Resist Etching Rate\\ (nm/min)\end{tabular} & Selectivity \\ \hline
+LP-CVD & 19.20                                                            & 12.76                                                                     & 1.50        \\ \hline
+PE-CVD & 23.48                                                            & 14.29                                                                     & 1.64        \\ \hline
+LS-CVD & 27.40                                                            & 2.08                                                                      & 13.17       \\ \hline
+\end{tabular}
+\mycaption{Etching rate and selectivity of ICP process}{}
+\label{tab:icp}
+\end{table}
 \stepcounter {chapter}
 \stepcounter {chapter}
 \stepcounter {chapter}
