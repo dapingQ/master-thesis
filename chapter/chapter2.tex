@@ -29,8 +29,8 @@ This is the normal \textit{Helmholtz equation}, indicating the relation between 
 
 Next, the boundary conditions determining the solution to Eqn. \ref{eq:helm}, arise from the Maxwell's equations as well.
 \begin{eqnarray*}%\label{eq:bcon}
-  \vb{\hat{n}} \cdot (\vb{E_a - E_b}) & = & 0 \\
-  \vb{\hat{n}} \times (\vb{\vb{H_a} - H_{\vb{b}}}) & = & 0
+  \vb{\hat{n}} \cdot (\vb{E}_a - \vb{E}_b) & = & 0 \\
+  \vb{\hat{n}} \times (\vb{H}_a - \vb{H}_b) & = & 0
 \end{eqnarray*}
 which is the continuity condition of both electric and magnetic field at all dielectric material interfaces. Here, $\vb{\hat{n}}$ is the normal direction at the material boundary and the subscript $a, b$ denote different regions.
 
@@ -210,10 +210,10 @@ It is worth mentioning that not only in the bulk crystals, but also in the sub-m
 
 % In this section, we prefer to introduce both second-order and third-order optical nonlinearity. 
 Here, a brief theoretical derivation is elucidated and in the following part, degenerate four wave mixing is emphasized. In an isotropic nonlinear medium, assuming only instantaneous dielectric response, the relation between the polarization and the electric field is expressed by a power series in the electric field
-\begin{equation}\label{eq:nlp}
-    \vb{P}(t) = \varepsilon_0 \large (\chi^{(1)}\vb{E}(t) + \chi^{(2)}\vb{E}^2(t) + \chi^{(3)}\vb{E}^3(t))
-    = \varepsilon_0 \chi^{(1)}\vb{E}(t) + \vb{P}_\mathrm{NL}(t)
-\end{equation}
+\begin{align}\label{eq:nlp}
+    \vb{P}(t) & = \varepsilon_0 \large (\chi^{(1)}\vb{E}(t) + \chi^{(2)}\vb{E}^2(t) + \chi^{(3)}\vb{E}^3(t)) \\
+			& = \varepsilon_0 \chi^{(1)}\vb{E}(t) + \vb{P}_\mathrm{NL}(t)
+\end{align}
 
 Note in \autoref{eq:nlp}, the nonlinear susceptibilities $\chi^{(2)}$ and $\chi^{(3)}$ are second-rank and third-rank tensors, corresponding to the tensor product with $\vb{E}^2$ and $\vb{E}^3$. The higher order response is neglected and sequentially, only $\chi^{(2)}$ processes and $\chi^{(3)}$ processes are to be introduced.
 
