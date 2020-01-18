@@ -51,7 +51,7 @@ It is also worth to mention that all the wafer deposited with above three recipe
 \begin{table}[]
 \centering
 \begin{tabular}{cccc}
-\hline
+%\hline
               & LP-CVD                            & PE-CVD                                                                                  & LS-CVD                                                                                  \\ \hline
 Facility      & -                                 & SAMCO PD-220NL                                                                          & SMACO PD-100ST                                                                          \\ \hline
 Source        & DCS:NH3:N2                        & \begin{tabular}[c]{@{}c@{}}\ce{SiH4}:\ce{NH3}:N2\\ =6:5:189 sccm\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}SN-2:\ce{N2}\\ =0.5:30 sccm\end{tabular}                          \\ \hline
@@ -77,7 +77,7 @@ Interestingly, there are also two peaks found at 1020 and 1120, indicating Si-O 
 
 \begin{figure}
     \centering
-    \includesvg{ftir}
+    \includesvg[width=.6\textwidth]{ftir}
     \caption{Caption}
     \label{fig:ftir}
 \end{figure}
@@ -86,14 +86,17 @@ In conclusion, even though the ammonia free recipe is used in LS-CVD method, the
 
 \subsubsection{Ellipsometry}
 
-Except the FTIR, it is necessary to evaluated the refractive indexes of the film deposited above. Using the infrared elliposometry,  
+Except the FTIR, it is necessary to evaluated the refractive indexes of the film deposited above. Using the infrared elliposometry, the refractive index of deposited silicon nitride film is obtained. The result is shown in \autoref{fig:ellipso}, where we can see the index varies from the deposition methods at the magnitude of 0.01.
+Furthermore, even the refractive index are distinguished, the material wavelength dispersion parameter $D_M$ can be close.
 
 \begin{figure}
 	\centering
 	\includesvg[scale=0.8]{ellipso}
-	\mycaption{Elliposometry}{}
+	\mycaption{Elliposometry result of the film deposited in several method}{}
 	\label{fig:ellipso}
 \end{figure}
+
+
 
 \subsection{Patterning}
 The sample used in our experiments are usually in the size of 20 mm $\times$ 20 mm, diced off from a 4-inch wafer. Before the electron beam lithography, electron beam resist is spin-coated on the surface of silicon nitride films after several times of cleaning. 
@@ -112,7 +115,7 @@ The etching rate of three kinds of film is listed in \autoref{tab:cvd}. From the
 
 \begin{table}[]
 \begin{tabular}{cccc}
-\hline
+%\hline
        & \begin{tabular}[c]{@{}c@{}}Film Etching Rate \\ (nm/min)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Resist Etching Rate\\ (nm/min)\end{tabular} & Selectivity \\ \hline
 LP-CVD & 19.20                                                            & 12.76                                                                     & 1.50        \\ \hline
 PE-CVD & 23.48                                                            & 14.29                                                                     & 1.64        \\ \hline
@@ -129,7 +132,7 @@ To remove the residual hydrogen in silicon nitride film, an optional step of ann
 
 Traditionally, annealing process can be performed in different cases, after or during CVD deposition \cite{Luke2013}, after dry etching or after top cladding \cite{Ang2018}. Since the first case requires tensile control during cycled deposition-annealing operation \cite{Luke2013}, in our experiments, annealing before or after top cladding of negatively patterned LS-CVD and PE-CVD sample are merely compared.
 
-To achieve high vacuum during the annealing, we use a tube-type electric furnace. In a high vacuum, the furnace is set first heating from room temperature to 300 \si{\celsius} for 1 h, then heating to 1000 \si{\celsius} for 3 h, keeping at 1000 \si{\celsius} for 4 h, and cooling down to 300 \si{\celsius} for 5 h, then naturally cooling to room temperature. 
+To achieve high vacuum during the annealing, we use a tube-type electric furnace. In a high vacuum, the furnace is set first heating gradually  from room temperature to 300 \si{\celsius} for 1 h, then heating to 1000 \si{\celsius} for 3 h, keeping at 1000 \si{\celsius} for 4 h, and cooling down to 300 \si{\celsius} for 5 h, then naturally cooling to room temperature. 
 
 Shown in \autoref{fig:anneal}, there are cracks on both the LS-CVD and PE-CVD samples. In contrast, the negatively patternned samples are free of any cracks but is severely contaminated, which possibly results from the contamination in the tube furnace. 
 In general, the finding of cracks on the top clad layer shows despite the tensile control over the silicon nitride film, even negative EB resist is used for transferring the structure, it is still difficult to annealing the typical TEOS cladded samples with the PE-CVD facility in our fabrication condition.
@@ -157,8 +160,6 @@ In general, the finding of cracks on the top clad layer shows despite the tensil
 \end{figure}
 
 \subsection{Edge coupling and chip dicing}
-
-In previous works \cite{Sunada2018}, both grating coupling and edge coupling were designed and studied. In this research, considering the broadband frequency conversion motivation, the edge coupling is preferred due to the broader 3 dB bandwidth. 
 
 To achieve high coupling efficiency, we adopt monolithic inversed tapered waveguide as the mode convertor. The input and output ports of waveguide are both tapered from normal width 1.5 \si{\um} to a narrower end. By FDTD methods, the mode field is swept with different taper end widths.
 
@@ -204,7 +205,7 @@ Compared with conventional mechanical dicing,  the laser dicing technique is adv
 		\includegraphics[width=\textwidth]{imgs/jpg/manual_cleav}
  		\caption{Manually cleaved}
 	\end{subfigure}
-    \mycaption{Caption}{}
+    \mycaption{Microscope images of chip edge}{The scale in the images is 10 \si{um}.}
     \label{fig:dicing}
 \end{figure}
 
@@ -215,9 +216,9 @@ Fabless photonic research is becoming a trend for its cheaper and easier externa
 Based on the silicon nitride platform, two independent foundries are evaluated in the following sections in the term of device performance and fabrication techniques.
 
 \subsection{Ligentec technique}
-Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in Ligentec samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is also flatten.  
+Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in Ligentec samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is improved.
 
-The laser microscope images is shown in . Several layers of different structures are found hierarchically, including the cross pattern stopping the crack during annealing and CMP, the silicon waveguides and a top unknown metallic layer.
+The microscope images of the samples is shown in . Several layers of different structures are found hierarchically, including the cross pattern stopping the crack during annealing and CMP, the silicon waveguides and a top unknown metallic layer.
 
 \begin{figure}
 	\centering
@@ -243,6 +244,8 @@ The laser microscope images is shown in . Several layers of different structures
 \end{figure}
 \subsection{NTT-AT technique}
 
-NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, the nitrogen flow is supplied and reacts with silicon vapor into the silicon nitride film. 
+NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, the nitrogen flow is supplied and reacts with silicon vapor into the silicon nitride film. The refractive index of the film deposited using method is also shown in \autoref{fig:ellipso}.
+
+
 
 % Despite the hydrogen bond induced loss.

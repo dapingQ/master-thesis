@@ -5,7 +5,7 @@
 \begin{table}[]
 \centering
 \begin{tabular}{cccc}
-\hline
+%\hline
               & LP-CVD                            & PE-CVD                                                                                  & LS-CVD                                                                                  \\ \hline
 Facility      & -                                 & SAMCO PD-220NL                                                                          & SMACO PD-100ST                                                                          \\ \hline
 Source        & DCS:NH3:N2                        & \begin{tabular}[c]{@{}c@{}}\ce{SiH4}:\ce{NH3}:N2\\ =6:5:189 sccm\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}SN-2:\ce{N2}\\ =0.5:30 sccm\end{tabular}                          \\ \hline
@@ -20,7 +20,7 @@ Deposition Rate          & -                                 & 15 nm/min        
  
 \begin{table}[]
 \begin{tabular}{cccc}
-\hline
+%\hline
        & \begin{tabular}[c]{@{}c@{}}Film Etching Rate \\ (nm/min)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Resist Etching Rate\\ (nm/min)\end{tabular} & Selectivity \\ \hline
 LP-CVD & 19.20                                                            & 12.76                                                                     & 1.50        \\ \hline
 PE-CVD & 23.48                                                            & 14.29                                                                     & 1.64        \\ \hline

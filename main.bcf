@@ -2029,10 +2029,11 @@
     <bcf:citekey order="24">Luke2013</bcf:citekey>
     <bcf:citekey order="25">Ang2018</bcf:citekey>
     <bcf:citekey order="26">Luke2013</bcf:citekey>
-    <bcf:citekey order="27">Sunada2018</bcf:citekey>
-    <bcf:citekey order="28">Hochberg2010</bcf:citekey>
-    <bcf:citekey order="29">Pfeiffer2015a</bcf:citekey>
-    <bcf:citekey order="29">Pfeiffer2018a</bcf:citekey>
+    <bcf:citekey order="27">Hochberg2010</bcf:citekey>
+    <bcf:citekey order="28">Pfeiffer2015a</bcf:citekey>
+    <bcf:citekey order="28">Pfeiffer2018a</bcf:citekey>
+    <bcf:citekey order="29">Liu2016d</bcf:citekey>
+    <bcf:citekey order="30">Sunada2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
