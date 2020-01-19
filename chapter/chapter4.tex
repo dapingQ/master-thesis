@@ -66,7 +66,13 @@ Deposition Rate          & -                                 & 15 nm/min        
 
 \subsection{Material properties}
 
+\subsubsection{Ellipsometry}
+
+It is more necessary to evaluated the refractive indexes of the film deposited above. Using the infrared elliposometry, the refractive index of deposited silicon nitride film is obtained. The result is shown in \autoref{fig:ellipso}, where we can see the index varies from the deposition methods at the magnitude of 0.01.
+Furthermore, even the refractive index are distinguished, the material wavelength dispersion parameter $D_M$ can be close.
+
 \subsubsection{Fourier-transform infrared spectroscopy}
+
 The vast majority of studies on silicon nitride fabrication processes have found that the hydrogen remaining in the films leads to N-H and Si-H bonds, which causes the optical absorption at S and C band \cites{Ay2004, Agnihotri2000}. To quantitatively clarify these bonds in our film, we perform the Fourier-transform infrared spectroscopy (FTIR) on the top of silicon nitride film.
 
 The measurement is carried out using attenuated total reflection (ATR) method with SHIMADZU ?. In \autoref{fig:ftir}, the absorbance is taken from the difference with background transmittance. It can be seen that except the peak around 800? \si{\per\cm} referring to Si-N stretching mode, two other peaks are located around 2150 and 3350 \si{\per\cm}, corresponding to Si-H and N-H bonds respectively.
@@ -84,10 +90,7 @@ Interestingly, there are also two peaks found at 1020 and 1120, indicating Si-O 
 
 In conclusion, even though the ammonia free recipe is used in LS-CVD method, the film is still hydrogenated while LP-CVD commercial wafers show least N-H absorbance.
 
-\subsubsection{Ellipsometry}
 
-Except the FTIR, it is necessary to evaluated the refractive indexes of the film deposited above. Using the infrared elliposometry, the refractive index of deposited silicon nitride film is obtained. The result is shown in \autoref{fig:ellipso}, where we can see the index varies from the deposition methods at the magnitude of 0.01.
-Furthermore, even the refractive index are distinguished, the material wavelength dispersion parameter $D_M$ can be close.
 
 \begin{figure}
 	\centering
@@ -126,7 +129,11 @@ LS-CVD & 27.40                                                            & 2.08
 \end{table}
 
 \subsection{Top-cladding and annealing}
-The final step is cladding another layer of silicon dioxide. The recipe is as same as the buried oxide layer, using TEOS source. 
+The final step is cladding another layer of silicon dioxide. 
+%Several works refer that low-temperature oxide can be lossy b
+To remove not only the residual EB resists but also the polymer generated during the plasma etching, 
+all the samples are first deeply ashed using normal oxygen recipe in another RIE facility. To reduce the damage to the waveguide shape during ashing, organic cleaning is supplied. As same as the buried oxide layer, TEOS source is used to deposit a 2-3 \si{\um} top cladding layer with the same LS-CVD facility.
+
 % \citeauthor{Ang2018} founds 
 To remove the residual hydrogen in silicon nitride film, an optional step of annealing is necessary. 
 
@@ -159,7 +166,7 @@ In general, the finding of cracks on the top clad layer shows despite the tensil
     \label{fig:anneal}
 \end{figure}
 
-\subsection{Edge coupling and chip dicing}
+\subsection{Edge coupling and chip dicing}\label{sec:chip-dicing}
 
 To achieve high coupling efficiency, we adopt monolithic inversed tapered waveguide as the mode convertor. The input and output ports of waveguide are both tapered from normal width 1.5 \si{\um} to a narrower end. By FDTD methods, the mode field is swept with different taper end widths.
 
