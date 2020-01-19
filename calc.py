@@ -12,6 +12,10 @@ D2 = (L/2/np.pi)*(wl**2/(2*np.pi*c))*D1**3*D_wl
 ng = 3e8 / L /D1
 D2_ref = (c/ng)*(wl**2/(2*np.pi*c))*D1**2*D_wl
 
-print(D2)
-print(D2_ref)
+# print(D2)
+# print(D2_ref)
 
+R = 200e-6
+FSR_w = c/(2*np.pi*R*neff)
+
+print(FSR_w)

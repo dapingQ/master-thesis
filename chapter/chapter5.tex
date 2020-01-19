@@ -71,21 +71,34 @@ For example, with the TEC set into different temperatures, the spectrum of a LP-
 \subsection{Substractive fabricated samples}
 
 To compare the material difference among the films deposited in three CVD methods, identical layout is used to fabricate the ring resonators using all the same recipes. %Controlling thickness 
-Since the thickness control during the film deposition and ICP etching are tough, all the device are label with the waveguide height measured by step profiler before TEOS top cladding.
+Since the thickness control during the film deposition and ICP etching are tough, all the device are label with the waveguide height measured by step profiler before TEOS top cladding. However, the fabrication of stoichiometric silicon nitride using PE-CVD method is not successful, a sample deposited using same machine with a silicon-rich recipe is reported instead.
 
 The device transmission spectrum is first measured shown in \autoref{fig:trans_cf}. It can be seen that there is strong optical absorption from 1520 nm to 1540 nm in each device. Compared with the FTIR result shown in \autoref{fig:ftir}, in particular the case of LP-CVD sample where is almost no Si-H or N-H bonds found, the absorption at optical telecom band not only originates from the residual hydrogen but also may results in top-cladding or bottom buried TEOS layer.
 
- The radius of these device are fixed to 200 \si{\um}.
+Furthermore, from the extracted resonant peaks, the \textit{Q}-factors and frequency FSRs are summarized in \autoref{fig:QF_cf}. The radius of each ring resonator are designed as 200 \si{\um}, corresponding to the FSR of 119.3 GHz. This agrees with the extracted FSRs of LP-CVD and LS-CVD samples. In the case of silicon-rich PE-CVD sample, the measured FSR of ring resonators near 1550 nm is around 94.3 GHz, indicating the refracting index of silicon-rich silicon nitride film is 0.34 higher.
 
- transmission spectrum are compared. In 
+% \si{\percent} 
+In the term of \textit{Q}-factors, according to the transmission,LP-CVD sampels shows absorption as some certain wavelength, leading to the error values of peaking finding. Such kind of broken spectra can be probably explained by the fabrition toleration, such like the gap is not fully etched or the ring resonator is contaminated with a certain particles. In general, the \textit{Q}-factors are counted in \autoref{fig:Qhist}, the LS-CVD samples have the highest quality values at the mean of \num{3d4} while the one of silicon-rich PE-CVD samples is near to only \num{1e4}. The distribution of LP-CVD sample are similar to LS-CVD ones, but influenced by the broken resonance spectrum.
 
 \begin{figure}
 	\centering
-	\includesvg[width=.6\textwidth]{trans_cf}
+	\includesvg[width=.8\textwidth]{trans_cf}
 	\mycaption{}{}
 	\label{fig:trans_cf}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includesvg[width=.8\textwidth]{FSR_Q_new}
+	\mycaption{}{}
+	\label{fig:QF_cf}
+\end{figure}
 
+\begin{figure}
+	\centering
+	\includesvg[width=.8\textwidth]{QHist_cf}
+	\mycaption{}{}
+	\label{fig:Qhist}
+\end{figure}
 
 \subsection{Dispersion analysis}
