@@ -6,6 +6,9 @@
 % !TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 \documentclass[final]{kuee_en}
 \usepackage[titletoc]{appendix}
+\usepackage{titlesec}
+% \titleformat{\chapter}[hang] 
+% {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{1em}{} 
 
 % citation
 \usepackage[final,breaklinks=true]{hyperref}
@@ -78,6 +81,7 @@
 \newcommand\mycaption[2]{\caption[#1]{\textbf{#1}. #2}}
 \newcommand{\dint}{D_\mathrm{int}}
 \newcommand{\dispu}{\si[per-mode=symbol]{\ps\per\km\per\nm}}
+\newcommand{\um}{\si{\um}}
 
 \etitle{Broadband frequency entangled photon generation using silicon nitride ring cavities}
 % \title{\cjk{窒化シリコンリング共振器を用いた\\広帯域周波数もつれ光子生成}}
