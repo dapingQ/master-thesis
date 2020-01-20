@@ -225,7 +225,29 @@ Based on the silicon nitride platform, two independent foundries are evaluated i
 \subsection{Ligentec technique}
 Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in Ligentec samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is improved.
 
-The microscope images of the samples is shown in . Several layers of different structures are found hierarchically, including the cross pattern stopping the crack during annealing and CMP, the silicon waveguides and a top unknown metallic layer.
+The sample layout is illustrated in \autoref{fig:gds_ligentec}. Five groups of various FSRs are designed. In ecch specific group, the coupling gap is detuned gradually from 400 nm to 700 nm in the step of 100 nm.
+
+
+\begin{table}[]
+\begin{tabular}{cccc}
+% \hline
+        & Ring Radius (\si{\um}) & FSR (GHz) & Ring Width (\si{\um}) \\ \hline
+Group 1 & 200                                                    & 100       & 0.8                                                   \\ \hline
+Group 2 & 200                                                    & 150       & 1.7                                                   \\ \hline
+Group 3 & 200                                                    & 200       & 1.5                                                   \\ \hline
+Group 4 & 10                                                     & 300       & 1.7                                                   \\ \hline
+Group 5 & 30                                                     & 1000      & 1.7                                                   \\ \hline
+\end{tabular}
+\end{table}
+
+The microscope images of the samples is shown in \autoref{fig:ligentec-laser-micro}. Several layers of different structures are observed hierarchically, including the cross pattern stopping the crack during annealing and CMP, the silicon waveguides and a top unknown metallic layer.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.6\textwidth]{imgs/png/ligentec_gds}
+    \caption{Caption}
+    \label{fig:gds_ligentec}
+\end{figure}
 
 \begin{figure}
 	\centering
@@ -249,10 +271,17 @@ The microscope images of the samples is shown in . Several layers of different s
 	\textbf{a}. Top metallic layer. \textbf{b}. Device layer. \textbf{c}. Crack stopper layer. \textbf{d}. Mode convertor}
 	\label{fig:ligentec-laser-micro}
 \end{figure}
+
 \subsection{NTT-AT technique}
+
 
 NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, the nitrogen flow is supplied and reacts with silicon vapor into the silicon nitride film. The refractive index of the film deposited using method is also shown in \autoref{fig:ellipso}.
 
-
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{imgs/png/ntt_gds.png}
+    \caption{Caption}
+    \label{fig:gds_ntt}
+\end{figure}
 
 % Despite the hydrogen bond induced loss.
