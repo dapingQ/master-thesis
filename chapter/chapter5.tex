@@ -42,15 +42,21 @@ The schematic diagram of the device spectrum measurement is shown in \autoref{fi
 
 Given the transmission spectra, the negative peaks are located with peak-finding algorithm, yielding not only the peak location, but also the width and prominence, which are used to calculate the free spectral range and \textit{Q}-factor.
 
-\section{Results}
+% \section{Results}
+\subsection{Dispersion analysis}
+Previous work \cite{Sunada2018} gave two methods analyzing the device dispersion. One is to perform Fourier transform of the reflected spectra on the input port, which is equivalent to the interference in a $2L$-long etalon. Another method is similar but using the resonance in the cavity instead. 
 
-\subsection{Thermal stability}
+Despite the fabrication tolerance, considering the bent segment, the chromatic dispersion in the ring resonator is not identical to the one in the straight waveguides. Hence, in our research, to the extract the dispersion information accurately, the ring resonacen method is employed. 
+
+Following the integrated dispersion definition, the resonant wavelength $\lambda_m$ is first converted to resonant frequency $\omega_m$. Before the polynomial fitting to the frequencies, the linear fitting is performed to evaluate first-order mode dispersion parameters and then used to calculate the integrated dispersion using the formula $ \dint(\mu) = \omega_0 - D_1 \mu$. The central frequency is $\omega_0$ set as the center of scanning range. The relative mode numbers are constructed as a integer neighbourhood of zero. A final step is perform the cubic or quadratic polynomial fitting. For the wide range scanning, a quartic curvature is more efficient, but in our case, the cubic polynomial is sufficient to extract the dispersion parameters at the second order in a 160 nm span.
+
+\section{Thermal stability}
 
 \begin{figure}
 	\centering
 	\includesvg[width=1\textwidth]{thermal}
 	%	\includegraphics[width=.9\textwidth]{imgs/png/trans_setup}
-	\mycaption{}{}
+	\mycaption{Transmission}{}
 	\label{fig:thermal}
 \end{figure}
 
@@ -62,43 +68,49 @@ Given the transmission spectra, the negative peaks are located with peak-finding
 %	\label{fig:wl-T}
 %\end{figure}
 
-Although silicon nitride is reported as high thermal conductivity material, the surrounding silicon dioxide is comparatively worse thermal-conductive. Despite the room temperature fluctuation, the nonlinear phenomena usually requires high pump power, which heats the device significantly, the index change variation leads to resonance shift. Thus, the thermal sensitivity is a critical factor of nonlinear ring resonators.
+Although silicon nitride is reported as high thermal conductivity material, the surrounding silicon dioxide is comparatively worse thermal-conductive. Despite the room temperature fluctuation, the nonlinear phenomena usually requires high pump power intracavity, which heats the device significantly, the index change variation leads to resonance shift. Thus, the thermal sensitivity is a critical factor of nonlinear ring resonators.
 
 For example, with the TEC set into different temperatures, the spectrum of a LP-CVD sample is then measured. Shown in \autoref{fig:thermal}a, temperature increasing leads to a obvious red-shift of the resonant peak. The wavelength range around 1630 nm is chosen for better transmission and well resonance in this device. From \autoref{fig:thermal}b, the estimated thermal dependence of resonant wavelength $\dv*{\lambda}{T}$ is 23 \si{\nm/\celsius}. In this case, if the \textit{Q}-factor of ring resonator is up to \num{10d5}, even room temperature variation can results in resonance totally mismatching at pumping wavelength.
 
-%\subsection{Device transmission}
+\section{Device transmission}
 
 \subsection{Substractive fabricated samples}
 
 To compare the material difference among the films deposited in three CVD methods, identical layout is used to fabricate the ring resonators using all the same recipes. %Controlling thickness 
-Since the thickness control during the film deposition and ICP etching are tough, all the device are label with the waveguide height measured by step profiler before TEOS top cladding. However, the fabrication of stoichiometric silicon nitride using PE-CVD method is not successful, a sample deposited using same machine with a silicon-rich recipe is reported instead.
+Since the thickness control during the film deposition and ICP etching is tough, all the device are label with the waveguide height measured by step profiler before TEOS top cladding. However, the fabrication of stoichiometric silicon nitride using PE-CVD method is not successful, a sample deposited using same machine but with a silicon-rich recipe is reported instead. 
 
-The device transmission spectrum is first measured shown in \autoref{fig:trans_cf}. It can be seen that there is strong optical absorption from 1520 nm to 1540 nm in each device. Compared with the FTIR result shown in \autoref{fig:ftir}, in particular the case of LP-CVD sample where is almost no Si-H or N-H bonds found, the absorption at optical telecom band not only originates from the residual hydrogen but also may results in top-cladding or bottom buried TEOS layer.
+The device transmission spectrum is first measured, shown in \autoref{fig:trans_cf}. It can be seen that there is strong optical absorption from 1520 nm to 1540 nm in each device. Compared with the FTIR result shown in \autoref{fig:ftir}, in particular the case of LP-CVD sample where is almost no Si-H or N-H bonds found, the absorption at optical telecom band not only originates from the residual hydrogen but also may results in top-cladding or bottom buried TEOS layer.
+In addition, LP-CVD sample shows absorption at some certain wavelength, leading to the error values of peaking finding. Such kind of broken spectra can be probably explained by the fabrition toleration, such like the gap is not fully etched or the ring resonator is contaminated with a certain particles. All these fabrication imperfection plays the role of sacttering and also decreases the quality factors.
 
 Furthermore, from the extracted resonant peaks, the \textit{Q}-factors and frequency FSRs are summarized in \autoref{fig:QF_cf}. The radius of each ring resonator are designed as 200 \si{\um}, corresponding to the FSR of 119.3 GHz. This agrees with the extracted FSRs of LP-CVD and LS-CVD samples. In the case of silicon-rich PE-CVD sample, the measured FSR of ring resonators near 1550 nm is around 94.3 GHz, indicating the refracting index of silicon-rich silicon nitride film is 0.34 higher.
 
 % \si{\percent} 
-In the term of \textit{Q}-factors, according to the transmission,LP-CVD sampels shows absorption as some certain wavelength, leading to the error values of peaking finding. Such kind of broken spectra can be probably explained by the fabrition toleration, such like the gap is not fully etched or the ring resonator is contaminated with a certain particles. In general, the \textit{Q}-factors are counted in \autoref{fig:Qhist}, the LS-CVD samples have the highest quality values at the mean of \num{3d4} while the one of silicon-rich PE-CVD samples is near to only \num{1e4}. The distribution of LP-CVD sample are similar to LS-CVD ones, but influenced by the broken resonance spectrum.
+In the term of \textit{Q}-factors, counted in \autoref{fig:Qhist}, the LS-CVD samples have the highest quality values at the mean of \num{3d4} while the one of silicon-rich PE-CVD samples is near to \num{1e4}. The distribution of LP-CVD sample are similar to LS-CVD ones, but influenced by the broken resonance spectrum.
 
 \begin{figure}
 	\centering
 	\includesvg[width=.8\textwidth]{trans_cf}
-	\mycaption{}{}
+	\mycaption{Trans Comparison}{}
 	\label{fig:trans_cf}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includesvg[width=.8\textwidth]{FSR_Q_new}
-	\mycaption{}{}
+	\mycaption{FSR cf}{}
 	\label{fig:QF_cf}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includesvg[width=.8\textwidth]{QHist_cf}
-	\mycaption{}{}
+	\mycaption{Q histogram}{}
 	\label{fig:Qhist}
 \end{figure}
 
-\subsection{Dispersion analysis}
+% \subsection{Fabless samples}
+
+\subsection{Ligentec technique}
+
+
+\subsection{NTT-AT technique}
