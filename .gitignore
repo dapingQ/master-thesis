@@ -9,4 +9,5 @@
 .vscode/
 *svg-tex*
 *.fff
+*.ttt
 *.xml

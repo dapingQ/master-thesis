@@ -4,12 +4,23 @@ import matplotlib.cm as cm
 from scipy.optimize import fsolve
 from scipy.constants import c
 
+from cycler import cycler
 plt.rcParams.update({    
-    'font.size': 12,
-    'lines.linewidth': 0.8,
     'figure.max_open_warning': 0,
-    'savefig.dpi':300,
+    'figure.subplot.hspace': 0,
+    'axes.prop_cycle': cycler('color', 'bgrcmyk'),
+    'axes.labelsize': 12,
+    'axes.grid': True,
+    'lines.linewidth': 0.8,
+    'font.size': 12,
+    'legend.fancybox': True,
+    'legend.framealpha': 1,
+#     'legend.frameon': False,
+    'legend.edgecolor': 'inherit',
+    'grid.linestyle': ':',
     'savefig.transparent': True,
+    'savefig.bbox': 'tight',
+    'savefig.dpi': 300,
 })
 
 w = np.arange(0.6,2.45,0.05)
@@ -20,7 +31,7 @@ data = np.loadtxt('20015-run05_disp.txt')#[:int(len(w)*len(t)*3)]
 d_array = data.reshape((len(w),len(t),3))[:,:,1]*1e6
 
 X, Y = np.meshgrid(w,t)
-fig, ax = plt.subplots(dpi=200,figsize=(6,3))
+fig, ax = plt.subplots(dpi=200,figsize=(4,3))
 im = ax.imshow(d_array, interpolation='bilinear', origin='lower',
                 cmap=cm.rainbow,extent=(w[0],w[-1],t[0],t[-1]),aspect='auto')
 
@@ -51,4 +62,4 @@ ax.set_xlabel('width ($\mathrm{\mu}$m)')
 ax.set_ylabel(r'thickness ($\mathrm{\mu}$m)')
 
 # plt.show()
-fig.savefig(f'fdtd_fine.svg',dpi=200,transparent=True,bbox_inches='tight')
+fig.savefig(f'fdtd_sm.svg')
