@@ -95,33 +95,53 @@ In the term of \textit{Q}-factors, counted in \autoref{fig:cvd_cf}(c), the LS-CV
 \end{figure}
 
 
-Beyond the samples with same design, LS-CVD deposited and sputtering films also succeed to 
-...
+%Beyond the samples with same design, LS-CVD deposited and sputtering films also succeed to 
+%...
 
 \subsection{Fabless samples}
 
-Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples. \autoref{fig:ligentec_triplot} presents the device transmission, quality factors and FSRs. The ring of this device is 237.28 \um and the FSR is targeted as 150 GHz.
+For the Ligentec group 1, due to the reliable fabrication recipe, the coupling of device is explicit as the gap between bus waveguide and ring resonator increases. As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from weak coupling to critical coupling, as the depth of resonance peak increase. The same tendency is found from the \textit{Q}-factors in \autoref{fig:gap_cf}(b). The other groups have the similar tendency but the critical coupling gaps are different.% resuls ring radii and waveguide width.
 
 \begin{figure}
-    \centering
-    \includesvg[width=5in]{ligentec/ligentec_triplot}
-    \caption{Caption}
-    \label{fig:ligentec_triplot}
+	\centering
+	\includesvg[width=6in]{ligentec/gap_cf}
+	\mycaption{Gap sweeping}{}
+	\label{fig:gap_cf}
 \end{figure}
 
-The spectrum shows no obvious absorption in the range 1520 nm - 1540 nm, compared with the samples fabricated using non-annealing subtractive recipe. This agrees with that the \textit{Q}-factors are all concentrated at the same level. 
+Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples shown in \autoref{fig:ligentec_gp2} from group2 device 4. The FSR is targeted at 150 GHz. 
+
+\begin{figure}
+	\centering
+	\includesvg[width=4.5in]{ligentec/ligentec_gp2}
+	\caption{Caption}
+	\label{fig:ligentec_gp2}
+\end{figure}
+
+%The device with deeper peaks are picked to locate the resonant wavelength, may not the minimum width though. 
+
+%\autoref{fig:ligentec_triplot} presents the device transmission of group1 device 4, as well as quality factors and FSRs. The ring of this device is 237.28 \um and the FSR is targeted as 150 GHz.
+
+
+%\begin{figure}
+%    \centering
+%    \includesvg[width=5in]{ligentec/ligentec_triplot}
+%    \caption{Caption}
+%    \label{fig:ligentec_triplot}
+%\end{figure}
+
+%The spectrum shows no obvious absorption in the range 1520 nm - 1540 nm, compared with the samples fabricated using non-annealing subtractive recipe. This agrees with that the \textit{Q}-factors are all concentrated at the same level. 
 % Besides, only fundamental mode is extracted from the transmission. 
 
-The result of NTT-AT technique is shown in \autoref{fig:ntt_triplot}. Due to the reactive sputtering methods, the silicon nitride film also stand outs no telecom band absorption. But the \textit{Q}-factors are even lower than the LS-CVD sample. We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not fully optimized for optical waveguides. 
+%The identical device in NTT-AT groups is shown in \autoref{fig:ntt_triplot}. Due to the reactive sputtering methods, the silicon nitride film also stand outs no telecom band absorption. But the \textit{Q}-factors are even lower than the LS-CVD sample. We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not fully optimized for optical waveguides. It is also interesting to find that there is a clear trend of increasing in the NTT-AT FSRs, indicating a normal dispersion.
 
-It is also interesting to find that the FSRs extracted from these identical device are differently increasingly, indicating the distinct difference at second-order dispersion.
-
-\begin{figure}
-    \centering
-    \includesvg[width=5in]{ntt/ntt_triplot}
-    \caption{Caption}
-    \label{fig:ntt_triplot}
-\end{figure}
+%In general, the waveguide width in the two device mentioned above is 0.8 \um. From the dispersion map in \autoref{fig:wg-disp}, waveguide in this size behave abnormal 
+%\begin{figure}
+%    \centering
+%    \includesvg[width=5in]{ntt/ntt_triplot}
+%    \caption{Caption}
+%    \label{fig:ntt_triplot}
+%\end{figure}
 
 
 \section{Dispersion analysis}
