@@ -1,3 +1,4 @@
+# %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -32,7 +33,14 @@ d_array = data.reshape((len(w),len(t),3))[:,:,1]*1e6
 
 X, Y = np.meshgrid(w,t)
 fig, ax = plt.subplots(dpi=200,figsize=(4,3))
-im = ax.imshow(d_array, interpolation='bilinear', origin='lower',
+
+norm = cm.colors.Normalize(
+    vmax=d_array.max(),  
+    # vcenter=0,
+    vmin=d_array.min()
+    )
+
+im = ax.imshow(d_array, interpolation='bilinear', origin='lower', #norm=norm,
                 cmap=cm.rainbow,extent=(w[0],w[-1],t[0],t[-1]),aspect='auto')
 
 cs = ax.contour(d_array, (-300,-100,0,50,100,150),
@@ -62,5 +70,4 @@ cbar.ax.set_ylabel(r'$D_{W}$ (ps/nm·km)')
 ax.set_xlabel('width ($\mathrm{\mu}$m)')
 ax.set_ylabel(r'thickness ($\mathrm{\mu}$m)')
 
-# plt.show()
-fig.savefig(f'fdtd_sm.svg')
+# fig.savefig(f'fdtd_sm.svg')
