@@ -109,7 +109,8 @@ For the Ligentec group 1, due to the reliable fabrication recipe, the coupling o
 	\label{fig:gap_cf}
 \end{figure}
 
-Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples shown in \autoref{fig:ligentec_gp2} from group2 device 4. The FSR is targeted at 150 GHz. 
+Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples shown in \autoref{fig:ligentec_gp2} from group2 device 4. The FSR is targeted at 150 GHz. The spectrum shows no obvious absorption in the range 1520 nm - 1540 nm, compared with the samples fabricated using non-annealing subtractive recipe. This agrees with that the \textit{Q}-factors are all concentrated at the same level. 
+Besides, only fundamental mode is extracted from the transmission. 
 
 \begin{figure}
 	\centering
@@ -130,18 +131,17 @@ Several works using the same Ligentec technique report ultrahigh Q-factors up to
 %    \label{fig:ligentec_triplot}
 %\end{figure}
 
-%The spectrum shows no obvious absorption in the range 1520 nm - 1540 nm, compared with the samples fabricated using non-annealing subtractive recipe. This agrees with that the \textit{Q}-factors are all concentrated at the same level. 
-% Besides, only fundamental mode is extracted from the transmission. 
-
-%The identical device in NTT-AT groups is shown in \autoref{fig:ntt_triplot}. Due to the reactive sputtering methods, the silicon nitride film also stand outs no telecom band absorption. But the \textit{Q}-factors are even lower than the LS-CVD sample. We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not fully optimized for optical waveguides. It is also interesting to find that there is a clear trend of increasing in the NTT-AT FSRs, indicating a normal dispersion.
+The result of an identical device in NTT-AT groups is presented in \autoref{fig:ntt_triplot}. Due to the reactive sputtering methods, the silicon nitride film also stand outs no telecom band absorption. But the \textit{Q}-factors are much lower
+ than the LS-CVD sample. 
+We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not fully optimized for optical waveguides. It is also interesting to find that there is a clear difference of FSR trends from the Ligentec one. In particular, the increasing NTT-AT FSRs indicate a normal dispersion.
 
 %In general, the waveguide width in the two device mentioned above is 0.8 \um. From the dispersion map in \autoref{fig:wg-disp}, waveguide in this size behave abnormal 
-%\begin{figure}
-%    \centering
-%    \includesvg[width=5in]{ntt/ntt_triplot}
-%    \caption{Caption}
-%    \label{fig:ntt_triplot}
-%\end{figure}
+\begin{figure}
+    \centering
+    \includesvg[width=5in]{ntt/ntt_triplot}
+    \caption{Caption}
+    \label{fig:ntt_triplot}
+\end{figure}
 
 
 \section{Dispersion analysis}
@@ -149,6 +149,8 @@ Several works using the same Ligentec technique report ultrahigh Q-factors up to
 Previous work \cite{Sunada2018} gave two methods analyzing the device dispersion, both depending on device transmission. One is to perform Fourier transform of the reflected spectra on the input port, which is equivalent to an etalon interference whose mirrors are waveguide input and output facets. Another method is similar but employs the cavity resonance instead. Despite the fabrication tolerance, considering the bent segment, the chromatic dispersion in the ring resonator is not identical to the one in straight waveguides. Hence in our research, to the extract dispersion information accurately, the ring resonance method is preferred. 
 
 Following the integrated dispersion definition, the resonant wavelength $\lambda_m$ is first converted to resonant frequencies $\omega_m$. Before the polynomial fitting, the linear fitting is performed to evaluate first-order mode dispersion parameter. Then the integrated dispersion is calculated using the formula $ \dint(\mu) = \omega_0 - D_1 \mu$. The central frequency is $\omega_0$ set as the center of scanning range. The relative mode numbers are constructed as a integer neighbourhood of zero. A final step is perform the cubic or quadratic polynomial fitting. For the wide range scanning, a quartic curvature is more efficient, but in our case, the cubic polynomial is sufficient to extract the dispersion parameters at the second order in a 160 nm span.
+
+
 
 %For the samples fabricated using subtractive processes, due to the fabrication imperfection, not all the devices show efficient resonance, especially using LP-CVD and PE-CVD deposited samples. To achieve best performance of peak finding, 
 %several approach like 
@@ -158,3 +160,10 @@ Following the integrated dispersion definition, the resonant wavelength $\lambda
 % In this chapter, the dispersion is shown compared with ring waveguide width.
 % are able to extract the dispersion successfully, especially not all the devices varying the gap in the same group 
 
+
+\begin{figure}
+	\centering
+	\includesvg[width=5in]{ligentec/ligentec_dint_cf}
+	\caption{Caption}
+	\label{fig:ligentec_dint_cf}
+\end{figure}

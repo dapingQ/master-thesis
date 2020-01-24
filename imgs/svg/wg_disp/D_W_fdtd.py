@@ -55,6 +55,7 @@ if plt.rcParams["text.usetex"]:
 else:
     fmt = ' %.0f '
 ax.clabel(cs, cs.levels, fmt=fmt,inline=1, fontsize=10)
+
 cbar = fig.colorbar(im, ax=ax)
 cbar.ax.set_ylabel(r'$D_{W}$ (ps/nm·km)')
 
