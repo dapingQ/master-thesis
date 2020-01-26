@@ -10,14 +10,14 @@ Given the well-resonant spectrum, the dispersion information is further extracte
 
 
 \section{Methods}
-%\subsection{Fiber launching}
 
+\subsection{Fiber launching}
 Much of related works, concerning such as photonic crystals or whispering gallery mode resonators, use prism coupling or tapered fiber coupling for coupling tunability. 
 %interact the external optical filed with cavity evanescent filed though, 
 In the case of integrated ring resonators, the bus wavegudies are designed in the distance of several gaps, usually varying from under-coupling to over-coupling. 
 Thus, the light confined in the bus waveguide can be directly coupled inwards or outwards using appropriate optical fibers. 
 In previous works \cite{Sunada2018}, both grating coupling and edge coupling were adopted. However, considering the broadband frequency conversion motivation, the edge coupling is preferred for a comparatively broader 3-dB bandwidth. 
- 
+
 Using two five-axis fiber alignment stages (Newport M-562F-XYZ \& M-562F-XYZ-LH), the device ports are aligned with two lensed fibers on both sides. The spot size of lensed fibers is 2 \um, which is not optimized to the size mentioned in \autoref{sec:chip-dicing}. 
 
 Before any following experiments, the output port is first coupled to the infrared InGaAs camera in free space using a 20$\times$ objective lens. To align the chip input port precisely, the real-time camera images is used to adjust all the three degrees of freedom until the spot is observed explicitly on the screen. Next, by carefully rotating the palettes of polarization controller on the input side, the device coupling can be launched in either TE or TM mode. Then another lensed fiber is launched instead and aligned carefully, as the power meter reading is referred to.
@@ -29,12 +29,11 @@ It is worth mentioning that the chip arrier (SURUGA SEIKI F126) is equipped with
 With connected to an external temperature controller, the temperature precision over device under test can be 0.1 \si{\celsius}.
 To avoid moisture condensation, the TEC is set a little higher than room temperature, 30 \si{\celsius} in our case. 
 
-%\subsection{Spectrum sweeping}
+\subsection{Spectrum sweeping}
 
 \begin{figure}
 	\centering
-	\includesvg[width=.9\textwidth]{trans_setup}
-%	\includegraphics[width=.9\textwidth]{imgs/png/trans_setup}
+	\includegraphics[width=1\textwidth]{imgs/trans.pdf}
 	\mycaption{Setup of transmission measurement system}{TSL, tunable semiconductor laser. PC, optical fiber polarization controller. DUT, device under test. PM, power meter. DAQ, data acquisition.}
 	\label{fig:transsetup}
 \end{figure}
@@ -100,7 +99,12 @@ In the term of \textit{Q}-factors, counted in \autoref{fig:cvd_cf}(c), the LS-CV
 
 \subsection{Fabless samples}
 
-For the Ligentec group 1, due to the reliable fabrication recipe, the coupling of device is explicit as the gap between bus waveguide and ring resonator increases. As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from weak coupling to critical coupling, as the depth of resonance peak increase. The same tendency is found from the \textit{Q}-factors in \autoref{fig:gap_cf}(b). The other groups have the similar tendency but the critical coupling gaps are different.% resuls ring radii and waveguide width.
+\subsubsection{Coupling evolution}
+
+Prior to cavity properties evaluation, it is essential to compare the coupling condition among devices in the same group. Since the gap between bus waveguide and ring resonator is swept increasingly, usually the coupling condition turns from over coupling to critical coupling, and finally into weak coupling.
+
+For the Ligentec group 1, due to the reliable fabrication recipe, such an evolution of coupling condition among the same group is explicit as the gap increases.
+As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over coupling to critical coupling, as the negative prominence of resonance peak increases. The same tendency agrees with the \textit{Q}-factors, shown in \autoref{fig:gap_cf}(b). The other groups in the sample have the similar tendency but the critical coupling gaps are different.
 
 \begin{figure}
 	\centering
@@ -109,21 +113,25 @@ For the Ligentec group 1, due to the reliable fabrication recipe, the coupling o
 	\label{fig:gap_cf}
 \end{figure}
 
-Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples shown in \autoref{fig:ligentec_gp2} from group2 device 4. The FSR is targeted at 150 GHz. The spectrum shows no obvious absorption in the range 1520 nm - 1540 nm, compared with the samples fabricated using non-annealing subtractive recipe. This agrees with that the \textit{Q}-factors are all concentrated at the same level. 
-Besides, only fundamental mode is extracted from the transmission. 
+\subsubsection{Quality factor comparison}
+
+Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples in Group3 and Group5. While to compare the fabrication quality of both technique, two device with the same design (Group1 Device4, gap 700nm, FSR 100 GHz, ring width 0.8 \um ) are listed in \autoref{fig:fabless_cf}, as well as the \textit{Q}-factor histograms.
 
 \begin{figure}
 	\centering
-	\includesvg[width=4.5in]{ligentec/ligentec_gp2}
-	\caption{Caption}
-	\label{fig:ligentec_gp2}
+	\includesvg[width=4in]{fabless_cf}
+	\mycaption{A comparison between identical ring resonator fabricated in Ligentec and NTT-AT technique}{}
+	\label{fig:fabless_cf}
 \end{figure}
 
+In the transmission of Ligentec device, shown in \autoref{fig:fabless_cf}(a)  and NTT-AT device shown in \autoref{fig:fabless_cf}(b), there is no obvious absorption in the range 1520 nm - 1540 nm compared with the samples fabricated using non-annealing subtractive recipe, though the transmission background declines at both red and blue side. However, the quality factors of Ligentec one are almost 4 times of NTT-AT samples, indicating the intracavity loss is 4 times lower. The histogram gathered in \autoref{fig:fabless_cf}(c) and \autoref{fig:fabless_cf}(b) features the same result.
+In both samples, the critical coupling features at shorter wavelength, according to the peak prominence and \textit{Q}-factor tendency. 
+
+We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not as fully optimized as Ligentec ones. It is also interesting to find that there is a clear difference of FSR trends from the former. In particular, the increasing NTT-AT FSRs indicate a normal dispersion.
+
+%Besides, only fundamental mode is extracted from the transmission
 %The device with deeper peaks are picked to locate the resonant wavelength, may not the minimum width though. 
-
 %\autoref{fig:ligentec_triplot} presents the device transmission of group1 device 4, as well as quality factors and FSRs. The ring of this device is 237.28 \um and the FSR is targeted as 150 GHz.
-
-
 %\begin{figure}
 %    \centering
 %    \includesvg[width=5in]{ligentec/ligentec_triplot}
@@ -131,17 +139,13 @@ Besides, only fundamental mode is extracted from the transmission.
 %    \label{fig:ligentec_triplot}
 %\end{figure}
 
-The result of an identical device in NTT-AT groups is presented in \autoref{fig:ntt_triplot}. Due to the reactive sputtering methods, the silicon nitride film also stand outs no telecom band absorption. But the \textit{Q}-factors are much lower
- than the LS-CVD sample. 
-We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not fully optimized for optical waveguides. It is also interesting to find that there is a clear difference of FSR trends from the Ligentec one. In particular, the increasing NTT-AT FSRs indicate a normal dispersion.
-
 %In general, the waveguide width in the two device mentioned above is 0.8 \um. From the dispersion map in \autoref{fig:wg-disp}, waveguide in this size behave abnormal 
-\begin{figure}
-    \centering
-    \includesvg[width=5in]{ntt/ntt_triplot}
-    \caption{Caption}
-    \label{fig:ntt_triplot}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includesvg[width=5in]{ntt/ntt_triplot}
+%    \caption{Caption}
+%    \label{fig:ntt_triplot}
+%\end{figure}
 
 
 \section{Dispersion analysis}
@@ -151,6 +155,23 @@ Previous work \cite{Sunada2018} gave two methods analyzing the device dispersion
 Following the integrated dispersion definition, the resonant wavelength $\lambda_m$ is first converted to resonant frequencies $\omega_m$. Before the polynomial fitting, the linear fitting is performed to evaluate first-order mode dispersion parameter. Then the integrated dispersion is calculated using the formula $ \dint(\mu) = \omega_0 - D_1 \mu$. The central frequency is $\omega_0$ set as the center of scanning range. The relative mode numbers are constructed as a integer neighbourhood of zero. A final step is perform the cubic or quadratic polynomial fitting. For the wide range scanning, a quartic curvature is more efficient, but in our case, the cubic polynomial is sufficient to extract the dispersion parameters at the second order in a 160 nm span.
 
 
+\begin{figure}
+	\centering
+	\includesvg[width=3.5in]{dint_cf}
+	\caption{Caption}
+	\label{fig:dint_cf}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includesvg[width=4in]{ligentec/ligentec_dint_cf}
+	\caption{Caption}
+	\label{fig:ligentec_dint_cf}
+\end{figure}
+
+
+The identical devices mentioned in transmission comparison section is further analyzed using the above method. The integrated dispersion is extracted in \autoref{fig:ligentec_dint_cf}.
+
 
 %For the samples fabricated using subtractive processes, due to the fabrication imperfection, not all the devices show efficient resonance, especially using LP-CVD and PE-CVD deposited samples. To achieve best performance of peak finding, 
 %several approach like 
@@ -159,11 +180,3 @@ Following the integrated dispersion definition, the resonant wavelength $\lambda
 %But the fabless samples are much more reliable, especially the Ligentec ones.
 % In this chapter, the dispersion is shown compared with ring waveguide width.
 % are able to extract the dispersion successfully, especially not all the devices varying the gap in the same group 
-
-
-\begin{figure}
-	\centering
-	\includesvg[width=5in]{ligentec/ligentec_dint_cf}
-	\caption{Caption}
-	\label{fig:ligentec_dint_cf}
-\end{figure}

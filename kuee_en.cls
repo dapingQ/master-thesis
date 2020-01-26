@@ -90,7 +90,7 @@
 }
 
 \RequirePackage{etoolbox}
-\RequirePackage[nomarkers]{endfloat}
+\RequirePackage[nomarkers, nolists]{endfloat}
 \makeatletter
 \@ifpackageloaded{endfloat}
 {

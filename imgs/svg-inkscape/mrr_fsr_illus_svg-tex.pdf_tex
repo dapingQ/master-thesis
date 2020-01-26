@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{362.56250663bp}%
+    \setlength{\unitlength}{506.36875563bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,13 +50,16 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.55774996)%
+  \begin{picture}(1,0.88262181)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{mrr_fsr_illus_svg-tex.pdf}}%
-    \put(0.33754689,0.26175504){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FWHM $\delta \lambda$\end{tabular}}}}%
-    \put(0.39635896,0.42342793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FSR\end{tabular}}}}%
+    \put(0.27130789,0.18741786){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FWHM $\delta \lambda$\end{tabular}}}}%
+    \put(0.31341763,0.30317642){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FSR\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{mrr_fsr_illus_svg-tex.pdf}}%
-    \put(0.1535661,0.35005716){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HM\end{tabular}}}}%
+    \put(0.13957676,0.25064262){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HM\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{mrr_fsr_illus_svg-tex.pdf}}%
+    \put(0.01664647,0.86461678){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(a)\end{tabular}}}}%
+    \put(0.01436795,0.40222515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b)\end{tabular}}}}%
   \end{picture}%
 \endgroup%
