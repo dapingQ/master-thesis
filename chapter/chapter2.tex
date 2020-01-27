@@ -1,8 +1,8 @@
 % !TeX root = ../main.tex
 
-\chapter{Principal theory}
+\chapter{Basics of four wave mixing in a ring cavity}
 
-The way how light travels in a chip-scale is remarkably different the way in free-space. In the sub-micron scale, the electromagnetic wave can only propagate in a fewer cycles due to the constraint of material boundaries. However, since atoms and molecules are much smaller, the refractive index is not changed, as well as the reflection, interference and diffraction. 
+The way how light travels in a chip-scale is remarkably different the way in free-space. In the sub-micron scale, the electromagnetic wave can only propagate in a fewer cycles due to the constraint of material boundaries. However, since atoms and molecules are much smaller, the refractive index is  unchanged, as well as the reflection, interference and diffraction. 
 
 Based on these facts, in order to perform quantum optics experiments \textit{at the bottom}, first, we shall confine the light propagation in a specific waveguide. On the other hand, thanks to modern laser technology, nonlinear optics is involved and give birth to optical frequency conversion. To enhance these nonlinear optical phenomena, we adopt the cavity structure and achieve sizable control.
 
@@ -289,4 +289,71 @@ Besides, the imaginary part of third-order susceptibility incorporate other four
 
 Finally, it worth mentioning that in all THG and FWM processes, different from SPM and XPM processes, phase matching condition is required due to the complex exponential factors. In this case, the phase mismatch can change the polarization rapidly and leads to periodical variation in these parametric processes.
 
-% \section{Nonlinear integrated devices}
+\section{Phase matching condition in nonlinear ring resonators}
+
+According to the previous section, in a typical nonlinear optical waveguide or silica fibers, despite the stimulated Raman and Brillouin scattering, the frequency conversion processes involve not only the self-phase modulation of pump light and cross-phase modulation of signal and idler light, but also the phase mismatch in four wave mixing propagation factor. 
+%\begin{equation}\label{key}
+%	\Delta \phi = \Delta_M
+%\end{equation}
+In this case, it is necessary to study the coupled nonlinear equations involving signal, idler and pump intensity \cite{AGRAWAL2013397}. 
+
+Whereas in ring resonators, whose mode linewidth (pm) is much narrower than self-phase modulation frequency broadening, 
+the frequency broadening in single mode is negligible. 
+Thus the phase mismatch among cavity modes becomes the critical factor of the band of four wave mixing.
+
+In a typical FWM process, both energy conservation and momentum conservation are required 
+\begin{align}
+\beta_\mathrm{i} + \beta_\mathrm{s} & = 2 \beta_\mathrm{p} \label{eq:beta-cons} \\
+\omega_\mathrm{i} + \omega_\mathrm{s} & = 2 \omega_\mathrm{p} \label{eq:omega-cons}
+\end{align}
+where the subscripts $\mathrm{s}~\mathrm{i}~\mathrm{p}$ stand for signal, idler and pump light.
+
+Meanwhile, the resonance condition \autoref{eq:res-con} leads to $\beta = m \frac{2 \pi}{L}$. Thus, \autoref{eq:beta-cons} is equivalent to 
+\begin{equation}\label{eq:mu-cons}
+m_i + m_s = 2 m_p 
+\end{equation} 
+
+We can see that the momentum conservation agrees with mode number conservation. That is to say, as pump light sets into resonant wavelengths, by choosing the equidistant modes relative to the pump mode, the momentum conservation can be naturally satisfied. This is the most significant difference of ring cavities from non-resonant devices.
+
+Therefore, phase mismatch can be estimated only in the frequency domain. By expanding a resonant angular frequency into Taylor series at $\omega_0$ to the propagation constant $\beta$, at the distance of $\mu$ times FSR, 
+
+
+\begin{eqnarray}\label{eq:omega-taylor}
+\omega_{\mu} & = & \omega_0 
++ \sum_{j=1}\dv[j]{\omega}{\beta} (\beta_{\mu}-\beta_0) \frac{{(\beta-\beta_0)}^j}{j!} \\
+& = & \omega_0 
++ \sum_{j=1}\dv[j]{\omega}{\beta} \qty(\frac{2 \pi}{L})^j \frac{\mu^j}{j!} \nonumber \\
+& = & \omega_0 + D_1 \mu + \frac{D_2}{2!} \mu^2 + \frac{D_3}{3!} \mu^3 + \cdots \nonumber
+\end{eqnarray}
+where $D_j \equiv  (\frac{2 \pi}{L})^j\dv*[j]{\omega}{\beta}$ are \textit{j}-order mode number dispersion parameter, whose dimension are all $\mathrm{T}^{-1}$ and $\mu \in \mathbb{Z}$ is the relative mode number. 
+
+It is easy to know that $D_1 / 2 \pi = v_g / L$ is the free spectral range in the frequency and indicates that the dispersion property is related with the difference of resonant frequencies.   
+
+Next, we introduce the integrated dispersion $\dint$ \cite{Brasch2014a} to analyze the phase mismatch
+\begin{align}\label{eq:def-dint}
+D_\mathrm{int}(\mu) &\equiv \omega_{\mu} - (\omega_0 + D_1 \mu)  \\
+&= \frac{D_2}{2!} \mu^2 + \frac{D_3}{3!} \mu^3 + \cdots \nonumber
+\end{align}
+
+In particular, $\dint$ is the residual dispersion higher than second order. Approximately, if $D_3 \mu \ll D_2$, the second-order dispersion will dominate the integrated dispersion both at signal and idler mode.
+
+Indeed, the mode number dispersion parameter is linked with the dispersion coefficients in frequency and wavelength domain, giving such a chain rule
+\begin{equation}\label{eq:disp-chain}
+D_2 = - \frac{L}{2\pi} {D_1^3}{\beta_2} = \frac{L}{2\pi}  \frac{\lambda^2}{2\pi c} {D_1^3} D_{\lambda}
+\end{equation}
+where $\beta_2=\dv*[2]{\beta}{\omega}$ is group velocity dispersion (GVD) and $D_{\lambda}= - (\lambda/c)\dv*[2]{n}{\lambda}$ is the dispersion parameter.
+
+In this method, we can analyze the phase mismatch in FWM quantitatively
+\begin{align}\label{eq:freq-mismatch}
+\Delta \omega &\equiv \omega_s + \omega_i - 2 \omega_p \\
+%	&=  D_{\mathrm{int},s} + D_{\mathrm{int},i} \\
+&= \dint(\mu) + \dint(-\mu) \nonumber \\
+&= 2\qty(\frac{D_2 \mu^2}{2!} + \frac{D_4 \mu^4}{4!} + \frac{D_6 \mu^6}{6!} +\cdots)  \nonumber
+\end{align}
+
+From the above derivation, the frequency mismatch $ \Delta\omega $ only adds to the even terms of Taylor series in \autoref{eq:omega-taylor}.
+To conclude, a rough presupposition to increase the efficient phase matched band is achieving zero and flat dispersion around pump wavelengths.
+
+\bigskip
+
+As we can see, based on the above derivation, light propagation in a nonlinear ring resonator involves not only basic guided optics but also nonlinear optics theory. In conclusion, four wave mixing in a ring resonator can be summarized as the frequency conversion progress occurring due to both waveguide confinement and cavity resonance under the specific phase matching condition. And much more interestingly, thanks to resonance in ring cavities, the phase matching condition is satisfied efficiently in the wave vector domain. To achieve frequency matching, the design and dispersion engineering  will be introduced in detail in next chapter. 

@@ -1,8 +1,91 @@
 % !TeX root = ../main.tex
+\chapter{Broadband photon pair generation}
 
-\chapter{Towards intermodal and intramodal photon pair}
-\section{Spontaneous four wave mixing}
+Back to the classical nonlinear optics theory, the solution to nonlinear coupling equations requires the initial power at ether signal or idler mode, which is called seed in the laser terminology. However, in quantum optics theory, all the modes in cavity behave intrinsic vacuum fluctuation at the quantity of half $ \hbar \omega $. Thus, even without light fed, the quantum fluctuation leads to emission at the single photon levels. 
 
+Furthermore, intracavity pump power then behaves the amplifier, intensify the corresponding signal or idler mode photon flux. Once the single photon flux exceeds cavity threshold, the extracavity single photon can be detected. To note, these kind of excitation is indistinguishable because the signal and idler photons are emitted simultaneously as a result of quantum mechanics, rather than signal photon stimulates idler photon and vice versa. In the context of quantum states, the state created intracavity is at the superposition of signal state and idler state. The wave packet is different from the normal single photon one. Further theoretical research \cite{Scully1997} explained the squeezed nature of four wave mixing photon pairs, which is one of the exclusive properties of frequency entangled photon pairs.
+
+In general, the spontaneous four wave mixing in nonlinear cavities defined in our context refers to the cavity modes are excited collectively and pair-by-pair under the phase matching condition. Thus, under the weak coherent approximation, the photon pair only include one photon in each mode but correlated with each other. Thus, the conventional coincidence counting technology can be used to verify such correlation. In the term of generation band, it agrees with the classical phase matching condition at pump power limit.
+
+%Furthermore, 
+%To clarify with the physics compared with the relevant research, such as Kerr frequency comb and soliton generation, where ultra-high power is used to built intracavity pump mode, the spontaneous four wave mixing differs 
+%\cite{Chembo2016a}
+
+\section{Methods}
+
+Using the dispersion extraction method in previous chapter, zero dispersion wavelength can be located easily among the measured band. Optical telecom band is focused on in this research due to enormous available fiber optical components for totally in-line setups. 
+Illustrated in \autoref{fig:bibpf}, the setup of mode-resolvable singular photon pair generation adopts the tunable laser as the pump source whose display tunability is 0.1 pm. The laser output is first connected to ring resonators using the same fiber launching system and measured with the power meter. A simple transmission scanning is perform to select the built-in polarization. For the high \textit{Q}-factor devices, the transmission of TE and TM modes are separated in a distance of tens of pm. Thus, as either of the resonance vanished, the input polarization is aligned at particular mode. For low \textit{Q}-factor cavities, the method of polarization alignment is as same as the one used in spectra transmission scanning.
+
+Next, the output light are splitted 50\si{\percent}:50\si{\percent}, indicating half of photons are lost, and sequentially filtered through two sets of band pass filters. The 3dB bandwidths of first set are 1540$\pm$4 nm and 1560 $\pm$4 nm, respectively. The second ones are tunable and 0.12nm-wide. Since the mode spacing is 0.75 nm for 100GHz-FSR cavities, the tunable band pass filter is adequate to define the single mode. Finally, each channel are detected using superconducting single photon detectors (SNSPD) in the resolution of 100 ps. Since the SNSPD is polarization-sensitive, another two polarization controllers (not shown) are used to achieve highest single photon counting. The time controller (ID900, ID Quantique) collects and records the count signal to calculate the coincidence counts.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{imgs/biBPF.pdf}
+%	\includesvg[width=.9\textwidth]{setup/biBPF}
+	\caption{Mode-resolvable singular photon pair generation}
+	\label{fig:bibpf}
+\end{figure}
+
+\bigskip
+\noindent\textbf{Coincidence counting}
+
+In quantum optics, coincidence counting is usually used to examine the non-locality of singular wave-particle. In our case, the photons splitted into two channels A and B, yields the count per second $N_A$ and $ N_B $. Define the coincidence windows $t$ 1 ns commonly, and coincidence count (CC) is two photon trigger events within this time window, equivalent to the photon pair generation rate effectively. The accidental counting (ACC) is defined as $ N_A N_B t $. To reduce the noise effect, accidental-coincidence ratio (CAR) is defined as (CC-ACC)/ACC.
+
+
+It is worth to mention that in our research, the main topic is generation rather than manipulation, in result numerous band-pass filters are exploited to realize mode-resolvable single photon counting. It does not contradict with distinguishability nature of frequency correlated photon pairs.
+
+
+\section{Single mode photon flux}
+
+With the pump power set as 100 \si{\micro\watt} and central wavelength at 1550.64 nm, the result of photon flux versus relative mode index is presented in \autoref{fig:flux1}. The device selected has FSR of 150 GHz and shows anomalous dispersion around 1550 nm. According to the 3dB-bandwidth of BPFs, the accessible relative mode index corresponds 7-14. To achieve higher photon counting, the central wavelength of TBPFs is tuned carefully in the step of 0.01 nm.
+
+In the result, there is trend that both signal and idler photon fluxes decreases as the mode index increases. It can be explained that phase mismatch of farther modes is greater than closer ones. The difference between signal and idler bands origins from the asymmetry of phase matching condition and filter spectral shape.
+
+%However, the problematic factor during our measurement is that all the data are collected after several BPFs.  But due to the backlash of mechanical unit
+
+\begin{figure}
+	\centering
+	\includesvg[width=3in]{mode_depen/flux_1}
+	\mycaption{Photon flux at 100 \si{\micro\watt} of Ligentec group 2 device 1}{}
+	\label{fig:flux1}
+\end{figure}
+
+
+\section{Coincidence counts of singular mode pair}
+
+In coincidence counts are measured in a 1 ns coincidence windows and in each mode, the time delay is set from -200 to 200 ps. The \autoref{fig:mode_cf} shows the result of CAR. As the mode number increases, coincidence counts varies roughly but in the CAR graph, such a trend is not obvious. The inconsistency may be due to the instability of pump mode resonance.
+
+
+\begin{figure}
+	\centering
+	\includesvg[width=3in]{mode_depen/mode_cf}
+	\mycaption{Photon flux at 100 \si{\micro\watt} of Ligentec group 2 device 1}{}
+	\label{fig:mode_cf}
+\end{figure}
+
+
+
+
+\section{Pump power dependence}
+
+
+\begin{figure}
+	\centering
+	\includesvg[width=3in]{pw_depen/pw_flux}
+	\mycaption{}{}
+	\label{fig:pwflux}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includesvg[width=3in]{pw_depen/pw_ar}
+	\mycaption{}{}
+	\label{fig:pwcar}
+\end{figure}
+
+
+
+\section{Joint spectrum intensity}
 
 
 \begin{figure}
@@ -28,4 +111,4 @@
 \end{figure}
 
 
-\section{Stimulated four wave mixing}
+

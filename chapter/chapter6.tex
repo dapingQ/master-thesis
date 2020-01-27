@@ -1,84 +1,126 @@
 % !TeX root = ../main.tex
-\chapter{Broadband photon pair generation}
 
-Back to the classical nonlinear optics theory, the solution to nonlinear coupling equations requires the initial power at ether signal or idler mode, which is called seed in the laser terminology. However, in quantum classical theory, all the modes in cavity behave intrinsic vacuum fluctuation at the quantity of half $ \hbar \omega $. Thus, even without light fed, the quantum fluctuation leads to enhancement at the single photon levels. The intracavity pump power then behaves the amplifier, intensify the corresponding signal or idler mode photon flux. Once the single photon flux exceeds cavity threshold, the extracavity single photon can be detected. To note, these kind of excitation is indistinguishable because the signal and idler photons are emitted simultaneously as a result of quantum mechanics, rather than signal photon stimulates idler photon and vice versa. In the context of quantum states, the state created intracavity is at the superposition of signal state and idler state. The wave packet is different from the normal single photon one. Further theoretical research \cite{Scully1997} explained the squeezed nature of four wave mixing photon pairs, which is one of the exclusive properties of frequency entangled photon pairs.
+\chapter{Fabless samples via foundries}
 
-In general, the spontaneous four wave mixing in nonlinear cavities defined in our context refers to the cavity modes are excited collectively and pair-by-pair under the phase matching condition. Thus, under the weak coherent approximation, the photon pair only include one photon in each mode but correlated with each other. Thus, the conventional coincidence counting technology can be used to verify such correlation. In the term of generation band, it agrees with the classical phase matching condition at pump power limit.
+To discover the diversity of fabrication recipes and compare the material properties, we also design the device layout and order the devices using ligentec process and NTT-AT process.
 
-%Furthermore, 
-%To clarify with the physics compared with the relevant research, such as Kerr frequency comb and soliton generation, where ultra-high power is used to built intracavity pump mode, the spontaneous four wave mixing differs 
-%\cite{Chembo2016a}
+Fabless photonic research is becoming a trend for its cheaper and easier external run \cite{Hochberg2010}. There are several foundries all around the world offering the multi-project run service on integrated photonics and quantum optics applications, such as AMF in Singapore, Ligentec in Switterland, LioniX in Netherlands and etc. 
 
-\section{Methods}
+Based on the silicon nitride platform, two independent foundries are evaluated in the following sections in the term of device performance and fabrication techniques.
 
-Using the dispersion extraction method in previous chapter, zero dispersion wavelength can be located easily among the measured band. Optical telecom band is focused on in this research due to enormous available fiber optical components for totally in-line setups. 
-Illustrated in \autoref{fig:bibpf}, the setup of mode-resolvable singular photon pair generation adopts the tunable laser as the pump source whose display tunability is 0.1 pm. The laser output is first connected to ring resonators using the same fiber launching system and measured with the power meter. A simple transmission scanning is perform to select the built-in polarization. For the high \textit{Q}-factor devices, the transmission of TE and TM modes are separated in a distance of tens of pm. Thus, as either of the resonance vanished, the input polarization is aligned at particular mode. For low \textit{Q}-factor cavities, the method of polarization alignment is as same as the one used in spectra transmission scanning.
+\section{Ligentec technique}
+Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in Ligentec samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is improved.
 
-Next, the output light are splitted 50\si{\percent}:50\si{\percent}, indicating half of photons are lost, and sequentially filtered through two sets of band pass filters. The 3dB bandwidths of first set are 1540$\pm$4 nm and 1560 $\pm$4 nm, respectively. The second ones are tunable and 0.12nm-wide. Since the mode spacing is 0.75 nm for 100GHz-FSR cavities, the tunable band pass filter is adequate to define the single mode. Finally, each channel are detected using superconducting single photon detectors (SNSPD) in the resolution of 100 ps. Since the SNSPD is polarization-sensitive, another two polarization controllers (not shown) are used to achieve highest single photon counting. The time controller (ID900, ID Quantique) collects and records the count signal to calculate the coincidence counts.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=1\linewidth]{imgs/biBPF.pdf}
-%	\includesvg[width=.9\textwidth]{setup/biBPF}
-	\caption{Mode-resolvable singular photon pair generation}
-	\label{fig:bibpf}
-\end{figure}
-
-\bigskip
-\noindent\textbf{Coincidence counting}
-
-In quantum optics, coincidence counting is usually used to examine the non-locality of singular wave-particle. In our case, the photons splitted into two channels A and B, yields the count per second $N_A$ and $ N_B $. Define the coincidence windows $t$ 1 ns commonly, and coincidence count (CC) is two photon trigger events within this time window, equivalent to the photon pair generation rate effectively. The accidental counting (ACC) is defined as $ N_A N_B t $. To reduce the noise effect, accidental-coincidence ratio (CAR) is defined as (CC-ACC)/ACC.
+The sample layout is illustrated in \autoref{fig:gds_ligentec}. Five groups of various FSRs are designed. In ecch specific group, the coupling gap is detuned gradually from 400 nm to 700 nm in the step of 100 nm.
 
 
-It is worth to mention that in our research, the main topic is generation rather than manipulation, in result numerous band-pass filters are exploited to realize mode-resolvable single photon counting. It does not contradict with distinguishability nature of frequency correlated photon pairs.
+\begin{table}[]
+	\begin{tabular}{cccc}
+		% \hline
+		& Ring Radius (\um) & FSR (GHz) & Ring Width (\um) \\ \hline
+		Group 1 & 237.28                                                 & 100       & 0.8                                                   \\ \hline
+		Group 2 & 157.95                                                 & 150       & 1.7                                                   \\ \hline
+		Group 3 & 119.90                                                 & 200       & 1.5                                                   \\ \hline
+		Group 4 & 78.55                                                  & 300       & 1.7                                                   \\ \hline
+		Group 5 & 22.95                                                  & 1000      & 1.7                                                   \\ \hline
+	\end{tabular}
+\end{table}
 
-
-\section{Single mode photon flux}
-
-With the pump power set as 100 \si{\micro\watt} and central wavelength at 1550.64 nm, the result of photon flux versus relative mode index is presented in \autoref{fig:flux1}. The device selected has FSR of 150 GHz and shows anomalous dispersion around 1550 nm. According to the 3dB-bandwidth of BPFs, the accessible relative mode index corresponds 7-14. To achieve higher photon counting, the central wavelength of TBPFs is tuned carefully in the step of 0.01 nm.
-
-In the result, there is trend that both signal and idler photon fluxes decreases as the mode index increases. It can be explained that phase mismatch of farther modes is greater than closer ones. The difference between signal and idler bands origins from the asymmetry of phase matching condition and filter spectral shape.
-
-%However, the problematic factor during our measurement is that all the data are collected after several BPFs.  But due to the backlash of mechanical unit
+The microscope images of the samples is shown in \autoref{fig:ligentec-laser-micro}. Several layers of different structures are observed hierarchically, including the cross pattern stopping the crack during annealing and CMP, the silicon waveguides and a top unknown metallic layer.
 
 \begin{figure}
 	\centering
-	\includesvg[width=3in]{mode_depen/flux_1}
-	\mycaption{Photon flux at 100 \si{\micro\watt} of Ligentec group 2 device 1}{}
-	\label{fig:flux1}
-\end{figure}
-
-
-\section{Coincidence counts of singular mode pair}
-
-In coincidence counts are measured in a 1 ns coincidence windows and in each mode, the time delay is set from -200 to 200 ps. The \autoref{fig:mode_cf} shows the result of CAR. As the mode number increases, coincidence counts varies roughly but in the CAR graph, such a trend is not obvious. The inconsistency may be due to the instability of pump mode resonance.
-
-
-\begin{figure}
-	\centering
-	\includesvg[width=3in]{mode_depen/mode_cf}
-	\mycaption{Photon flux at 100 \si{\micro\watt} of Ligentec group 2 device 1}{}
-	\label{fig:mode_cf}
-\end{figure}
-
-
-
-
-\section{Pump power dependence}
-
-
-\begin{figure}
-	\centering
-	\includesvg[width=3in]{pw_depen/pw_flux}
-	\mycaption{}{}
-	\label{fig:pwflux}
+	\includegraphics[width=.6\textwidth]{imgs/png/ligentec_gds}
+	\caption{Caption}
+	\label{fig:gds_ligentec}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includesvg[width=3in]{pw_depen/pw_ar}
-	\mycaption{}{}
-	\label{fig:pwcar}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/top}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/dev}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/cross}
+		\caption{Crack stopper layer}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/cov}
+		\caption{}
+	\end{subfigure}
+	\mycaption{Laser microscope images of Ligentec smaples}{By lowering the focus depth, three layers are observed.
+		\textbf{a}. Top metallic layer. \textbf{b}. Device layer. \textbf{c}. Crack stopper layer. \textbf{d}. Mode convertor}
+	\label{fig:ligentec-laser-micro}
 \end{figure}
 
+\section{NTT-AT technique}
+
+
+NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, the nitrogen flow is supplied and reacts with silicon vapor into the silicon nitride film. The refractive index of the film deposited using method is also shown in \autoref{fig:ellipso}.
+
+In the term design, the 4-inch wafer is customed with 22 cell in the layout shown in \autoref{fig:gds_ntt}, including the same design of Ligentec one in the special cell.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{imgs/png/ntt_gds.png}
+	\caption{Caption}
+	\label{fig:gds_ntt}
+\end{figure}
+
+
+\section{Device evaluation}
+
+\subsection{Coupling evolution}
+
+Prior to cavity properties evaluation, it is essential to compare the coupling condition among devices in the same group. Since the gap between bus waveguide and ring resonator is swept increasingly, usually the coupling condition turns from over coupling to critical coupling, and finally into weak coupling.
+
+For the Ligentec group 1, due to the reliable fabrication recipe, such an evolution of coupling condition among the same group is explicit as the gap increases.
+As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over coupling to critical coupling, as the negative prominence of resonance peak increases. The same tendency agrees with the \textit{Q}-factors, shown in \autoref{fig:gap_cf}(b). The other groups in the sample have the similar tendency but the critical coupling gaps are different.
+
+\begin{figure}
+	\centering
+	\includesvg[width=6in]{ligentec/gap_cf}
+	\mycaption{Gap sweeping}{}
+	\label{fig:gap_cf}
+\end{figure}
+
+\subsection{Quality factor comparison}
+
+
+Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples in Group3 and Group5. While to compare the fabrication quality of both technique, two device with the same design (Group1 Device4, gap 700nm, FSR 100 GHz, ring width 0.8 \um ) are listed in \autoref{fig:fabless_cf}, as well as the \textit{Q}-factor histograms.
+
+\begin{figure}
+	\centering
+	\includesvg[width=4in]{fabless_cf}
+	\mycaption{A comparison between identical ring resonator fabricated in Ligentec and NTT-AT technique}{}
+	\label{fig:fabless_cf}
+\end{figure}
+
+In the transmission of Ligentec device, shown in \autoref{fig:fabless_cf}(a)  and NTT-AT device shown in \autoref{fig:fabless_cf}(b), there is no obvious absorption in the range 1520 nm - 1540 nm compared with the samples fabricated using non-annealing subtractive recipe, though the transmission background declines at both red and blue side. However, the quality factors of Ligentec one are almost 4 times of NTT-AT samples, indicating the intracavity loss is 4 times lower. The histogram gathered in \autoref{fig:fabless_cf}(c) and \autoref{fig:fabless_cf}(b) features the same result.
+In both samples, the critical coupling features at shorter wavelength, according to the peak prominence and \textit{Q}-factor tendency. 
+
+We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not as fully optimized as Ligentec ones. It is also interesting to find that there is a clear difference of FSR trends from the former. In particular, the increasing NTT-AT FSRs indicate a normal dispersion.
+
+%Besides, only fundamental mode is extracted from the transmission
+%The device with deeper peaks are picked to locate the resonant wavelength, may not the minimum width though. 
+%\autoref{fig:ligentec_triplot} presents the device transmission of group1 device 4, as well as quality factors and FSRs. The ring of this device is 237.28 \um and the FSR is targeted as 150 GHz.
+%\begin{figure}
+%    \centering
+%    \includesvg[width=5in]{ligentec/ligentec_triplot}
+%    \caption{Caption}
+%    \label{fig:ligentec_triplot}
+%\end{figure}
+
+%In general, the waveguide width in the two device mentioned above is 0.8 \um. From the dispersion map in \autoref{fig:wg-disp}, waveguide in this size behave abnormal 
+%\begin{figure}
+%    \centering
+%    \includesvg[width=5in]{ntt/ntt_triplot}
+%    \caption{Caption}
+%    \label{fig:ntt_triplot}
+%\end{figure}
 

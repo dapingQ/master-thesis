@@ -3,20 +3,51 @@
 \chapter{Device evaluation and dispersion analysis}% from transmission spectroscopy
 
 
+\section{Material properties}
+
+\subsection{Ellipsometry}
+
+It is more necessary to evaluated the refractive indexes of the film deposited above. Using the infrared elliposometry, the refractive index of deposited silicon nitride film is obtained. The result is shown in \autoref{fig:ellipso}, where we can see the index varies from the deposition methods at the magnitude of 0.01.
+Furthermore, even the refractive index are distinguished, the material wavelength dispersion parameter $D_M$ can be close.
+
+\subsection{Fourier-transform infrared spectroscopy}
+
+The vast majority of studies on silicon nitride fabrication processes have found that the hydrogen remaining in the films leads to N-H and Si-H bonds, which causes the optical absorption at S and C band \cites{Ay2004, Agnihotri2000}. To quantitatively clarify these bonds in our film, we perform the Fourier-transform infrared spectroscopy (FTIR) on the top of silicon nitride film.
+
+The measurement is carried out using attenuated total reflection (ATR) method with SHIMADZU IRTracer-100. In \autoref{fig:ftir}, the absorbance is taken from the difference with background transmittance. It can be seen that except the peak around 780? \si{\per\cm} referring to Si-N stretching mode, two other peaks are located around 2150 and 3350 \si{\per\cm}, corresponding to Si-H and N-H bonds respectively.
+
+Interestingly, there are also two peaks found at 1020 and 1120, indicating Si-O symmetric and asymmetric stretching modes. This result may be explained by the fact that in ATR method, the depth of penetration at this wavelength is less than 1 micron, while the thickness of silicon nitride layers in our experiment is targeted at 800 nm.
+% \cite{Shaw2005}
+
+
+\begin{figure}
+	\centering
+	\includesvg[width=.6\textwidth]{ftir}
+	\caption{Caption}
+	\label{fig:ftir}
+\end{figure}
+
+In conclusion, even though the ammonia free recipe is used in LS-CVD method, the film is still hydrogenated while LP-CVD commercial wafers show least N-H absorbance.
+
+
+
+\begin{figure}
+	\centering
+	\includesvg[scale=0.8]{ellipso}
+	\mycaption{Elliposometry result of the film deposited in several method}{}
+	\label{fig:ellipso}
+\end{figure}
+
+\section{Device transmission}
+
+\subsection{Methods}
+
 In the example given in \autoref{sec:disp-comp},  a typical dispersive ring resonator has the $ D_2 $ value less than MHz, which means the frequency FSR, for example 100 GHz, is different from the next one with a MHz-level difference. It is difficult to achieve such precise measurement using traditional optical spectrum analyzer whose typical resolution is around pm, 100 MHz. The tunable laser scanning is developed to solve this problem, especially assisted by an external frequency comb \cite{Liu2016d}. 
 
 Here, we exploit the method using laser step triggering to calibrate the real-time measured device transmission. Compared with the frequency comb or wave meter assisted spectroscopy, this method is much more convenient to deploy. By increasing the data acquisition sampling rate or altering with electric oscilloscope, the wavelength precision can be further improved.
 Given the well-resonant spectrum, the dispersion information is further extracted from the transmission, in particular the resonant peaks. Such method is widely used to study the Kerr frequency comb. It is also efficient to study the frequency-entangled photon pair generation.
 
-
-\section{Methods}
-
-\subsection{Fiber launching}
-Much of related works, concerning such as photonic crystals or whispering gallery mode resonators, use prism coupling or tapered fiber coupling for coupling tunability. 
-%interact the external optical filed with cavity evanescent filed though, 
-In the case of integrated ring resonators, the bus wavegudies are designed in the distance of several gaps, usually varying from under-coupling to over-coupling. 
-Thus, the light confined in the bus waveguide can be directly coupled inwards or outwards using appropriate optical fibers. 
-In previous works \cite{Sunada2018}, both grating coupling and edge coupling were adopted. However, considering the broadband frequency conversion motivation, the edge coupling is preferred for a comparatively broader 3-dB bandwidth. 
+\subsubsection{Fiber launching} 
 
 Using two five-axis fiber alignment stages (Newport M-562F-XYZ \& M-562F-XYZ-LH), the device ports are aligned with two lensed fibers on both sides. The spot size of lensed fibers is 2 \um, which is not optimized to the size mentioned in \autoref{sec:chip-dicing}. 
 
@@ -29,7 +60,7 @@ It is worth mentioning that the chip arrier (SURUGA SEIKI F126) is equipped with
 With connected to an external temperature controller, the temperature precision over device under test can be 0.1 \si{\celsius}.
 To avoid moisture condensation, the TEC is set a little higher than room temperature, 30 \si{\celsius} in our case. 
 
-\subsection{Spectrum sweeping}
+\subsubsection{Spectrum sweeping}
 
 \begin{figure}
 	\centering
@@ -44,22 +75,7 @@ The internal power reference signal and the step trigger are also generated simu
 
 Compared with photon diodes, the power meter in our setup is critical to realize various range scanning.  Finally, the signals from power monitor, step trigger and device transmission are all synchronized with the data acquisition module, and then analyzed by the computer. To achieve pm-resolution spectra, transmitted power is simply divided by power reference and the step trigger are marked to interpolate wavelengths in the certain time interval.
 
-
-\section{Thermal stability}
-
-\begin{figure}
-	\centering
-	\includesvg[width=1\textwidth]{thermal_depen}
-	%	\includegraphics[width=.9\textwidth]{imgs/png/trans_setup}
-	\mycaption{Thermal dependence of LP-CVD sample}{\textbf{a}. Transmission measured at three temperatures. \textbf{b}. Resonant wavelengths extracted versus temperature. The estimated thermal dependence $\dv*{\lambda}{T}$ is 23 \si{\nm/\celsius}.}
-	\label{fig:thermal}
-\end{figure}
-
-Although silicon nitride is reported as high thermal conductivity material, the surrounding silicon dioxide is comparatively worse thermal conductive. Despite the room temperature fluctuation, the nonlinear phenomena usually requires high pump power intracavity, which heats the device significantly, the index change variation leads to resonance shift. Thus, the thermal sensitivity is a critical factor of nonlinear ring resonators.
-
-For example, with the TEC set into different temperatures, the spectrum of a LP-CVD sample is then measured. Shown in \autoref{fig:thermal}a, temperature increasing leads to a obvious red-shift of the resonant peak. The wavelength range around 1630 nm is chosen for better transmission and well resonance in this device. From \autoref{fig:thermal}b, the estimated thermal dependence of resonant wavelength $\dv*{\lambda}{T}$ is 23 \si{\nm/\celsius}. In this case, if the \textit{Q}-factor of ring resonator is up to \num{10d5}, even room temperature variation can results in resonance totally mismatching at pumping wavelength.
-
-\section{Device transmission}
+\subsubsection{Peak searching}
 
 Given the transmission spectra, the negative peaks are located with peak-finding algorithm, yielding not only the peak location, but also the width and prominence. These values are next used to calculate the free spectral ranges and \textit{Q}-factors. In general, due to the fabrication difference, not all the device appear resonance all around the measured band. To compensate the broken spectra, several algorithm are performed to achieve best performance of peak-finding. 
 
@@ -73,7 +89,27 @@ Given the transmission spectra, the negative peaks are located with peak-finding
 In our technology, for the spectra with remarkable absorption illustrated in \autoref{fig:spec_filt}, the background of raw spectrum is first calculated using digital filters. The filtered spectra to search the peaks are then the difference between raw spectrum and background without the noise effects.
 
 
-\subsection{Subtractive fabricated samples}
+\subsection{Thermal stability}
+
+\begin{figure}
+	\centering
+	\includesvg[width=1\textwidth]{thermal_depen}
+	%	\includegraphics[width=.9\textwidth]{imgs/png/trans_setup}
+	\mycaption{Thermal dependence of LP-CVD sample}{\textbf{a}. Transmission measured at three temperatures. \textbf{b}. Resonant wavelengths extracted versus temperature. The estimated thermal dependence $\dv*{\lambda}{T}$ is 23 \si{\nm/\celsius}.}
+	\label{fig:thermal}
+\end{figure}
+
+Although silicon nitride is reported as high thermal conductivity material, the surrounding silicon dioxide is comparatively worse thermal conductive. Despite the room temperature fluctuation, the nonlinear phenomena usually requires high pump power intracavity, which heats the device significantly, the index change variation leads to resonance shift. Thus, the thermal sensitivity is a critical factor of nonlinear ring resonators.
+
+For example, with the TEC set into different temperatures, the spectrum of a LP-CVD sample is then measured. Shown in \autoref{fig:thermal}a, temperature increasing leads to a obvious red-shift of the resonant peak. The wavelength range around 1630 nm is chosen for better transmission and well resonance in this device. From \autoref{fig:thermal}b, the estimated thermal dependence of resonant wavelength $\dv*{\lambda}{T}$ is 23 \si{\nm/\celsius}. In this case, if the \textit{Q}-factor of ring resonator is up to \num{10d5}, even room temperature variation can results in resonance totally mismatching at pumping wavelength.
+
+\subsection{Device evaluation of samples fabricated using various CVD methods}
+
+
+
+%\subsection{Subtractive fabricated samples}
+
+
 
 To compare the material difference among the films deposited in three CVD methods, identical ring resonators layout is used to fabricate all these samples. %Controlling thickness 
 Since the thickness control during the film deposition and ICP etching is tough, all the device are label with the waveguide height measured by step profiler before TEOS top cladding. However, the fabrication of stoichiometric silicon nitride using PE-CVD method is not successful, a sample deposited using same machine but with a silicon-rich recipe is reported instead. 
@@ -96,56 +132,6 @@ In the term of \textit{Q}-factors, counted in \autoref{fig:cvd_cf}(c), the LS-CV
 
 %Beyond the samples with same design, LS-CVD deposited and sputtering films also succeed to 
 %...
-
-\subsection{Fabless samples}
-
-\subsubsection{Coupling evolution}
-
-Prior to cavity properties evaluation, it is essential to compare the coupling condition among devices in the same group. Since the gap between bus waveguide and ring resonator is swept increasingly, usually the coupling condition turns from over coupling to critical coupling, and finally into weak coupling.
-
-For the Ligentec group 1, due to the reliable fabrication recipe, such an evolution of coupling condition among the same group is explicit as the gap increases.
-As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over coupling to critical coupling, as the negative prominence of resonance peak increases. The same tendency agrees with the \textit{Q}-factors, shown in \autoref{fig:gap_cf}(b). The other groups in the sample have the similar tendency but the critical coupling gaps are different.
-
-\begin{figure}
-	\centering
-	\includesvg[width=6in]{ligentec/gap_cf}
-	\mycaption{Gap sweeping}{}
-	\label{fig:gap_cf}
-\end{figure}
-
-\subsubsection{Quality factor comparison}
-
-Several works using the same Ligentec technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples in Group3 and Group5. While to compare the fabrication quality of both technique, two device with the same design (Group1 Device4, gap 700nm, FSR 100 GHz, ring width 0.8 \um ) are listed in \autoref{fig:fabless_cf}, as well as the \textit{Q}-factor histograms.
-
-\begin{figure}
-	\centering
-	\includesvg[width=4in]{fabless_cf}
-	\mycaption{A comparison between identical ring resonator fabricated in Ligentec and NTT-AT technique}{}
-	\label{fig:fabless_cf}
-\end{figure}
-
-In the transmission of Ligentec device, shown in \autoref{fig:fabless_cf}(a)  and NTT-AT device shown in \autoref{fig:fabless_cf}(b), there is no obvious absorption in the range 1520 nm - 1540 nm compared with the samples fabricated using non-annealing subtractive recipe, though the transmission background declines at both red and blue side. However, the quality factors of Ligentec one are almost 4 times of NTT-AT samples, indicating the intracavity loss is 4 times lower. The histogram gathered in \autoref{fig:fabless_cf}(c) and \autoref{fig:fabless_cf}(b) features the same result.
-In both samples, the critical coupling features at shorter wavelength, according to the peak prominence and \textit{Q}-factor tendency. 
-
-We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not as fully optimized as Ligentec ones. It is also interesting to find that there is a clear difference of FSR trends from the former. In particular, the increasing NTT-AT FSRs indicate a normal dispersion.
-
-%Besides, only fundamental mode is extracted from the transmission
-%The device with deeper peaks are picked to locate the resonant wavelength, may not the minimum width though. 
-%\autoref{fig:ligentec_triplot} presents the device transmission of group1 device 4, as well as quality factors and FSRs. The ring of this device is 237.28 \um and the FSR is targeted as 150 GHz.
-%\begin{figure}
-%    \centering
-%    \includesvg[width=5in]{ligentec/ligentec_triplot}
-%    \caption{Caption}
-%    \label{fig:ligentec_triplot}
-%\end{figure}
-
-%In general, the waveguide width in the two device mentioned above is 0.8 \um. From the dispersion map in \autoref{fig:wg-disp}, waveguide in this size behave abnormal 
-%\begin{figure}
-%    \centering
-%    \includesvg[width=5in]{ntt/ntt_triplot}
-%    \caption{Caption}
-%    \label{fig:ntt_triplot}
-%\end{figure}
 
 
 \section{Dispersion analysis}

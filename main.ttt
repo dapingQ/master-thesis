@@ -29,12 +29,14 @@ LS-CVD & 27.40                                                            & 2.08
 \mycaption{Etching rate and selectivity of ICP process}{}
 \label{tab:icp}
 \end{table}
+\stepcounter {chapter}
+\stepcounter {chapter}
 \efloatseparator
  
 \begin{table}[]
 \begin{tabular}{cccc}
 % \hline
-        & Ring Radius (\um) & FSR (GHz) & Ring Width (\um) \\ \hline
+& Ring Radius (\um) & FSR (GHz) & Ring Width (\um) \\ \hline
 Group 1 & 237.28                                                 & 100       & 0.8                                                   \\ \hline
 Group 2 & 157.95                                                 & 150       & 1.7                                                   \\ \hline
 Group 3 & 119.90                                                 & 200       & 1.5                                                   \\ \hline
@@ -42,7 +44,5 @@ Group 4 & 78.55                                                  & 300       & 1
 Group 5 & 22.95                                                  & 1000      & 1.7                                                   \\ \hline
 \end{tabular}
 \end{table}
-\stepcounter {chapter}
-\stepcounter {chapter}
 \stepcounter {chapter}
 \stepcounter {chapter}
