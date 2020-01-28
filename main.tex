@@ -26,21 +26,24 @@
 \usepackage{xcolor,graphicx}
 \usepackage{subcaption}
 
-%\usepackage{sectsty} % change section style
+\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing
+\setstretch{1.1}
+
+\usepackage{sectsty} % change section style
 %\allsectionsfont{\sffamily\bfseries}
 %\sectionfont{\noindent\textsc} % indent setting
 
 % \usepackage{paralist}
 % \usepackage{booktabs}
+%\usepackage{fancyhdr}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{fontspec}
-%\renewcommand{\familydefault}{Times}
+\usepackage{mathptmx}
+%\usepackage{newtxtext, newtxmath}
 %\usepackage{tgbonum}
-\usepackage{newtxtext, newtxmath}
-
-% \usepackage{mathptmx}
-\usepackage{fancyhdr}
 
 % svg insert
 \usepackage[inkscape=on]{svg}
@@ -81,7 +84,7 @@
 \newcommand\mycaption[2]{\caption[#1]{\textbf{#1}. #2}}
 \newcommand{\dint}{D_\mathrm{int}}
 \newcommand{\dispu}{\si[per-mode=symbol]{\ps\per\km\per\nm}}
-\newcommand{\um}{\si{\um}}
+\newcommand{\um}{\si{\um}~}
 
 \etitle{Broadband frequency entangled photon generation using silicon nitride ring cavities}
 % \title{\cjk{窒化シリコンリング共振器を用いた\\広帯域周波数もつれ光子生成}}

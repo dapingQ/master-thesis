@@ -8,10 +8,12 @@
 \RequirePackage{physics}
 \RequirePackage[version=4]{mhchem} % chemical formula, \ce{H2O}
 
+%CJK
 \RequirePackage{CJKutf8}
 \newcommand*{\cjk}[1]{%
   \begin{CJK}{UTF8}{ipxm}#1\end{CJK}
 }
+
 
 % set lengths
 \setlength{\topmargin}{0mm} 

@@ -81,7 +81,7 @@ Given the transmission spectra, the negative peaks are located with peak-finding
 
 \begin{figure}
 	\centering
-	\includesvg[width=5in]{filt_cf}
+	\includesvg[width=4in]{filt_cf}
 	\mycaption{}{}
 	\label{fig:spec_filt}
 \end{figure}
@@ -122,9 +122,9 @@ Furthermore, from the extracted resonant peaks, the \textit{Q}-factors and frequ
 
 In the term of \textit{Q}-factors, counted in \autoref{fig:cvd_cf}(c), the LS-CVD samples have the highest quality values at the mean of \num{3d4} while the one of silicon-rich PE-CVD samples is near to \num{1e4}. The distribution of LP-CVD sample are similar to LS-CVD ones, but influenced by the broken resonance spectrum. The tendency of \textit{Q}-factors is as same as the transmission.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
-	\includesvg[width=6in]{cvd_cf}
+	\includesvg[height=6in]{cvd_cf}
 	\mycaption{Trans Comparison}{}
 	\label{fig:cvd_cf}
 \end{figure}
@@ -140,29 +140,11 @@ Previous work \cite{Sunada2018} gave two methods analyzing the device dispersion
 
 Following the integrated dispersion definition, the resonant wavelength $\lambda_m$ is first converted to resonant frequencies $\omega_m$. Before the polynomial fitting, the linear fitting is performed to evaluate first-order mode dispersion parameter. Then the integrated dispersion is calculated using the formula $ \dint(\mu) = \omega_0 - D_1 \mu$. The central frequency is $\omega_0$ set as the center of scanning range. The relative mode numbers are constructed as a integer neighbourhood of zero. A final step is perform the cubic or quadratic polynomial fitting. For the wide range scanning, a quartic curvature is more efficient, but in our case, the cubic polynomial is sufficient to extract the dispersion parameters at the second order in a 160 nm span.
 
+For the samples fabricated using subtractive processes, due to the fabrication imperfection, not all the devices show efficient resonance, especially using LP-CVD and PE-CVD deposited samples. The dispersion in the sample fabricated above is only analyzed in the non-absorption range, shown in \autoref{fig:dint_cvd_cf}.
 
 \begin{figure}
 	\centering
-	\includesvg[width=3.5in]{dint_cf}
-	\caption{Caption}
-	\label{fig:dint_cf}
+	\includesvg[width=4in]{cvd_dint_cf}
+	\mycaption{Trans Comparison}{}
+	\label{fig:dint_cvd_cf}
 \end{figure}
-
-\begin{figure}
-	\centering
-	\includesvg[width=4in]{ligentec/ligentec_dint_cf}
-	\caption{Caption}
-	\label{fig:ligentec_dint_cf}
-\end{figure}
-
-
-The identical devices mentioned in transmission comparison section is further analyzed using the above method. The integrated dispersion is extracted in \autoref{fig:ligentec_dint_cf}.
-
-
-%For the samples fabricated using subtractive processes, due to the fabrication imperfection, not all the devices show efficient resonance, especially using LP-CVD and PE-CVD deposited samples. To achieve best performance of peak finding, 
-%several approach like 
-%the background is first using several smoothing or filter. 
-
-%But the fabless samples are much more reliable, especially the Ligentec ones.
-% In this chapter, the dispersion is shown compared with ring waveguide width.
-% are able to extract the dispersion successfully, especially not all the devices varying the gap in the same group 

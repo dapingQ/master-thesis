@@ -9,15 +9,15 @@ Beyond this method suitable for simple rectangular channel waveguides, in some s
 In this chapter, above methods are described sequentially for the specific silicon nitride ring resonators. Beside, in the case of ring resonators, to improve the coupling efficiency, design of mode size convertors at bus waveguide input/output ports is also introduced.
 
 \section{Dispersion compensation}\label{sec:disp-comp}
-Shown in \autoref{sec:guide}, the dispersion behaviour in integrated devices is not only the intrinsic material property, but also depends on the waveguide dimension. In other words, the phase mismatch occurs as a result of both material dispersion $D_M$ and waveguide dispersion $ D_W $, $D_{\lambda}= D_M + D_W$. Here, we adopt the wavelength dispersion parameter since the wavelength domain is measurable.
+indicated in \autoref{eq:te-eq}, the dispersion behavior of integrated devices is not only the intrinsic material property, but also depends on the waveguide dimension. Thus, the phase mismatch origins as a result of both material dispersion $D_M$ and waveguide dispersion $ D_W $, $D_{\lambda}= D_M + D_W$. Here, we adopt the wavelength dispersion parameter since the wavelength domain is measurable.
 
-Usually, the Sellmeier equation is used to fit the refractive index for a particular transparent medium based on the Lorentz-Drude mode. \citeauthor{Luke2015a} reported the below measured refractive index of stoichiometric \ce{Si3N4} film \cite{Luke2015a}
+Usually, the Sellmeier equation is used to fit the refractive index for a particular transparent medium based on the Lorentz-Drude mode. \citeauthor{Luke2015a} reported the below measured refractive index of stoichiomertric \ce{Si3N4} film \cite{Luke2015a}
 \begin{equation}\label{eq:si3n4-selleimeier}
     n_{\ce{Si3N4}}^2 = 1 + \frac{3.0249 \lambda^2}{\lambda^2-135.3406^2} + \frac{40314 \lambda^2}{\lambda^2 - 1239842^2}
 \end{equation}
 
 This Sellmeier equation is valid over the wavelength range 310–5504 \si{\nm}.
-The result of \autoref{eq:si3n4-selleimeier} is plotted in \autoref{fig:Luke-si3n4}, along with the material dispersion parameter $D_M$, which is calculated at the precision of \si{\nm} using the second-order finite difference of refractive index. In the telecom C-band, $n$=1.9963 and $D_M$ = -6.57 \dispu, which suggests the material dispersion at this range is considerably small.
+The result of \autoref{eq:si3n4-selleimeier} is plotted in \autoref{fig:Luke-si3n4}, along with the material dispersion parameter $D_M$, which is calculated at the precision of \si{\nm} using the second-order finite difference of refractive index. In the telecom C-band 1550 nm, $n$=1.9963 and $D_M$ = -6.57 \dispu, which suggests the material dispersion at this range is considerably small. To note, the Sellmeier equation used above is valid only for dehydrogenated shoichiomertric silicon nitride. In most cases of common film growing, deposition sources and methods influence the refractive index significantly.
 
 \begin{figure}
     \centering
@@ -25,12 +25,10 @@ The result of \autoref{eq:si3n4-selleimeier} is plotted in \autoref{fig:Luke-si3
     \mycaption{Refractive index and dispersion parameter measured in reference}{$ \lambda$=1550 \si{\nm}, $n$=1.9963 and $D_M$ = -6.5656 \dispu .}
     \label{fig:Luke-si3n4}
 \end{figure}
+To evaluate the waveguide dispersion parameter, the numerical simulation using commercial software \si{\nm}{Lumerical MODE} is adopted to solve the modes and sweep the cross section dimension in a channel waveguide. The selected mode is fundamental TE modes, and the bent radius 200 \um is involved in the mode solver.
 
-On the other hand, the numerical simulation is adopted to evaluate the waveguide parameter.
-We use commercial software \si{\nm}{Lumerical MODE} to solve for the refractive index of fundamental TE modes.
-Shown in \autoref{fig:wg-disp}, the dimension dependence of waveguide dispersion features negative values in the small waveguide size, i.e. behaving as normal dispersion at the second order. Nevertheless, as either the thickness or width of channel waveguide increases,
+Shown in \autoref{fig:wg-disp}, the dimension dependence of waveguide dispersion features negative values in a small size, i.e. behaving normal dispersion at the second order. Nevertheless, as either the thickness or width increases,
 $D_W$ turns positive. This indicates that to achieve zero dispersion in phase match condition of four wave mixing, the normal material dispersion can be compensated with anomalous waveguide dispersion. 
-
 For example, at 1550 \si{\nm}, in a 1.5-\si{\um}-wide and 0.8-\si{\um}-thick silicon nitride waveguide cladded by silica, where the refractive index is 1.48,
 the waveguide dispersion is 122.56 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 3.07 MHz. It is close to zero dispersion for the pump wavelength.
 
@@ -61,7 +59,8 @@ Except the waveguide width $w$ and thickness $t$, two extra parameters are defin
 
 \begin{figure}
 	\centering
-	\includegraphics[width=.8\linewidth]{imgs/png/slot_mode}
+%	\includegraphics[width=.8\linewidth]{imgs/png/slot_mode}
+	\includesvg[width=4in]{slot/slot_mode}
     \mycaption{Modes of the double vertical slot waveguide}{$w$=2.5, $t$=0.8, $\mathit{ff}$=0.053, $\mathit{pf}$=0.4}
  	\label{fig:slot-mode}
 \end{figure}
@@ -106,11 +105,11 @@ In the following research, the mode crossings found in our devices not only chan
 \section{Edge coupling}
 Much of related works, such as photonic crystals or whispering gallery mode resonators, use prism coupling or tapered fiber coupling for tunability of coupling condition. 
 %interact the external optical filed with cavity evanescent filed though, 
-In the case of integrated ring resonators, the bus wavegudies are designed in the distance of several gaps, usually varying from under-coupling to over-coupling. 
+In the case of integrated ring resonators, the bus wavegudies are designed in the distance of several gaps, usually varying from under coupling to over coupling. 
 Thus, the light confined in the bus waveguide can be directly coupled inwards or outwards using appropriate optical fibers. 
-In previous works \cite{Sunada2018}, both grating coupling and edge coupling were adopted. However, considering the broadband frequency conversion motivation, the edge coupling is preferred for a comparatively broader 3-dB bandwidth.
+In previous works \cite{Sunada2018}, both grating coupling and edge coupling were adopted. However, considering the broadband frequency conversion motivation, the edge coupling is preferred for a comparatively broader 3dB bandwidth.
 
-To achieve high coupling efficiency, we adopt monolithic inversed tapered waveguide as the mode convertor. The input and output ports of waveguide are both tapered from normal width 1.5 \um to a narrower end. By FDTD methods, the mode field is swept with different taper end widths.
+To achieve high coupling efficiency, inverted tapered couplers are used as mode convertor. The input and output ports of waveguide are both tapered from normal width 1.5 \um to a narrower end. By FDTD methods, the mode field is swept with different taper end widths.
 
 \begin{figure}
 	\centering
@@ -139,7 +138,7 @@ To achieve high coupling efficiency, we adopt monolithic inversed tapered wavegu
 	\label{fig:taper}
 \end{figure}
 
-From the result shown in \autoref{fig:taper}a, the mode fields expand horizontally as the taper end width increases proportionally. The largest mode size of 3.4 \um $\times$ 3.4 \um is successfully demonstrated, but the enhancement is not significant compared with no tapered port in \autoref{fig:taper}e. In result, a lensed fiber with spot diameter from 3.0 \um to 3.4 \um is recommended. 
+From the result shown in \autoref{fig:taper}a, the mode fields expand horizontally as the taper end width increases proportionally. The largest mode size of 3.4 \um $\times$ 3.4 \um is successfully demonstrated, but the enhancement is not significant compared with no tapered port in \autoref{fig:taper}e. In result, a lensed fiber with spot diameter from 3.0 \um  to 3.4 \um  is recommended. 
 
 
 

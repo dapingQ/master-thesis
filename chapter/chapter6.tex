@@ -11,7 +11,7 @@ Based on the silicon nitride platform, two independent foundries are evaluated i
 \section{Ligentec technique}
 Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in Ligentec samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is improved.
 
-The sample layout is illustrated in \autoref{fig:gds_ligentec}. Five groups of various FSRs are designed. In ecch specific group, the coupling gap is detuned gradually from 400 nm to 700 nm in the step of 100 nm.
+The sample layout is illustrated in \autoref{fig:gds}. Five groups of various FSRs are designed. In ecch specific group, the coupling gap is detuned gradually from 400 nm to 700 nm in the step of 100 nm.
 
 
 \begin{table}[]
@@ -30,29 +30,14 @@ The microscope images of the samples is shown in \autoref{fig:ligentec-laser-mic
 
 \begin{figure}
 	\centering
-	\includegraphics[width=.6\textwidth]{imgs/png/ligentec_gds}
-	\caption{Caption}
-	\label{fig:gds_ligentec}
+	\includesvg[width=5in]{gds}
+	\mycaption{Layout of fabless samples}{\textbf{a} is the layout of NTT-AT sample, including the identical design of Ligentec device shown in \textbf{b}. The cell size is 1mm$\times$1mm. }
+	\label{fig:gds}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/top}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/dev}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/cross}
-		\caption{Crack stopper layer}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{imgs/jpg/ligentec/cov}
-		\caption{}
-	\end{subfigure}
+	\includesvg[width=4in]{ligentec_image}
 	\mycaption{Laser microscope images of Ligentec smaples}{By lowering the focus depth, three layers are observed.
 		\textbf{a}. Top metallic layer. \textbf{b}. Device layer. \textbf{c}. Crack stopper layer. \textbf{d}. Mode convertor}
 	\label{fig:ligentec-laser-micro}
@@ -63,14 +48,8 @@ The microscope images of the samples is shown in \autoref{fig:ligentec-laser-mic
 
 NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, the nitrogen flow is supplied and reacts with silicon vapor into the silicon nitride film. The refractive index of the film deposited using method is also shown in \autoref{fig:ellipso}.
 
-In the term design, the 4-inch wafer is customed with 22 cell in the layout shown in \autoref{fig:gds_ntt}, including the same design of Ligentec one in the special cell.
+In the term design, the 4-inch wafer is customed with 22 cell in the layout shown in \autoref{fig:gds}, including the same design of Ligentec one in the special cell.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{imgs/png/ntt_gds.png}
-	\caption{Caption}
-	\label{fig:gds_ntt}
-\end{figure}
 
 
 \section{Device evaluation}
@@ -89,6 +68,16 @@ As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over
 	\label{fig:gap_cf}
 \end{figure}
 
+\subsection{Deterministic dispersion compensation}
+
+\begin{figure}
+	\centering
+	\includesvg[width=6in]{fabless/dint_comp}
+	\mycaption{}{}
+	\label{fig:dint_comp}
+\end{figure}
+
+
 \subsection{Quality factor comparison}
 
 
@@ -96,7 +85,7 @@ Several works using the same Ligentec technique report ultrahigh Q-factors up to
 
 \begin{figure}
 	\centering
-	\includesvg[width=4in]{fabless_cf}
+	\includesvg[width=4in]{fabless/fabless_cf}
 	\mycaption{A comparison between identical ring resonator fabricated in Ligentec and NTT-AT technique}{}
 	\label{fig:fabless_cf}
 \end{figure}
@@ -124,3 +113,14 @@ We assume that despite the ammonia-free recipe used in NTT-AT technique, the etc
 %    \label{fig:ntt_triplot}
 %\end{figure}
 
+\subsection{Dispersion comparison}
+
+The identical devices mentioned in transmission comparison section is further analyzed using the above method. The integrated dispersion is extracted in \autoref{fig:dint_cf}.
+
+
+\begin{figure}
+	\centering
+	\includesvg[width=6in]{fabless/dint_cf}
+	\mycaption{}{}
+	\label{fig:dint_cf}
+\end{figure}
