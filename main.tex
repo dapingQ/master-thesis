@@ -1,0 +1,149 @@
+% !TeX document-id = {d7bfea81-c3f6-4000-b3a4-ebfa033e41d4}
+% !TeX root = ./main.tex
+% !TEX program = pdflatex
+% !BIB program = biber
+% !TEX encoding = UTF-8 Unicode
+% !TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+\documentclass[final]{kuee_en}
+\usepackage[titletoc]{appendix}
+\usepackage{titlesec}
+% \titleformat{\chapter}[hang] 
+% {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{1em}{} 
+
+% citation
+\usepackage[final,breaklinks=true]{hyperref}
+\renewcommand*{\sectionautorefname}{Section}
+\renewcommand*{\chapterautorefname}{Chapter}
+%\renewcommand*{\equationautorefname}{Eqn.}
+% \usepackage{cleveref}
+
+\usepackage{pdflscape}
+
+\usepackage{siunitx} % SI units
+\sisetup{detect-all}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor,graphicx}
+\usepackage{subcaption}
+
+\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing
+\setstretch{1.1}
+
+\usepackage{sectsty} % change section style
+%\allsectionsfont{\sffamily\bfseries}
+%\sectionfont{\noindent\textsc} % indent setting
+
+% \usepackage{paralist}
+% \usepackage{booktabs}
+%\usepackage{fancyhdr}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+%\usepackage{newtxtext, newtxmath}
+%\usepackage{tgbonum}
+
+% svg insert
+\usepackage[inkscape=on]{svg}
+\svgpath{{imgs/svg/}}
+\usepackage[off]{svg-extract}
+\svgsetup{%
+	extractpath=./imgs/svg-extract/,
+	inkscapepath=./imgs/svg-inkscape, 
+	clean=true,
+	convertformat={png},
+	convertdpi={png=600},%
+	convertdpi=300}
+
+% using modern biblatex
+\usepackage[sorting=none,
+    backend=biber,
+    bibencoding=utf8,
+    bibstyle=nature_kuee,
+    citestyle=numeric-comp,
+    doi=false,isbn=false,url=false,eprint=false]{biblatex}
+\bibliography{library}
+\bibliography{bibsupple}
+
+
+% Please add the following required packages to your document preamble:
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\mathd}{\mathrm{d}}
+\newcommand{\tmname}[1]{\textsc{#1}}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextit}[1]{{\itshape{#1}}}
+\newcommand{\nosymbol}{}
+\newcommand{\tmmathmd}[1]{\ensuremath{#1}}
+%%%%%%%%%% End TeXmacs macros
+
+\newcommand\mycaption[2]{\caption[#1]{\textbf{#1}. #2}}
+\newcommand{\dint}{D_\mathrm{int}}
+\newcommand{\dispu}{\si[per-mode=symbol]{\ps\per\km\per\nm}}
+\newcommand{\um}{\si{\um}~}
+\newcommand{\uW}{\si{\micro\watt}~}
+\newcommand{\tbe}{\color{red} To be edited}
+
+\etitle{Broadband frequency entangled photon generation using silicon nitride ring cavities}
+% \title{\cjk{窒化シリコンリング共振器を用いた\\広帯域周波数もつれ光子生成}}
+\title{Broadband frequency entangled photon generation \\using silicon nitride ring cavities}
+\eauthor{Zhenghao Yin} 
+\author{\cjk{殷　政浩}}
+\supervisor{\cjk{竹内　繁樹　教授}}
+\school{\cjk{京都大学大学院工学研究科}}
+\depart{\cjk{電子工学専攻}}
+\date{\cjk{令和2年1月31日}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Frequency entangled photon source is widely required in various optical quantum technology, including but no limited to quantum key distribution, cluster state quantum computation and quantum metrology etc. In the recent decade, chip-scale entangled photon source has been developed in silicon platform for its robustness, large scalability and COMS technology compatible. However, due to the intrinsic two-photon absorption and limitation of transparency range, the high-intensity and broadband frequency entangled photon pairs such as one-octave, remains an outstanding challenge.
+
+Here, we report the generation of frequency entangled photon pairs using silicon nitride ring resonators, which is transparent from visible to mid-infrared range and no power-dependent absorption.
+The device design technique is first introduced in the term of phase matching condition. 
+Then, we demonstrate the standard subtractive fabrication and compare the difference between mainstream silicon nitride deposition methods. 
+Based on the device transmission, the dispersion evaluation method for broadband frequency entangled photon generation is developed.
+The quality factor of \num{5d4} is achieved in our device, promising to generate broadband frequency entangled photons at telecom band. 
+
+Furthermore, we exploit fabless device and success to realize chip-scale frequency entangled photon generation in \uW power level. The photon pair generation rate estimated is 15 cps/\uW based on our setup.
+
+\tbe
+
+
+\end{abstract}
+
+\tableofcontents
+% \clearpage
+
+
+\input{chapter/chapter1.tex}
+\input{chapter/chapter2.tex}
+\input{chapter/chapter3.tex}
+\input{chapter/chapter4.tex}
+\input{chapter/chapter5.tex}
+\input{chapter/chapter6.tex}
+\input{chapter/chapter7.tex}
+\input{chapter/chapter8.tex}
+
+
+\begin{acknowledgements}
+\lipsum[2-4]
+\end{acknowledgements}
+
+
+\printbibliography[title=References,heading=bibintoc]
+
+\clearpage % ensure all floats are processed
+\processdelayedfloats
+\clearpage
+
+%\begin{appendices}
+%\chapter{Dispersion simulation}
+%\chapter{Layout design}
+%\end{appendices}
+\end{document}
