@@ -22,7 +22,7 @@ For the high \textit{Q}-factor devices, the transmission of TE and TM modes are 
 
 Beyond the polarization selection, the pump wavelength should also be aligned to the resonance of ring resonators. The on-resonance or off-resonance can be determined as the output displays largest distinction ratio. In our experiment, the pump peak around 1550 nm, usually perform at least 10 dB extinction ratio between on-resonance and off-resonance.
 
-Next, the output light are splitted 50\si{\percent} by 50\si{\percent} into signal and idler channels, indicating half of generated photons are lost. The two channels are sequentially filtered through two sets of band pass filters. The 3dB bandwidth in the first set is 1540$\pm$4 nm and 1560$\pm$4 nm, respectively. The second set of band pass filters are 0.01nm-tunable and 3dB bandwith is 0.12nm. Since mode spacing, FSR in our device is much more larger, the tunable band pass filter is adequate to pass only single mode.
+Next, the output light are splitted 50\si{\percent} by 50\si{\percent} into signal and idler channels, indicating half of generated photons are lost. The two channels are sequentially filtered through two sets of band pass filters. The 3dB bandwidth in the first set is 1540$\pm$4 nm and 1560$\pm$4 nm, respectively. The second set of band pass filters are 0.01nm-tunable and 3dB bandwith is 0.12nm. Since the free spectra range (FSR) in our device is much more larger, the tunable band pass filter is adequate to pass only single mode.
 
 Finally, each channel are detected by superconducting single photon detectors (SNSPD) which are specific for infrared range. The time resolution is 100 ps. Since the SNSPD is polarization-sensitive, another two polarization controllers (not shown) are used to achieve maximal single photon counting during each measurement. At last, the time controller (ID Quantique, ID900) collects and records the counting time tag in the 100 ps resolution. The coincidence counting is triggered directly or calculated by setting the coincidence window. 
 
@@ -93,18 +93,16 @@ The result of photo flux is given in \autoref{fig:pwflux}. It is apparent that t
 	\label{fig:pwcar}
 \end{figure}
 
-Furthermore, the coincidence counting result is shown in \autoref{fig:pwcar}(a) where both maximal coincidence counts and background accidental coincidence counts increase with the pump power. While from CAR provided in \autoref{fig:pwcar}(b), higher input power leads to a significant decline. This can explained by the background noise arising from the Raman effect in optical fibers \cite{Engin2012}
+Furthermore, the coincidence counting result is shown in \autoref{fig:pwcar}(a) where both maximal coincidence counts and background accidental coincidence counts increase with the pump power. While from CAR provided in \autoref{fig:pwcar}(b), higher input power leads to a significant decline. This can explained by the background noise arising from the Raman effect in optical fibers \cite{Engin2012, Sugiura2019}
 . As the nonlinearity of optical fiber is much weaker than silicon nitride device, in the high input power regime, it becomes obvious and contributes to the single photo count while decreasing the coincidence count rate.
 
-\section{Joint spectrum intensity}
+\section{Joint spectral intensity}
 
-Since the spontaneous four wave mixing occurs simultaneously at each mode pair, the state generated in a broadband is equivalent to the intensity superposition all over the signal and idler bands. To clarify the quantum state characteristics in this view, usually the joint spectrum filed or intensity is measured to evaluate the frequency correlation \cites{Helt2010,Vernon2015b}. For example, compared with the $ N $ mode correlation measurement mentioned above, the joint spectrum intensity requires the coincidence measurement over the whole two-party $ N^2 $ hibert space.
+Since the spontaneous four wave mixing occurs simultaneously at each mode pair, the state generated in a broadband is equivalent to the intensity superposition all over the signal and idler bands. To clarify the quantum state characteristics in this view, usually the joint spectral filed or intensity is measured to evaluate the frequency correlation \cites{Helt2010,Vernon2015b}. For example, compared with the $ N $ mode correlation measurement mentioned above, the joint spectral intensity requires the coincidence measurement over the whole two-party $ N^2 $ hibert space.
 
-\subsection{Setups}
-
+%\subsection{Setups}
 Much of recent research concerning soliton generation discussed the thermal stability in the nonlinear ring resonators \cites{Guo2017a,Herr2012}. 
-
-To solve this problem, illustrated in \autoref{fig:pid}, an auxiliary photon detector is added to monitor off-resonance. Using digital proportional–integral–derivative (PID) controller, which is realize by a LabVIEW program, the wavelength of tunable laser is tuned dynamically by the external voltage input. In this way, the extinction ratio of our system can keep at a low level as soon as possible. In addition, to increase the available mode number, the first set of band pass filter in \autoref{fig:bibpf} is replaced by a notch filter. 
+To solve this problem, illustrated in \autoref{fig:pid}, an auxiliary photon detector is added to monitor off-resonance. Using digital proportional–integral–derivative (PID) controller, which is realize by a LabVIEW program, the wavelength of tunable laser is tuned dynamically by the external voltage input. In this way, the extinction ratio of our system can keep at a low level as soon as possible. In addition, to increase the available mode number, the first set of band pass filter in \autoref{fig:bibpf} is replaced by a notch filter. The pump power used is 24.5 mW.
 
 \begin{figure}
 	\centering
@@ -114,7 +112,9 @@ To solve this problem, illustrated in \autoref{fig:pid}, an auxiliary photon det
 	\label{fig:pid}
 \end{figure}
 
-\autoref{fig:jsi} presents the final results of intermodal coincidence counts, accidental coincidence counts and their ratio, CAR. The operation 
+%\autoref{fig:jsi} presents the final results of intermodal coincidence counts, accidental coincidence counts and their ratio, CAR. 
+During our measurement, the coincidence count is first scanned along the diagonal term of joint spectral intensity to locate the central wavelength of tunable band pass filters. Then photon flux is shown in \autoref{fig:flux2}. In \autoref{fig:jsi}(a), CC characterize the peak at mode 13. This agrees with the result of photon flux. More obviously, both photon flux and CC suffer from the notch filter, whose 3dB bandwidth is much large the single FSR and not ideally symmetric at signal and idler bands. After the diagonal scanning, the off-diagonal terms are measured mode-by-mode. The grid-like distribution of ACC \autoref{fig:jsi}(b) indicates at specific mode, the scanning progress is not stale enough.
+However, the CAR presented in \autoref{fig:jsi}(c) stands out no obvious off-diagonal fluctuation and features the maximum frequency correlation in 46 mode pairs.
 
 \begin{figure}
 	\centering
@@ -130,5 +130,4 @@ To solve this problem, illustrated in \autoref{fig:pid}, an auxiliary photon det
 	\label{fig:jsi}
 \end{figure}
 
-
-
+\section{Summary}

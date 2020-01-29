@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 
-\chapter{Device evaluation and dispersion analysis}% from transmission spectroscopy
-
+\chapter{Device evaluation and dispersion analysis of samples fabricated using various CVD methods}% from transmission spectroscopy
+During and after the fabrication, the film property and devices are then fully estimated. To compare the chemical vapor deposition method differences, the material properties, especially the infrared band absorption is first studied. By using tunable laser based spectrum measurement, device optical transmission is then analyzed. Finally. this chapter is closesd by the discussion of dispersion behavior shown in fabricated devices.
 
 \section{Material properties}
 
@@ -103,8 +103,6 @@ Although silicon nitride is reported as high thermal conductivity material, the 
 
 For example, with the TEC set into different temperatures, the spectrum of a LP-CVD sample is then measured. Shown in \autoref{fig:thermal}a, temperature increasing leads to a obvious red-shift of the resonant peak. The wavelength range around 1630 nm is chosen for better transmission and well resonance in this device. From \autoref{fig:thermal}b, the estimated thermal dependence of resonant wavelength $\dv*{\lambda}{T}$ is 23 \si{\nm/\celsius}. In this case, if the \textit{Q}-factor of ring resonator is up to \num{10d5}, even room temperature variation can results in resonance totally mismatching at pumping wavelength.
 
-\subsection{Device evaluation of samples fabricated using various CVD methods}
-
 
 
 %\subsection{Subtractive fabricated samples}
@@ -140,7 +138,7 @@ Previous work \cite{Sunada2018} gave two methods analyzing the device dispersion
 
 Following the integrated dispersion definition, the resonant wavelength $\lambda_m$ is first converted to resonant frequencies $\omega_m$. Before the polynomial fitting, the linear fitting is performed to evaluate first-order mode dispersion parameter. Then the integrated dispersion is calculated using the formula $ \dint(\mu) = \omega_0 - D_1 \mu$. The central frequency is $\omega_0$ set as the center of scanning range. The relative mode numbers are constructed as a integer neighbourhood of zero. A final step is perform the cubic or quadratic polynomial fitting. For the wide range scanning, a quartic curvature is more efficient, but in our case, the cubic polynomial is sufficient to extract the dispersion parameters at the second order in a 160 nm span.
 
-For the samples fabricated using subtractive processes, due to the fabrication imperfection, not all the devices show efficient resonance, especially using LP-CVD and PE-CVD deposited samples. The dispersion in the sample fabricated above is only analyzed in the non-absorption range, shown in \autoref{fig:dint_cvd_cf}.
+For the samples fabricated using subtractive processes, due to the fabrication imperfection, not all the devices show efficient resonance, especially using LP-CVD and PE-CVD deposited samples. The dispersion in the sample fabricated above is only analyzed in the non-absorption range, shown in \autoref{fig:dint_cvd_cf}. As we can see, in the case of LP-CVD and PE-CVD deposited films, thanks to the fine control of waevguide dimension, the dispersion are efficiently compensated. While due to different recipe used in PE-CVD one, non-stoichiomertric slicon nitride indicates lagers material dispersion.
 
 \begin{figure}
 	\centering
@@ -148,3 +146,6 @@ For the samples fabricated using subtractive processes, due to the fabrication i
 	\mycaption{Trans Comparison}{}
 	\label{fig:dint_cvd_cf}
 \end{figure}
+
+
+\section{Summary}

@@ -1,21 +1,55 @@
 % !TeX root = ../main.tex
 \chapter{Introduction}
-% Quantum mechanics has not only boosted up the modern science and technology in different disciplines, but also established the cornerstone for future quantum information processing technology. Furthermore, differing from the past applications, which only involves the quantization nature, the quantum information processing, including but not limited to  quantum computation, quantum communication and quantum metrology, exploits the deep-level physics of quantum mechanics, such as quantum superposition and quantum entanglement.
-
-% Meanwhile, 
-The flying qubit---photon---featuring the advantages of long coherent time and multiple degrees of freedom (DoF), is a promising candidate in quantum computation and quantum communication. However, in the term of DoF, much of research up to now focuses on the photon polarization and path entanglement realization, very little attention has been paid to the role of frequency entanglement, which is continuous and infinite in hilbert space. 
-
-Furthermore, the previous research shows that frequency entangled photon pairs can be exploited not only in wavelength division multiplexing quantum key distribution \cite{Wengerowsky2018} but also transferring quantum information in future quantum networks \cite{Tchebotareva2019}. Besides, in recent applications of quantum metrology, quantum optical coherent tomography (QOCT), the broadband frequency entanglement \cite{Okano2015} is also required. 
 
 \section{Background}
 
-% The state-of-art method to generate frequency entangled photon pair is to use bulky crystals.
-Compared with crystal experiments, a chip-scale photon source has the advantages of scalability and robustness. A conventional material candidate is silicon on insulator (SOI), since it is CMOS-compatible and supplied by a lot of wafer manufacturers. However, suffering from two photon absorption and stimulated Raman scattering, silicon is no able to generate broadband frequency conversion. Since that, silicon nitride, which is transparent from visible to near infrared range, is preferred to perform broadband frequency entanglement. A recent record is single pair from visible to telecom band \cite{Lu2016}.
+Quantum mechanics has not only boosted up the modern science and technology in different disciplines, but also established the cornerstone for future quantum information processing technology. 
+Furthermore, differing from the past applications of quantum mechanics which only involves the quantization nature, the frontier quantum information processing 
+including but not limited to quantum computation, quantum communication and quantum metrology, 
+exploits the deep-level physics of quantum mechanics, such as quantum superposition and quantum entanglement.
+Therefore, the fundamental quanta of light---photon---featuring attractive advantages like long coherent time and multiple degrees of freedom (DoF), is a suitable candidate among the research quantum computation and quantum communication. 
+
+Furthermore, entanglement between photon pairs which originates from the nonlocality of quantum mechanics, can be easily realized using nonlinear bulk crystals. 
+While in the term of DoF, much of research up to now focuses on the polarization and path entanglement approaches and very little attention has been paid to frequency entanglement, whose basis is continuous and infinite in hilbert space. 
+Moreover, the previous research shows that frequency entangled photon pairs can be exploited not only in wavelength division multiplexing quantum key distribution \cite{Wengerowsky2018} but also promising to transfer quantum information in future quantum networks \cite{Tchebotareva2019}. 
+An example of quantum computation is cluster state encoded by frequency \cites{Reimer2019}.
+Therefore, frequency entangled photon plays a powerful and general role for optical quantum information processing.
+
+Nevertheless, large scale realization of frequency entanglement requires hundreds of free-space optical components, especially the nonlinear crystals, which challenges robust manipulation of generated quantum states.
+Besides, in recent applications of quantum metrology, quantum optical coherent tomography (QOCT), the broadband frequency entanglement \cite{Okano2015} is also urgent.
+
+To improve both scalability and robustness, chip-scale full-optical routine has been developed for optical quantum information processing \cites{ Vahala2008, OBrien2009}.  
+A conventional material candidate is silicon on insulator (SOI), since it is CMOS compatible and supplied by silicon wafer manufacturers. Much of research up to date reported not only frequency \cite{Kues2017b} but also path and time-bin encoded quantum state in this platform \cites{Paesani2018,Zhang2018a}. Other materials like lithium niobate and aluminum nitride are also developed and show various advantages, but requires special fabrication technology.
 
 \section{Objective}
-In the platform of silicon nitride, we utilize the third-order optical nonlinearity and confine the light in the sub-micron scale---optical waveguides. To enhance the nonlinear interaction, we define the ring resonator and couple the light inside along with a bus waveguide. The broadband property is ensured by carefully optimizing the device geometry to achieve a broadband phase matching condition. All the photon pair generation events are detected by single photon detectors and verified by the coincident counting.
 
-In this dissertation, the terms 'broadband photon pair' is used to describe that pairs are generated in different frequency pairs simultaneously and but entangled only in the single mode pair. 
+However, suffering from two photon absorption and stimulated Raman scattering \cite{Engin2012}, silicon is no able to generate high-intensity and broadband frequency conversion. 
+Since that, silicon nitride, which is transparent from visible to near infrared range, can be used to achieve ultra-broadband frequency conversion. 
+A simple comparison of these two material is shown in \autoref{tab:si-vs-sin}.
+Recently, single photon pair generation from visible to telecom band is reported\cite{Lu2016}. 
+
+\begin{table}[]
+	\mycaption{Comparison of several material properties between silicon and silicon nitride}{The data of silicon is cited from Reference \cite{Sinclair2019} and silicon nitride refers to \cite{Ang2018}.}
+	\label{tab:si-vs-sin}
+	\begin{tabular}{ccc}
+							& silicon nitride 			& silicon		 			\\ \hline
+		refractive index $n$ at 1550 nm
+							& 2.0						& 3.4						\\ \hline
+		transparent band 	& visible to NIR			& NIR					    \\ \hline
+		two photon absorption $ \beta_\mathrm{TPA} $ (cm/GW)                 
+							& - 						& 0.75 			 			\\ \hline
+		Kerr nonlinearity $ n_2 $ (\si{\square\meter\per\watt})             
+							& \num{6.94d-19} 			& \num{5d-18} 				\\ \hline
+	\end{tabular}
+\end{table}
+
+In the silicon nitride waveguide, third-order optical nonlinearity is dominant and leads spontaneous four wave mixing in sub-micron scale. 
+To enhance the nonlinear interaction, the all-pass ring resonator is used where the light is coupled inside from a bus waveguide. Once continuous wave laser launched at the ring resonant mode, the cavity made of nonlinear material is strongly driven and leads frequency broadening nature intracavity. Thus, other resonant modes are excited and then photon are generated spontaneously. Indeed, this progress is governed by phase matching condition in nonlinear optics.
+In our research, by carefully optimizing the device geometry, broadband phase matching condition can be realized. 
+Finally, all the photon pair generation events are detected by single photon detectors and verified by the coincident counting.
+%In this dissertation, the terms 'broadband photon pair' is used to describe that pairs are generated in different frequency pairs simultaneously and but entangled only in the single mode pair. 
+
+\newpage
 
 \section{Outline}
 The following chapters are sequentially divided in different topics.

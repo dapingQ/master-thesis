@@ -2,9 +2,10 @@
 
 \chapter{Device design and dispersion engineering of nonlinear ring cavities}
 
-Mentioned above, before the design of ring resonators, second-order mode dispersion $ D_2 $ becomes the key factor according to phase matching condition, especially in the term of frequency mismatch. In this case, a typical approach to reduce the dispersion offset is balancing the intrinsic material dispersion and waveguide dispersion, which is usually called as dispersion compensation. Typically, it requires greater film thickness which complicating the fabrication process. 
+Mentioned above, %before the design of ring resonators, 
+second-order mode dispersion $ D_2 $ is the key factor in phase matching condition, especially in frequency mismatch. In this case, a typical approach to reduce the dispersion offset is balancing the intrinsic material dispersion and structure induced dispersion---waveguide dispersion. This method is usually named as dispersion compensation. Typically, it requires greater film thickness which complicates the fabrication process, such as thicker film deposition and high-selectivity etching. Besides, it only suitable for simple rectangular channel waveguides.
 
-Beyond this method suitable for simple rectangular channel waveguides, in some structures including slot waveguides, the waveguide dispersion features flat curvature in a appropriate dimension, indicating that by optimizing the structure, the material dispersion can be not only compensated but also flattened. Another example is mode crossing, the avoiding crossing of dispersion curve, leads to local dispersion inversion even in a thin thickness. 
+Furthermore, in some structures including slot waveguides, the waveguide dispersion features flat curvature in a appropriate dimension, indicating that by optimizing the structure, the material dispersion can be not only compensated but also flattened. Another example is mode crossing, the avoiding crossing of dispersion curve, leads to local dispersion inversion even in a thin thickness. 
 
 In this chapter, above methods are described sequentially for the specific silicon nitride ring resonators. Beside, in the case of ring resonators, to improve the coupling efficiency, design of mode size convertors at bus waveguide input/output ports is also introduced.
 
@@ -30,7 +31,9 @@ To evaluate the waveguide dispersion parameter, the numerical simulation using c
 Shown in \autoref{fig:wg-disp}, the dimension dependence of waveguide dispersion features negative values in a small size, i.e. behaving normal dispersion at the second order. Nevertheless, as either the thickness or width increases,
 $D_W$ turns positive. This indicates that to achieve zero dispersion in phase match condition of four wave mixing, the normal material dispersion can be compensated with anomalous waveguide dispersion. 
 For example, at 1550 \si{\nm}, in a 1.5-\si{\um}-wide and 0.8-\si{\um}-thick silicon nitride waveguide cladded by silica, where the refractive index is 1.48,
-the waveguide dispersion is 122.56 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 3.07 MHz. It is close to zero dispersion for the pump wavelength.
+the waveguide dispersion is 122.56 \dispu. Substituting into the second-order dispersion chain rule in \autoref{eq:disp-chain}, the second-order mode number dispersion parameter $ D_2 $ is about 3.07 MHz.
+
+%It is close to zero dispersion for the pump wavelength.
 
 \begin{figure}
 	\centering

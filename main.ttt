@@ -1,7 +1,23 @@
 \stepcounter {chapter}
+\begin{table}[]
+\mycaption{Comparison of several material properties between silicon and silicon nitride}{The data of silicon is cited from Reference \cite{Sinclair2019} and silicon nitride refers to \cite{Ang2018}.}
+\label{tab:si-vs-sin}
+\begin{tabular}{ccc}
+& silicon nitride  & silicon   \\ \hline
+refractive index $n$ at 1550 nm
+& 2.0 & 3.4 \\ \hline
+transparent band  & visible to NIR & NIR     \\ \hline
+two photon absorption $ \beta_\mathrm{TPA} $ (cm/GW)
+& -  & 0.75    \\ \hline
+Kerr nonlinearity $ n_2 $ (\si{\square\meter\per\watt})
+& \num{6.94d-19}  & \num{5d-18}  \\ \hline
+\end{tabular}
+\end{table}
 \stepcounter {chapter}
 \stepcounter {chapter}
 \stepcounter {chapter}
+\efloatseparator
+ 
 \begin{table}[]
 \centering
 \begin{tabular}{cccc}
