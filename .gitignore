@@ -7,7 +7,7 @@
 *.blg
 *.synctex.gz
 .vscode/
-*svg-tex*
+./imgs/svg-tex*
 *.fff
 *.ttt
 *.xml

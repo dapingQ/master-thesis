@@ -4,29 +4,29 @@
 \section{Background}
 
 Quantum mechanics has not only boosted up the modern science and technology in different disciplines, but also established the cornerstone for future quantum information processing technology. 
-Furthermore, differing from the past applications of quantum mechanics which only involves the quantization nature, the frontier quantum information processing 
+Differing from the past applications of quantum mechanics which only involves the quantization nature, the frontier quantum information processing 
 including but not limited to quantum computation, quantum communication and quantum metrology, 
 exploits the deep-level physics of quantum mechanics, such as quantum superposition and quantum entanglement.
-Therefore, the fundamental quanta of light---photon---featuring attractive advantages like long coherent time and multiple degrees of freedom (DoF), is a suitable candidate among the research quantum computation and quantum communication. 
+Therefore, the fundamental quanta of light---photon---featuring attractive advantages like long coherent time and multiple degrees of freedom (DoF), is a suitable candidate in the research of quantum computation and quantum communication. 
 
 Furthermore, entanglement between photon pairs which originates from the nonlocality of quantum mechanics, can be easily realized using nonlinear bulk crystals. 
 While in the term of DoF, much of research up to now focuses on the polarization and path entanglement approaches and very little attention has been paid to frequency entanglement, whose basis is continuous and infinite in hilbert space. 
-Moreover, the previous research shows that frequency entangled photon pairs can be exploited not only in wavelength division multiplexing quantum key distribution \cite{Wengerowsky2018} but also promising to transfer quantum information in future quantum networks \cite{Tchebotareva2019}. 
-An example of quantum computation is cluster state encoded by frequency \cites{Reimer2019}.
+Moreover, the previous research shows that frequency entangled photon pairs can be utilized not only in wavelength division multiplexing quantum key distribution \cite{Wengerowsky2018} but also promising to transfer quantum information in future quantum networks \cite{Tchebotareva2019}. 
+An extra example for quantum computation is cluster state encoded by frequency \cites{Reimer2019}.
 Therefore, frequency entangled photon plays a powerful and general role for optical quantum information processing.
 
 Nevertheless, large scale realization of frequency entanglement requires hundreds of free-space optical components, especially the nonlinear crystals, which challenges robust manipulation of generated quantum states.
 Besides, in recent applications of quantum metrology, quantum optical coherent tomography (QOCT), the broadband frequency entanglement \cite{Okano2015} is also urgent.
 
-To improve both scalability and robustness, chip-scale full-optical routine has been developed for optical quantum information processing \cites{ Vahala2008, OBrien2009}.  
-A conventional material candidate is silicon on insulator (SOI), since it is CMOS compatible and supplied by silicon wafer manufacturers. Much of research up to date reported not only frequency \cite{Kues2017b} but also path and time-bin encoded quantum state in this platform \cites{Paesani2018,Zhang2018a}. Other materials like lithium niobate and aluminum nitride are also developed and show various advantages, but requires special fabrication technology.
+To improve both scalability and robustness, chip-scale full-optical routine has been developed for optical quantum information processing \cites{ Vahala2008, OBrien2009, Bonneau2016}.  
+A conventional material candidate is silicon on insulator (SOI), since it is CMOS compatible and supplied by silicon wafer manufacturers. Much of research up to date reported not only frequency \cite{Kues2017b} but also path and time-bin encoded quantum state in this platform \cites{Paesani2018,Zhang2018a}. Other materials like lithium niobate, aluminum nitride and high-index contrast doped glass (HICDG) \cite{Sugiura2019} are also developed and show various advantages, but special fabrication technology is required.
 
 \section{Objective}
 
-However, suffering from two photon absorption and stimulated Raman scattering \cite{Engin2012}, silicon is no able to generate high-intensity and broadband frequency conversion. 
-Since that, silicon nitride, which is transparent from visible to near infrared range, can be used to achieve ultra-broadband frequency conversion. 
-A simple comparison of these two material is shown in \autoref{tab:si-vs-sin}.
-Recently, single photon pair generation from visible to telecom band is reported\cite{Lu2016}. 
+However, due to energy band structure, silicon suffers from two photon absorption and stimulated Raman scattering at high pump power regime \cite{Engin2012}, thus it is no able to perform high-intensity and broadband frequency conversion. 
+An alternative material is silicon nitride, which is transparent from visible to near infrared range and characterizes no obvious two photon absorption.
+A simple comparison of these two materials is shown in \autoref{tab:si-vs-sin}.
+Recently, single photon pair generation from visible to optical communication band is reported\cite{Lu2016}. 
 
 \begin{table}[]
 	\mycaption{Comparison of several material properties between silicon and silicon nitride}{The data of silicon is cited from Reference \cite{Sinclair2019} and silicon nitride refers to \cite{Ang2018}.}
@@ -34,7 +34,7 @@ Recently, single photon pair generation from visible to telecom band is reported
 	\begin{tabular}{ccc}
 							& silicon nitride 			& silicon		 			\\ \hline
 		refractive index $n$ at 1550 nm
-							& 2.0						& 3.4						\\ \hline
+							& 1.9963					& 3.4757						\\ \hline
 		transparent band 	& visible to NIR			& NIR					    \\ \hline
 		two photon absorption $ \beta_\mathrm{TPA} $ (cm/GW)                 
 							& - 						& 0.75 			 			\\ \hline
@@ -43,16 +43,32 @@ Recently, single photon pair generation from visible to telecom band is reported
 	\end{tabular}
 \end{table}
 
-In the silicon nitride waveguide, third-order optical nonlinearity is dominant and leads spontaneous four wave mixing in sub-micron scale. 
-To enhance the nonlinear interaction, the all-pass ring resonator is used where the light is coupled inside from a bus waveguide. Once continuous wave laser launched at the ring resonant mode, the cavity made of nonlinear material is strongly driven and leads frequency broadening nature intracavity. Thus, other resonant modes are excited and then photon are generated spontaneously. Indeed, this progress is governed by phase matching condition in nonlinear optics.
+Similar to silicon, in the silicon nitride waveguide, third-order optical nonlinearity is dominant and leads to spontaneous four wave mixing in sub-micron scale without influence of two-photon absorption.
+To enhance the optical nonlinear interaction, the all-pass type ring resonator is adopted where the light is coupled inside from a adjacent bus waveguide. 
+
+Shown in \autoref{fig:fwm_io},
+as continuous wave laser is launched at the cavity resonant mode, the ring made of nonlinear material is strongly driven and leads to frequency broadening intracavity. As a result, other resonant modes are excited sequentially, i.e. photons are generated spontaneously and collectively. Indeed, this progress is governed by phase matching condition in nonlinear optics.
 In our research, by carefully optimizing the device geometry, broadband phase matching condition can be realized. 
 Finally, all the photon pair generation events are detected by single photon detectors and verified by the coincident counting. 
 %In this dissertation, the terms broadband photon pair is used to describe that pairs are generated in different frequency pairs simultaneously and but entangled only in the single mode pair. 
 
-\newpage
+\begin{figure}
+	\centering
+	\includesvg[width=4in]{illus/fwm_io}
+	\mycaption{Illustration of spontaneous four wave mixing in a silicon nitride ring resonator}{By pumping continuous wave laser, nonlinear \ce{Si3N4} ring cavities features comb-like output.}
+	\label{fig:fwm_io}
+\end{figure}
 
 \section{Outline}
 
-The following chapters are sequentially divided in different topics.
+The following chapters are sequentially divided in several topics.
 
-In Chapter 2, basic theory of nonlinear ring resonators is to be introduced. In the following chapters, device design and fabrication technology are introduced. Using device transmission and 
+\begin{itemize}
+	\item In Chapter 2, basic theory concerning nonlinear ring resonators is to be introduced, covering guided optics, ring cavities, nonlinear optics and phase matching condition of four wave mixing.
+	\item In Chapter 3, design and optimization of ring resonator structure are discussed, especially the dispersion compensation method.
+	\item In Chapter 4, we employ standard subtractive fabrication process, from film deposition to lithography, then dry etching and top oxide layer cladding. Here, three different chemical vapor deposition (CVD) methods are compared.
+	\item In Chapter 5, the device fabricated above is evaluated in the term of device transmission and dispersion. The influence of CVD methods is discussed.
+	\item In Chapter 6, due to the fabrication imperfection during our process, fabless device is involved and evaluated in the same way.
+	\item In Chapter 7, we focus on the photon pair generation experiments using fabless device.
+	\item In Chapter 8, all the topics are summarized and some extensive outlooks are given.
+\end{itemize}

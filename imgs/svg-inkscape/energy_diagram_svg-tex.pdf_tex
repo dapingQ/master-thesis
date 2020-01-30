@@ -1,0 +1,85 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'energy_diagram_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{426.89824113bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.57284712)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(-0.12678161,0.62196914){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.57976339\unitlength}\raggedright \end{minipage}}}%
+    \put(0.15993995,0.42236591){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{energy_diagram_svg-tex.pdf}}%
+    \put(-0.00089781,0.43149222){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0.01463295,0.55203932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SPM\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{energy_diagram_svg-tex.pdf}}%
+    \put(-0.35517325,0.35492658){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.57976339\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{energy_diagram_svg-tex.pdf}}%
+    \put(0.15404207,0.11731707){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_2$\end{tabular}}}}%
+    \put(-0.00212745,0.11718455){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0.01414053,0.28760451){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}XPM\end{tabular}}}}%
+    \put(0.10161005,0.62196917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.57976339\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{energy_diagram_svg-tex.pdf}}%
+    \put(0.22802384,0.24954609){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0.3871432,0.19230454){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_\mathrm{THG}$\end{tabular}}}}%
+    \put(0.24271402,0.55172868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}THG\end{tabular}}}}%
+    \put(0.33000172,0.62196917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.57976339\unitlength}\raggedright \end{minipage}}}%
+    \put(0.47048454,0.55157792){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FWM\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{energy_diagram_svg-tex.pdf}}%
+    \put(0.46361721,0.42058616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0.45878584,0.2872835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0.63141522,0.2872835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_3$\end{tabular}}}}%
+    \put(0.6217525,0.41988199){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_2$\end{tabular}}}}%
+    \put(0.59353057,0.60440061){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.57976339\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{energy_diagram_svg-tex.pdf}}%
+    \put(0.74498095,0.24084347){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hbar\omega_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{energy_diagram_svg-tex.pdf}}%
+    \put(0.69921407,0.5517287){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TPA\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

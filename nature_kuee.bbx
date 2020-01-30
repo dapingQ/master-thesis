@@ -208,6 +208,7 @@
       \setunit{\addspace}%
     }%
   \printfield{volume}%
+  \nopunct
   \newunit
   \usebibmacro{issue}%
   \newunit
@@ -313,7 +314,7 @@
   \usebibmacro{byeditor+others}%
   \newunit
   \usebibmacro{issue+date}%
-  \newunit\newblock
+  \newunit\nopunct
   \usebibmacro{note+pages}%
   \newunit
   \iftoggle{bbx:isbn}

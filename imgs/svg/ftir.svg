@@ -43,7 +43,7 @@
      id="namedview320"
      showgrid="true"
      inkscape:zoom="1.8352839"
-     inkscape:cx="149.44615"
+     inkscape:cx="19.493503"
      inkscape:cy="75.24401"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -668,9 +668,7 @@
        id="tspan1673"
        style="stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
        x="153.08173"
-       y="159.95103">CO<tspan
-   style="font-size:64.99999762%;baseline-shift:sub;stroke-linecap:butt;stroke-linejoin:round"
-   id="tspan1677">2</tspan></tspan></text>
+       y="159.95103">\ce{CO2}</tspan></text>
   <g
      id="figure_1"
      style="stroke-linecap:butt;stroke-linejoin:round"

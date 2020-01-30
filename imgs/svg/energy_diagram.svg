@@ -14502,11 +14502,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="270.78058"
-     inkscape:cy="182.80559"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="368.09395"
+     inkscape:cy="177.95274"
      inkscape:document-units="mm"
-     inkscape:current-layer="g8779-8"
+     inkscape:current-layer="g2782"
      showgrid="true"
      units="in"
      objecttolerance="10000"
@@ -15322,13 +15322,13 @@
                  transform="translate(1.031667e-6,-23.812494)" />
               <text
                  id="text25233"
-                 y="230.57271"
-                 x="72.621872"
+                 y="235.33514"
+                 x="82.676048"
                  style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
                  xml:space="preserve"><tspan
                    style="font-size:4.23333311px;stroke-width:0.26458332"
-                   y="230.57271"
-                   x="72.621872"
+                   y="235.33514"
+                   x="82.676048"
                    id="tspan25231"
                    sodipodi:role="line">$\hbar\omega_1$</tspan></text>
               <path

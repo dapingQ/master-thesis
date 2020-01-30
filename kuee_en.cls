@@ -92,7 +92,10 @@
 }
 
 \RequirePackage{etoolbox}
-\RequirePackage[nomarkers, nolists, ]{endfloat}
+\RequirePackage[nomarkers, 	
+%		figuresonly,
+%		tablesonly,
+		nolists]{endfloat}
 \makeatletter
 \@ifpackageloaded{endfloat}
 {

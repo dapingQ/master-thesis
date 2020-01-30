@@ -61,6 +61,8 @@
 \usepackage[sorting=none,
     backend=biber,
     bibencoding=utf8,
+    block=space,
+%    style=ieee,
     bibstyle=nature_kuee,
     citestyle=numeric-comp,
     doi=false,isbn=false,url=false,eprint=false]{biblatex}
@@ -83,7 +85,7 @@
 
 \newcommand\mycaption[2]{\caption[#1]{\textbf{#1}. #2}}
 \newcommand{\dint}{D_\mathrm{int}}
-\newcommand{\dispu}{\si[per-mode=symbol]{\ps\per\km\per\nm}}
+\newcommand{\dispu}{ps/km$ \cdot $nm}
 \newcommand{\um}{\si{\um}~}
 \newcommand{\uW}{\si{\micro\watt}~}
 \newcommand{\tbe}{\color{red} To be edited}
@@ -102,24 +104,20 @@
 \maketitle
 
 \begin{abstract}
-Frequency entangled photon source is widely required in various optical quantum technology, including but no limited to quantum key distribution, cluster state quantum computation and quantum metrology etc. In the recent decade, chip-scale entangled photon source has been developed in silicon platform for its robustness, large scalability and COMS technology compatible. However, due to the intrinsic two-photon absorption and limitation of transparency range, the high-intensity and broadband frequency entangled photon pairs such as one-octave, remains an outstanding challenge.
+Frequency entangled photon source is widely required in a variety of optical quantum technology, including but no limited to quantum key distribution, cluster state quantum computation and quantum metrology etc. In the recent decade, chip-scale entangled photon source has been developed in silicon platform for its robustness, large scalability and COMS technology compatibility. However, due to the intrinsic two-photon absorption and limitation of transparency range, the high-intensity and broadband frequency entangled photon pairs such as one-octave, remains an outstanding challenge.
 
-Here, we report the generation of frequency entangled photon pairs using silicon nitride ring resonators, which is transparent from visible to mid-infrared range and no power-dependent absorption.
+Here, we report the generation of frequency entangled photon pairs using silicon nitride ring cavities, which is transparent from visible to mid-infrared range and no intensity-dependent absorption.
 The device design technique is first introduced in the term of phase matching condition. 
-Then, we demonstrate the standard subtractive fabrication and compare the difference between mainstream silicon nitride deposition methods. 
+Then, we demonstrate the standard subtractive fabrication and compare mainstream silicon nitride deposition methods.
 Based on the device transmission, the dispersion evaluation method for broadband frequency entangled photon generation is developed.
-The quality factor of \num{5d4} is achieved in our device, promising to generate broadband frequency entangled photons at telecom band. 
+The quality factor of \num{5d4} is achieved in our device, promising to generate broadband frequency entangled photons in the optical communication band. 
 
-Furthermore, we exploit fabless device and success to realize chip-scale frequency entangled photon generation in \uW power level. The photon pair generation rate estimated is 15 cps/\uW based on our setup.
-
-\tbe
+Furthermore, we exploit fabless device and success to realize chip-scale frequency entangled photon generation at \uW power level. The estimated photon pair generation rate is 15 cps/\uW based on our setup. Furthermore, maximal 46 mode pairs are observed using 24.5 mW pump power, indicating a 106 nm span frequency correlation.
 
 
 \end{abstract}
 
 \tableofcontents
-% \clearpage
-
 
 \input{chapter/chapter1.tex}
 \input{chapter/chapter2.tex}
@@ -132,7 +130,22 @@ Furthermore, we exploit fabless device and success to realize chip-scale frequen
 
 
 \begin{acknowledgements}
-\lipsum[2-4]
+
+First of all, I would like to thank my supervisor, Prof. Shigeki Takeuchi, without his continuing active support and knowledge I would not have made it this far. I would additionally also like to thank Associate Prof. Ryo Okamoto for discussions and lab support and Assistant Prof. Hideaki Takashima for discussions and teaching of the relevant topics. 
+
+I would also like to thank and acknowledge Xiaoyang Cheng, Jianxun Hong, Prof. Shiyoshi Yokoyama and the rest of the members at Kyushu University for our collaboration. I appreciate very much the great support and kindness
+I received when I visited. Most of the experimental results in this thesis have
+been possible thanks to you!
+
+Moreover I would like to thank all the members of the Applied Quantum Electronics laboratory
+here at Kyoto University. I would like to thank Bo Cao for discussion on nonlinear optics and quantum optics, Toshiyuki Tashima for experience concerning FDTD simulation and Yu Mukai for discussion on FTIR.
+Specifically I would like to thank Kenta Sugiura for being great office mates providing discussions both around and beyond the topics that we are each working on, and other senior members for discussions on research topics. I would like to thank Masaya Arahata, Kazuki Fukushige, Issei Matsumoto and Masato Yoshikawa during our whole education and out-office experience. I would also like to thank other members for their discussion and office support on other research topics.
+
+Additionally, I would like to thank the staff in Kyoto University Nanotechnology Hub for their technical support on device fabrication. I am grateful to other technicians providing instrumental support for our experiments. 
+
+Last, but not least, I would like to thank all of my family and friends home and abroad for
+being supportive and great to be around.
+
 \end{acknowledgements}
 
 

@@ -1,23 +1,25 @@
 % !TeX root = ../main.tex
 
-\chapter{Fabless samples via foundries}
+\chapter{Fabless samples via foundries}\label{chap:6}
 
 Fabless photonic research is becoming a trend for its cheaper and easier external run \cite{Hochberg2010}. There are several foundries all around the world offering the multi-project run service on integrated photonics and quantum optics applications, such as AMF in Singapore, LIGENTEC in Switterland, LioniX in Netherlands and etc. 
 
-Based on the silicon nitride platform, two independent foundries are evaluated in the following sections in the term of device performance and fabrication techniques.
+Except standard subtractive process used in previous chapter, to discover fabrication process diversity, we also design the device layout and order the devices fablessly.
+In the case of silicon nitride, two independent foundries are compared in the term of fabrication technique and device performance in the following sections.
 
 \section{Fabless process}
-Except standard subtractive process used in previous chapter, to discover fabrication process diversity, we also design the device layout and order the devices using LIGENTEC process and NTT-AT process.
+The fabless sample involved in this research is ordered from LIGENTEC in Switzerland, and NTT-AT in Japan. Next, the process technique used is roughly introduced.
 
 \bigskip
 \noindent\textbf{LIGENTEC technique}
 
-Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in LIGENTEC samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is improved.
+Photonic damascene process \cite{Pfeiffer2015a,Pfeiffer2018a} used in LIGENTEC samples improves the waveguide sidewall roughness by depositing the silicon nitride film into the etched thermal oxidized silica. By additive chemical mechanical planarization (CMP), the top surface of silicon nitride is polished.
 
-The sample layout is illustrated in \autoref{fig:gds}. Five groups of various FSRs are designed. In ecch specific group, the coupling gap is detuned gradually from 400 nm to 700 nm in the step of 100 nm.
-
+The sample layout is illustrated in \autoref{fig:gds}. Five device groups with various FSRs are contained. In each specific group, the coupling gap is tuned from 400 nm to 700 nm in the step of 100 nm.
 
 \begin{table}[]
+	\mycaption{Design parameters of LIGENTEC samples}{FSR is specialized at 1550 nm.}
+	\label{tab:ligentec}
 	\begin{tabular}{cccc}
 		% \hline
 		& Ring Radius (\um) & FSR (GHz) & Ring Width (\um) \\ \hline
@@ -29,7 +31,7 @@ The sample layout is illustrated in \autoref{fig:gds}. Five groups of various FS
 	\end{tabular}
 \end{table}
 
-The microscope images of the samples is shown in \autoref{fig:LIGENTEC-laser-micro}. Several layers of different structures are observed hierarchically, including the cross pattern stopping the crack during annealing and CMP, the silicon waveguides and a top unknown metallic layer.
+The microscope images of the sample is shown in \autoref{fig:LIGENTEC-laser-micro}. Several layers of different structures are observed hierarchically, including the cross pattern stopping the crack during annealing and CMP, the waveguide layer and a top metallic layer for other users in the same run.
 
 \begin{figure}
 	\centering
@@ -40,34 +42,31 @@ The microscope images of the samples is shown in \autoref{fig:LIGENTEC-laser-mic
 
 \begin{figure}
 	\centering
-	\includesvg[width=4in]{LIGENTEC_image}
-	\mycaption{Laser microscope images of LIGENTEC smaples}{By lowering the focus depth, three layers are observed.
-		\textbf{a}. Top metallic layer. \textbf{b}. Device layer. \textbf{c}. Crack stopper layer. \textbf{d}. Mode convertor}
+	\includesvg[width=4in]{ligentec/ligentec_image}
+	\mycaption{Laser microscope images of LIGENTEC samples}{By lowering the focus depth, three layers are observed.
+		\textbf{a}. Top metallic layer. \textbf{b}. Device layer. \textbf{c}. Crack stopper layer. \textbf{d}. Mode convertor. The metallic bar is 30\um-long.}
 	\label{fig:LIGENTEC-laser-micro}
 \end{figure}
 
 \bigskip
 \noindent\textbf{NTT-AT technique}
 
-NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, the nitrogen flow is supplied and reacts with silicon vapor into the silicon nitride film. The refractive index of the film deposited using method is also shown in \autoref{fig:ellipso}.
+NTT-AT technique adopts a different physical vapor method--reactive sputtering to deposit non-hydrogen silicon nitride. Compared with standard silicon sputtering, silicon atoms emitted from source react with the nitrogen gas flow into silicon nitride. Refractive index of the film deposited using this method is included in \autoref{fig:ellipso}.
 
-In the term design, the 4-inch wafer is customed with 22 cell in the layout shown in \autoref{fig:gds}, including the same design of LIGENTEC one in the special cell.
-
-
+In the term of design, the 4-inch wafer is customized with 22 cell in the layout shown in \autoref{fig:gds}, including the same design of LIGENTEC one in the special cell.
 
 \section{Device evaluation}
 
 \subsection{Coupling evolution}
 
-Prior to cavity properties evaluation, it is essential to compare the coupling condition among devices in the same group. Since the gap between bus waveguide and ring resonator is swept increasingly, usually the coupling condition turns from over coupling to critical coupling, and finally into weak coupling.
+Prior to cavity property evaluation, it is essential to compare the coupling condition among devices in the same group. Since the gap between bus waveguide and ring resonator is swept increasingly, usually the coupling condition turns from over coupling to critical coupling, and finally into weak coupling.
 
-For the LIGENTEC Group 1, due to the reliable fabrication recipe, such an evolution of coupling condition among the same group is explicit as the gap increases.
-As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over coupling to critical coupling, as the negative prominence of resonance peak increases. The same tendency agrees with the \textit{Q}-factors, shown in \autoref{fig:gap_cf}(b). The other groups in the sample have the similar tendency but the critical coupling gaps are different.
+For the LIGENTEC Group 1, due to the reliable fabrication process, such an evolution of coupling condition is explicit. Presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over coupling to critical coupling, as the negative prominence of resonance peak increases. This tendency agrees with the \textit{Q}-factor counts, shown in \autoref{fig:gap_cf}(b). The other groups in the sample have similar feature but the critical coupling gaps are different.
 
 \begin{figure}
 	\centering
-	\includesvg[width=6in]{LIGENTEC/gap_cf}
-	\mycaption{Gap sweeping}{}
+	\includesvg[width=5in]{ligentec/gap_cf}
+	\mycaption{Transmission and \textit{Q}-factors of devices sweeping the gap}{The coupling condition varies from over coupling to critical coupling, as the negative prominence of resonance peak increases in \textbf{a}. The same tendency agrees with the \textit{Q}-factors in \textbf{b}.}
 	\label{fig:gap_cf}
 \end{figure}
 
@@ -75,42 +74,44 @@ As presented in \autoref{fig:gap_cf}(a), the coupling condition varies from over
 
 \subsection{Dispersion inversion}
 
-Due the high quality fabrication of LIGENTEC damascene process, Group 1 and Group 2 show interesting dispersion inversion with the ring width increased. Presented in \autoref{fig:dint_comp}, as the ring width is tuned from 0.8 \um to 1.7 \um, the mode dispersion is inversed significantly.
+Thanks to the high quality fabrication of LIGENTEC damascene process, Group 1 and Group 2 show interesting dispersion inversion as ring widths increase. Presented in \autoref{fig:dint_comp}, as the ring width is tuned from 0.8 \um to 1.7 \um, the mode dispersion is inversed significantly, from -0.83 MHz to 1.46 MHz.
 
 \begin{figure}
 	\centering
 	\includesvg[width=4.5in]{fabless/dint_comp}
-	\mycaption{}{}
+	\mycaption{Dispersion inversion shown by integrated dispersion}{The ring width is tuned from 0.8 \um (Group 1) to 1.7 \um (Group 2), the mode dispersion is inversed significantly.}
 	\label{fig:dint_comp}
 \end{figure}
 
 
-\subsection{Quality factor comparison}
+\subsection{Comparison of quality factor and dispersion}
 
 
-Several works using the same LIGENTEC technique report ultrahigh Q-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples in Group 3 and Group 5. While to compare the fabrication quality of both technique, two device with the same design (Group 1 Device 4, gap 700nm, FSR 100 GHz, ring width 0.8 \um ) are listed in \autoref{fig:fabless_cf}, as well as the \textit{Q}-factor histograms.
+Several works using the same LIGENTEC technique report ultrahigh \textit{Q}-factors up to \num{3d6} \cites{Yu2019, Vaidya2019}. The same magnitude is also attained in our samples in Group 3 and Group 5. While to compare the fabrication quality of both technique, two device with the same design (Group 1 Device 4, gap 700nm, FSR 100 GHz, ring width 0.8 \um ) are listed in \autoref{fig:fabless_cf}, as well as the \textit{Q}-factor histograms.
 
 \begin{figure}
 	\centering
 	\includesvg[width=4in]{fabless/fabless_cf}
-	\mycaption{A comparison between identical ring resonator fabricated in LIGENTEC and NTT-AT technique}{}
+	\mycaption{A comparison between identical ring resonator fabricated using LIGENTEC and NTT-AT technique}{\textbf{a}. Transmission, \textit{Q}-factors, FSR of LIGENTC sample. \textbf{b}. Transmission, \textit{Q}-factors, FSR of NTT-AT sample. \textit{Q}-factors histogram of LIGENTEC and NTT-AT are given in \textbf{c} and \textbf{d} respectively. Identical pattern is used for fabrication (Group 1 Device 4, gap 700nm, FSR 100 GHz, ring width 0.8 \um). }
 	\label{fig:fabless_cf}
 \end{figure}
 
-In the transmission of LIGENTEC device, shown in \autoref{fig:fabless_cf}(a)  and NTT-AT device shown in \autoref{fig:fabless_cf}(b), there is no obvious absorption in the range 1520 nm - 1540 nm compared with the samples fabricated using non-annealing subtractive recipe, though the transmission background declines at both red and blue side. However, the quality factors of LIGENTEC one are almost 4 times of NTT-AT samples, indicating the intracavity loss is 4 times lower. The histogram gathered in \autoref{fig:fabless_cf}(c) and \autoref{fig:fabless_cf}(b) features the same result.
+In the transmission of LIGENTEC device, shown in \autoref{fig:fabless_cf}(a)  and NTT-AT device shown in \autoref{fig:fabless_cf}(b), there is no obvious absorption in the range 1500 nm - 1540 nm compared with the samples fabricated using non-annealing subtractive recipe
+%, though the transmission background declines at both red and blue side. 
+However, the quality factors of LIGENTEC ones are almost 4 times higher than NTT-AT.
+%, indicating the intracavity loss is 4 times lower. 
+The histogram gathered in \autoref{fig:fabless_cf}(c) and \autoref{fig:fabless_cf}(b) features the same result.
 In both samples, the critical coupling features at shorter wavelength, according to the peak prominence and \textit{Q}-factor tendency. 
 
 We assume that despite the ammonia-free recipe used in NTT-AT technique, the etching recipe is not as fully optimized as LIGENTEC ones. It is also interesting to find that there is a clear difference of FSR trends from the former. In particular, the increasing NTT-AT FSRs indicate a normal dispersion.
 
+%\subsection{Dispersion comparison}
 
-\subsection{Dispersion comparison}
-
-The identical devices mentioned in transmission comparison section is further analyzed using the above method. The integrated dispersion is extracted in \autoref{fig:dint_cf}.
-
+The identical devices mentioned above is further analyzed using the above method. The integrated dispersion is extracted in \autoref{fig:dint_cf}. As we can see, the fabrication process influence the dispersion effectively as a result of different film growing technology is performed.
 
 \begin{figure}
 	\centering
-	\includesvg[width=6in]{fabless/dint_cf}
-	\mycaption{}{}
+	\includesvg[width=4.5in]{fabless/dint_cf}
+	\mycaption{Comparison of integrated dispersion between LIGENTEC and NTT-AT samples with same device parameters}{Fabrication process changes the dispersion effectively as a result of different film growing technology is performed.}
 	\label{fig:dint_cf}
 \end{figure}

@@ -429,7 +429,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.1402416"
-     inkscape:cx="67.716609"
+     inkscape:cx="-9.665972"
      inkscape:cy="94.068607"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -668,13 +668,13 @@
 </g>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="6.6823959"
-       y="280.74432"
+       x="5.5028157"
+       y="264.48297"
        id="text1727"><tspan
          sodipodi:role="line"
          id="tspan1725"
-         x="6.6823959"
-         y="280.74432"
-         style="stroke-width:0.26458332;font-size:4.23333333px">scattering</tspan></text>
+         x="5.5028157"
+         y="264.48297"
+         style="font-size:4.23333311px;stroke-width:0.26458332">scattering</tspan></text>
   </g>
 </svg>
