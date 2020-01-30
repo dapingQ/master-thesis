@@ -1,19 +1,19 @@
 % !TeX root = ../main.tex
 \chapter{Broadband photon pair generation}\label{chap:7}
 
-Back to the classical nonlinear optics theory, the solution to nonlinear coupling equations requires the initial power at ether signal or idler mode, which is called seed in the laser terminology. However, in quantum optics theory, all the modes in cavity behave intrinsic vacuum fluctuation at the quantity of half $ \hbar \omega $. Thus, even without light fed, the quantum fluctuation leads to emission at the single photon levels. 
+Back to the classical nonlinear optics theory, the solution to nonlinear coupling equations requires the initial power at ether signal or idler mode, which is called seed light in the laser terminology. However, in quantum optics theory, all the cavity modes behave intrinsic vacuum fluctuation at a quantity of half $ \hbar \omega $. Generally, even without light fed, the quantum fluctuation leads to photon emission at the single photon levels. 
 
-Furthermore, intracavity pump power then behaves the amplifier, intensify the corresponding signal or idler mode photon flux. Once the single photon flux exceeds cavity threshold, the extracavity single photon can be detected. To note, these kind of excitation is indistinguishable because the signal and idler photons are emitted simultaneously as a result of quantum mechanics, rather than signal photon stimulates idler photon and vice versa. In the context of quantum states, the state created intracavity is at the superposition of signal state and idler state. The wave packet is different from the normal single photon one. Further theoretical research \cite{Scully1997} explained the squeezed nature of four wave mixing photon pairs, which is one of the exclusive properties of frequency entangled photon pairs.
+Once the single photon flux exceeds cavity threshold, the extracavity photon can be detected. To note, this kind of excitation is indistinguishable because the signal and idler photons are emitted simultaneously as a result of quantum mechanics, rather than signal photon stimulates idler photon and vice versa. 
+In the language of quantum states, the state created intracavity contains both signal and idler photons. The wave packet is different from the normal single photon one. Further theoretical research \cite{Scully1997} explained the squeezed nature of four wave mixing photon pairs, which is one of the exclusive properties of frequency entangled photon pairs.
 
-In general, the spontaneous four wave mixing in nonlinear cavities defined in our context refers to the cavity modes are excited collectively and pair-by-pair under the phase matching condition. Thus, under the weak coherent approximation, the photon pair only include one photon in each mode but correlated with each other. Thus, the conventional coincidence counting technology can be used to verify such correlation. In the term of generation band, it agrees with the classical phase matching condition at pump power limit.
-
-%Furthermore, 
-%To clarify with the physics compared with the relevant research, such as Kerr frequency comb and soliton generation, where ultra-high power is used to built intracavity pump mode, the spontaneous four wave mixing differs 
-%\cite{Chembo2016a}
+In general, the photon pair or mode pair defined in our context refers to cavity modes are excited collectively under the phase matching condition. 
+All the pairs are at a superposition of probability amplitude.
+Thus, under the weak coherent approximation, only two correlated photons exist in the wave packet, but the basis depends on allowed mode pair.
+Coincidence counting technology can be used to verify such correlation. As to generation band, it agrees with the classical phase matching condition.
 
 \section{Methods}
 
-Using the dispersion extraction method in \autoref{chap:5}, zero dispersion wavelength can be located easily among the measured band. In our experiments, optical communication band, especially C band is focused on, because enormous fiber optical components, like in-line filters are available in this range.
+Using the dispersion extraction method in \autoref{chap:5}, zero dispersion wavelength can be located easily among the measured band. In our experiments, optical communication band, especially C band is concentrated on, because enormous fiber optical components, like in-line filters are available in this range.
 
 Illustrated in \autoref{fig:bibpf}, the setup of mode-resolvable singular photon pair generation first adopts a tunable laser as the pump source, whose display tunability is 0.1 pm and able to be tuned via external voltage input. The laser output is pumped into ring resonators using the fiber launching system.% and the output power is measured with the power meter. 
 
@@ -48,7 +48,7 @@ In this chapter, considering the mode spacing and \textit{Q}-factors, LIGENTEC G
 \begin{figure}
 	\centering
 	\includesvg[width=4in]{ligentec/ligentec_gp1}
-	\mycaption{Transmission, quality factors and FSR of LIGENTEC Group 2 Device 1 employed in this chapter}{$ D_2 $ = 1.47 MHz and \textit{Q}-factor is around \num{2.5d5} in the filter range.}
+	\mycaption{Transmission, quality factors and FSR of LIGENTEC Group 2 Device 1 employed in this chapter}{$ D_2 $ = 1.47 MHz and \textit{Q}-factor is around \num{2.5d5} in the filter band.}
 	\label{fig:ligentec_gp1}
 \end{figure}
 
@@ -68,7 +68,7 @@ In the result, there is trend that both signal and idler photon fluxes decreases
 
 \subsection{Coincidence counts of singular mode pair}
 
-In coincidence counts are measured in a 1ns coincidence window and in each mode, the time delay is set from -200 to 200 ps. The \autoref{fig:mode_cf} shows the result of coincidence counts and CAR. In the mode pair 9, single photon pair generation rate is 1500 per second, equals to \num{1.5d4} per mW, which is the highest rate observed at this input power level among all the samples.
+In coincidence counts are measured in a 1ns coincidence window and in each mode, the time delay is set from -200 to 200 ps. The \autoref{fig:mode_cf} shows the result of coincidence counts and CAR. In the mode pair 9, single photon pair generation rate is 1500 per second, equals to \num{1.5d4} cps per mW, which is the highest rate observed at this input power level among all the samples.
 
 As the mode number increases, coincidence counts varies roughly but in the CAR graph, such a trend is not obvious. This is due to the band pass filters used in our setup is not flat-top on the transmission spectrum. In conclusion, even several frequency-dependent optical components used in our setup, by calculating the coincidence-accidental ratio, the photon pair generation can be evaluated successfully.
 
@@ -102,14 +102,14 @@ The result of photo flux is given in \autoref{fig:pwflux}. It is apparent that t
 \end{figure}
 
 Furthermore, the coincidence counting result is shown in \autoref{fig:pwcar}(a) where both maximal coincidence counts and background accidental coincidence counts increase with the pump power. While from CAR provided in \autoref{fig:pwcar}(b), higher input power leads to a significant decline. This can explained by the background noise arising from the Raman effect in optical fibers \cite{Engin2012, Sugiura2019}
-. As the nonlinearity of optical fiber is much weaker than silicon nitride device, in the high input power regime, it becomes obvious and contributes to the single photon count and decreases the coincidence count rate.
+. As the nonlinearity of optical fibers is much weaker than silicon nitride device, in the high input power regime, it becomes obvious and contributes to the single photon count and decreases the coincidence count rate.
 
 \section{Joint spectral intensity}
 
 Since the spontaneous four wave mixing occurs simultaneously at each mode pair, the state generated in a broadband is equivalent to the intensity superposition all over the signal and idler bands. To clarify the quantum state characteristics in this view, usually the joint spectral filed or intensity is estimated to evaluate the frequency correlation \cites{Helt2010,Vernon2015b}. For example, compared with the $ N $ mode correlation measurement mentioned above, the two-party joint spectral intensity requires the coincidence measurement on the element in the whole $ N^2 $ hilbert space.
 
 On the other hand, much of recent research concerning soliton generation discussed the thermal instability in the nonlinear ring resonators \cites{Guo2017a,Herr2012}. 
-To realize long time stable measurement, an auxiliary photon detector is added to monitor off-resonance situation illustrated in \autoref{fig:pid}. Using digital proportional–integral–derivative (PID) controller, which is deployed by a LabVIEW program, the tunable laser wavelength is tuned dynamically by the external voltage input. In this way, the extinction ratio of on-resonance is kept at a stable level as soon as possible. In addition, to increase the accessible mode number, the first set of BPFs in \autoref{fig:bibpf} is replaced by a notch filter (OE Land Inc.). The pump power used here is 24.5 mW. This work is assisted by Kenta Sugiura.
+To realize long time stable measurement, an auxiliary photon diode is added to monitor off-resonance situation illustrated in \autoref{fig:pid}. Using digital proportional–integral–derivative (PID) controller, which is deployed by a LabVIEW program, the tunable laser wavelength is tuned dynamically by the external voltage input. In this way, the extinction ratio of on-resonance is kept at a stable level as soon as possible. In addition, to increase the accessible mode number, the first set of BPFs in \autoref{fig:bibpf} is replaced by a notch filter (OE Land Inc.). The pump power used here is 24.5 mW. This work is assisted by Kenta Sugiura.
 
 \begin{figure}
 	\centering
@@ -119,7 +119,7 @@ To realize long time stable measurement, an auxiliary photon detector is added t
 \end{figure}
 
 %\autoref{fig:jsi} presents the final results of intermodal coincidence counts, accidental coincidence counts and their ratio, CAR. 
-During our measurement, the coincidence count is first scanned along the diagonal term of joint spectral intensity map to locate the central wavelength of tunable band pass filters when photon flux shown in \autoref{fig:flux2} is measured. In \autoref{fig:jsi}(a), CC characterizes the peak at mode 13. This agrees with the result of photon flux. More obviously, both photon flux and CC suffer from the notch filter, whose 3dB cut bandwidth is larger the single FSR and not symmetric at signal and idler bands. After the diagonal scanning, the off-diagonal terms are then selected mode-by-mode. The grid-like distribution in ACC map, \autoref{fig:jsi}(b) indicates the variation of measurement.
+During our measurement, the coincidence count is first scanned along the diagonal term of joint spectral intensity map to locate the central wavelength of tunable band pass filters when photon flux in \autoref{fig:flux2} is measured. In \autoref{fig:jsi}(a), CC characterizes the peak at mode 13. This agrees with the result of photon flux. More obviously, both photon flux and CC suffer from the notch filter, whose 3dB cut bandwidth is larger the single FSR and not symmetric at signal and idler bands. After the diagonal scanning, the off-diagonal terms are then selected mode-by-mode. The grid-like distribution in ACC map, \autoref{fig:jsi}(b) indicates the variation of measurement.
 As a result, the CAR presented in \autoref{fig:jsi}(c) stands out no obvious off-diagonal fluctuation and features the frequency correlation in 46 mode pairs, corresponding a 106 nm ( 1499 nm - 1605 nm) span.
 
 \begin{figure}
